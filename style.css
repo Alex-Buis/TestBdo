@@ -520,7 +520,7 @@ body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.16; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin: 88px 0;
+  margin: 40px 0 88px;
 }
 
 .feature {
@@ -538,7 +538,7 @@ body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.16; }
 .channel-link {
   display: flex;
   justify-content: center;
-  margin: -48px 0 72px;
+  margin: 56px 0 8px;
 }
 
 .channel-link a {
