@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
 :root {
   --stone-950: #121019;
@@ -14,7 +14,7 @@
   --purga-deep: #7c2919;
   --purga-glow: #f5a37c;
   --gold: #bd9752;
-  --font-display: 'Cormorant Garamond', serif;
+  --font-display: 'Cinzel', serif;
   --font-body: 'IBM Plex Sans', sans-serif;
   --radius-rune: 10px;
 }
@@ -28,7 +28,8 @@ body {
   background: var(--stone-950);
   background-image:
     radial-gradient(ellipse at 20% -10%, rgba(149, 118, 209, 0.10), transparent 55%),
-    radial-gradient(ellipse at 85% 10%, rgba(207, 84, 51, 0.08), transparent 50%);
+    radial-gradient(ellipse at 85% 10%, rgba(207, 84, 51, 0.08), transparent 50%),
+    repeating-radial-gradient(circle at 0 0, rgba(236, 229, 214, 0.025) 0, rgba(236, 229, 214, 0.025) 1px, transparent 1px, transparent 3px);
   color: var(--parchment);
   font-family: var(--font-body);
   font-size: 16px;
@@ -39,12 +40,12 @@ h1, h2, h3, .display {
   font-family: var(--font-display);
   font-weight: 600;
   margin: 0 0 0.4em;
-  letter-spacing: 0.01em;
+  text-transform: uppercase;
 }
 
-h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 0.95; }
-h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
-h3 { font-size: 1.3rem; }
+h1 { font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.05; letter-spacing: 0.05em; }
+h2 { font-size: clamp(1.5rem, 3.4vw, 2.1rem); letter-spacing: 0.06em; }
+h3 { font-size: 1.05rem; letter-spacing: 0.05em; font-weight: 600; }
 
 p { color: var(--parchment-dim); max-width: 62ch; }
 
@@ -83,13 +84,15 @@ header.site-nav {
 
 .wordmark {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-style: italic;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   text-decoration: none;
   color: var(--parchment);
 }
 
-.wordmark span { color: var(--gold); font-style: normal; }
+.wordmark span { color: var(--gold); }
 
 .site-nav nav { display: flex; gap: 28px; }
 
@@ -183,10 +186,36 @@ footer.site-footer .wrap {
 .form-card.purga { border-color: var(--purga-deep); background: linear-gradient(180deg, rgba(207,84,51,0.08), transparent); }
 .form-card.purga:hover { border-color: var(--purga); }
 
-.form-card h3 { font-family: var(--font-display); font-style: italic; margin-bottom: 6px; }
+.form-card h3 { margin-bottom: 6px; }
 .form-card.sacra h3 { color: var(--sacra-glow); }
 .form-card.purga h3 { color: var(--purga-glow); }
 .form-card p { margin: 0; font-size: 0.9rem; }
+
+/* ---------- divider ---------- */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--stone-700);
+}
+
+.divider-mark {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  background: var(--gold);
+  opacity: 0.75;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
 
 /* ---------- feature strip ---------- */
 
@@ -324,10 +353,13 @@ footer.site-footer .wrap {
   display: block;
   font-size: 0.72rem;
   font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--parchment);
   background: var(--stone-800);
   border: 1px solid var(--stone-700);
-  border-radius: 5px;
+  border-top-color: rgba(236, 229, 214, 0.22);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
   padding: 2px 5px;
   margin: 0 auto 6px;
   width: fit-content;
@@ -390,7 +422,7 @@ footer.site-footer .wrap {
 .lore-panel.sacra { border-color: var(--sacra-deep); }
 .lore-panel.purga { border-color: var(--purga-deep); }
 
-.lore-panel h3 { font-style: italic; }
+
 .lore-panel.sacra h3 { color: var(--sacra-glow); }
 .lore-panel.purga h3 { color: var(--purga-glow); }
 
