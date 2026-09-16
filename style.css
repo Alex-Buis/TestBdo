@@ -385,12 +385,12 @@ footer.site-footer a:hover { color: var(--gold); }
 }
 
 body[data-form-theme="sacra"] {
-  --stone-950: #f2e9cf;
-  --stone-900: #ece0bd;
-  --stone-800: #e3d4a4;
-  --stone-700: #cdb87e;
-  --parchment: #2b2013;
-  --parchment-dim: #5c4d2c;
+  --stone-950: #d6c69a;
+  --stone-900: #c7b482;
+  --stone-800: #b2996a;
+  --stone-700: #7d6538;
+  --parchment: #241a0f;
+  --parchment-dim: #4a3c22;
 }
 
 body[data-form-theme="purga"] {
@@ -398,19 +398,19 @@ body[data-form-theme="purga"] {
 }
 
 body[data-form-theme="sacra"] .page-backdrop {
-  background: radial-gradient(ellipse 120% 90% at 50% 15%, #f2ead2, #e2d19f 85%);
+  background: radial-gradient(ellipse 120% 90% at 50% 15%, #d6c69a, #ad9463 85%);
 }
 body[data-form-theme="sacra"] .page-backdrop .photo {
   background-image: url('assets/sacra-bg.jpg');
   background-position: center 30%;
-  opacity: 0.5;
-  filter: brightness(0.92) saturate(0.95);
+  opacity: 0.32;
+  filter: brightness(0.7) saturate(0.85);
 }
 body[data-form-theme="sacra"] .page-backdrop .side-light,
 body[data-form-theme="sacra"] .page-backdrop .side-dark,
 body[data-form-theme="sacra"] .page-backdrop .seam { opacity: 0; }
-body[data-form-theme="sacra"] .page-backdrop .scrim { background: rgba(242, 233, 207, 0.35); }
-body[data-form-theme="sacra"] .page-backdrop .rosette-mark { opacity: 0.10; }
+body[data-form-theme="sacra"] .page-backdrop .scrim { background: rgba(35, 26, 14, 0.22); }
+body[data-form-theme="sacra"] .page-backdrop .rosette-mark { opacity: 0.08; }
 
 body[data-form-theme="purga"] .page-backdrop {
   background: radial-gradient(ellipse 120% 90% at 50% 15%, #2a0a06, #050201 85%);
@@ -456,18 +456,18 @@ body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.16; }
 /* ---------- theme sections: paradis (Sacramentum) / enfer (Purgatum) ---------- */
 
 .theme-sacra {
-  background: radial-gradient(ellipse at 50% -20%, #fffdf5, #f3e9cc 65%);
+  background: radial-gradient(ellipse at 50% -20%, #e2d2a4, #c7b17c 65%);
   border: 1px solid var(--sacra-deep);
   border-radius: var(--radius-rune);
   padding: 36px;
-  box-shadow: 0 0 70px rgba(201, 162, 39, 0.14);
+  box-shadow: 0 0 50px rgba(138, 109, 31, 0.12);
 }
 .theme-sacra h3, .theme-sacra .combo-note, .theme-sacra p { color: var(--sacra-ink-dim); }
 .theme-sacra h3 { color: var(--sacra-ink); }
 .theme-sacra .combo-arrow { color: var(--sacra-deep); }
 .theme-sacra .combo-name { color: var(--sacra-ink-dim); }
 .theme-sacra .combo-key {
-  background: #fffaf0;
+  background: #ecdfb4;
   border-color: var(--sacra-deep);
   color: var(--sacra-ink);
 }
@@ -477,7 +477,7 @@ body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.16; }
   border-left-color: var(--sacra-deep);
   color: var(--sacra-ink-dim);
 }
-.theme-sacra .video-frame { background: #fffaf0; border-color: var(--sacra-deep); }
+.theme-sacra .video-frame { background: #ecdfb4; border-color: var(--sacra-deep); }
 .theme-sacra .video-placeholder { color: var(--sacra-ink-dim); }
 .theme-sacra .video-placeholder strong { color: var(--sacra-ink); }
 
