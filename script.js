@@ -44,3 +44,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btn.click();
 });
+
+// Bouton "Copier la séquence" : reconstruit la liste touche > touche > ... du combo
+// et la copie dans le presse-papier.
+document.querySelectorAll('.copy-btn').forEach((btn) => {
+  const defaultLabel = btn.textContent;
+
+  btn.addEventListener('click', async () => {
+    const block = btn.closest('.combo-block');
+    if (!block) return;
+
+    const keys = Array.from(block.querySelectorAll('.combo-key')).map((el) => el.textContent.trim());
+    const sequence = keys.join(' > ');
+
+    try {
+      await navigator.clipboard.writeText(sequence);
+      btn.textContent = 'Copié !';
+      btn.classList.add('is-copied');
+    } catch (err) {
+      btn.textContent = 'Échec de la copie';
+    }
+
+    setTimeout(() => {
+      btn.textContent = defaultLabel;
+      btn.classList.remove('is-copied');
+    }, 1800);
+  });
+});

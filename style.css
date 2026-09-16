@@ -641,20 +641,41 @@ body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.16; }
 
 .combo-block { margin-bottom: 48px; }
 
+.combo-block-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.combo-block-head h3 { margin-bottom: 4px; }
+
+.copy-btn {
+  flex: 0 0 auto;
+  background: transparent;
+  border: 1px solid var(--stone-700);
+  color: var(--parchment-dim);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.copy-btn:hover { border-color: var(--gold); color: var(--gold); }
+.copy-btn.is-copied { border-color: var(--gold); color: var(--gold); }
+
 .combo-block h3 { margin-bottom: 4px; }
 .combo-block .combo-note { font-size: 0.85rem; margin-top: 0; margin-bottom: 18px; }
 
 .combo-row {
   display: flex;
   align-items: flex-start;
-  gap: 2px;
-  overflow-x: auto;
-  padding: 8px 4px 18px;
-  scroll-snap-type: x proximity;
+  flex-wrap: wrap;
+  gap: 10px 2px;
+  padding: 8px 4px 4px;
 }
 
 .combo-step {
-  scroll-snap-align: start;
   flex: 0 0 auto;
   width: 92px;
   text-align: center;
