@@ -774,7 +774,7 @@ body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.16; }
   padding: 14px;
 }
 
-.addon-card .combo-icon { margin: 2px 0 0; }
+.addon-card .combo-icon { width: 60px; height: 60px; margin: 2px 0 0; }
 
 .addon-card h4 {
   font-family: var(--font-display);
