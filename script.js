@@ -28,3 +28,24 @@ document.querySelectorAll('[data-tab-group]').forEach((group) => {
     });
   });
 });
+
+// Arrivée depuis un lien externe (ex: page d'accueil) avec #sacramentum ou #purgatum :
+// on active directement le bon onglet de forme au chargement de la page Combos.
+document.addEventListener('DOMContentLoaded', () => {
+  const hashToForm = {
+    '#sacramentum': 'form-sacra',
+    '#purgatum': 'form-purga',
+  };
+  const targetForm = hashToForm[window.location.hash];
+  if (!targetForm) return;
+
+  const btn = document.querySelector(`.tab-btn[data-tab-target="${targetForm}"]`);
+  if (!btn) return;
+
+  btn.click();
+
+  const panel = document.getElementById(targetForm);
+  if (panel) {
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
