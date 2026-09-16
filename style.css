@@ -259,6 +259,13 @@ footer.site-footer a:hover { color: var(--gold); }
   max-width: 46ch;
 }
 
+.hero-tag a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--parchment);
+}
+.hero-tag a:hover { color: var(--gold); }
+
 .hero-split {
   display: flex;
   gap: 16px;
