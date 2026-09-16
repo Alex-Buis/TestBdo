@@ -31,9 +31,10 @@ body {
   margin: 0;
   background: var(--stone-950);
   background-image:
-    radial-gradient(ellipse at 20% -10%, rgba(201, 162, 39, 0.08), transparent 55%),
-    radial-gradient(ellipse at 85% 10%, rgba(194, 58, 34, 0.10), transparent 50%),
+    radial-gradient(ellipse 70% 55% at 0% 0%, rgba(255, 250, 230, 0.06), transparent 60%),
+    radial-gradient(ellipse 70% 55% at 100% 100%, rgba(194, 58, 34, 0.10), transparent 60%),
     repeating-radial-gradient(circle at 0 0, rgba(236, 229, 214, 0.025) 0, rgba(236, 229, 214, 0.025) 1px, transparent 1px, transparent 3px);
+  background-attachment: fixed;
   color: var(--parchment);
   font-family: var(--font-body);
   font-size: 16px;
@@ -132,44 +133,138 @@ footer.site-footer .wrap {
 
 /* ---------- hero / rosette ---------- */
 
+/* ---------- hero scene: ange (lumière) / démon (braise) ---------- */
+
 .hero {
   position: relative;
-  padding: 96px 0 72px;
+  min-height: 560px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 56px;
   overflow: hidden;
+  border-bottom: 1px solid var(--stone-700);
 }
 
-.rosette {
+.hero-scene {
   position: absolute;
-  top: -220px;
-  right: -160px;
-  width: 620px;
-  height: 620px;
-  border-radius: 50%;
+  inset: 0;
+  z-index: 0;
+  background: var(--stone-950);
+}
+
+.hero-scene .side-light,
+.hero-scene .side-dark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 62%;
+}
+
+.hero-scene .side-light {
+  left: 0;
   background:
-    repeating-conic-gradient(from 0deg,
-      rgba(236, 229, 214, 0.10) 0deg 4deg,
-      transparent 4deg 18deg);
-  -webkit-mask-image: radial-gradient(circle, black 62%, transparent 64%);
-  mask-image: radial-gradient(circle, black 62%, transparent 64%);
+    radial-gradient(ellipse 70% 60% at 25% 15%, rgba(255, 255, 255, 0.55), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 55%, rgba(255, 248, 224, 0.25), transparent 65%),
+    linear-gradient(100deg, rgba(243, 233, 204, 0.14), transparent 65%);
+}
+
+.hero-scene .side-dark {
+  right: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 75% 20%, rgba(194, 58, 34, 0.32), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 90% 60%, rgba(74, 13, 8, 0.6), transparent 65%),
+    linear-gradient(260deg, rgba(8, 3, 2, 0.55), transparent 65%);
+}
+
+.hero-scene .spires {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 46%;
+  height: 62%;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  opacity: 0.9;
+}
+
+.hero-scene .spire {
+  flex: 0 0 auto;
+  background: linear-gradient(180deg, #24100c, #0a0403);
+  clip-path: polygon(50% 0%, 100% 28%, 100% 100%, 0% 100%, 0% 28%);
+  box-shadow: 0 0 24px rgba(194, 58, 34, 0.18);
+}
+
+.hero-scene .spire:nth-child(1) { width: 34px; height: 58%; }
+.hero-scene .spire:nth-child(2) { width: 46px; height: 82%; }
+.hero-scene .spire:nth-child(3) { width: 30px; height: 46%; }
+.hero-scene .spire:nth-child(4) { width: 54px; height: 96%; }
+.hero-scene .spire:nth-child(5) { width: 36px; height: 68%; }
+.hero-scene .spire:nth-child(6) { width: 44px; height: 78%; }
+
+.hero-scene .seam {
+  position: absolute;
+  left: 38%;
+  width: 24%;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(18, 16, 25, 0.92) 50%, transparent);
+}
+
+.hero-scene .rosette-mark {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: repeating-conic-gradient(from 0deg, rgba(236, 229, 214, 0.10) 0deg 4deg, transparent 4deg 18deg);
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 64%);
+  mask-image: radial-gradient(circle, black 60%, transparent 64%);
   animation: rosette-spin 90s linear infinite;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 @keyframes rosette-spin {
-  to { transform: rotate(360deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
 }
 
-.hero-inner { position: relative; z-index: 1; max-width: 640px; }
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 0.25em;
+}
+
+.hero-title .flourish {
+  width: 46px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.hero-title .flourish.right { background: linear-gradient(90deg, var(--gold), transparent); }
 
 .hero-tag {
-  font-size: 1.05rem;
-  margin-top: 0;
+  font-size: 1.02rem;
+  margin: 0 auto;
+  max-width: 46ch;
 }
 
 .hero-split {
   display: flex;
   gap: 16px;
-  margin-top: 40px;
+  margin: 40px auto 0;
+  max-width: 640px;
+  text-align: left;
   flex-wrap: wrap;
 }
 
