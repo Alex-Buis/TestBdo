@@ -298,13 +298,26 @@ footer.site-footer .wrap {
 
 /* ---------- page backdrop (Combos) : base = split, Sacramentum = plein ange, Purgatum = plein démon ---------- */
 
+/* ---------- page backdrop (Combos) : base = identique à l'accueil, Sacramentum = photo ange, Purgatum = photo démon ---------- */
+
 .page-backdrop {
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
   background: var(--stone-950);
+  overflow: hidden;
   transition: background 0.7s ease;
+}
+
+.page-backdrop .photo {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/hero-seraph.png');
+  background-size: cover;
+  background-position: center 28%;
+  opacity: 0.92;
+  transition: opacity 0.6s ease, filter 0.6s ease, background-image 0.1s;
 }
 
 .page-backdrop .side-light,
@@ -317,26 +330,36 @@ footer.site-footer .wrap {
 }
 
 .page-backdrop .side-light,
-.page-backdrop .side-dark { width: 65%; }
+.page-backdrop .side-dark { width: 78%; }
 
 .page-backdrop .side-light {
   left: 0;
+  mix-blend-mode: screen;
+  opacity: 0.55;
   background:
-    radial-gradient(ellipse 80% 70% at 20% 8%, rgba(255, 255, 255, 0.45), transparent 62%),
-    radial-gradient(ellipse 60% 55% at 5% 55%, rgba(255, 248, 224, 0.25), transparent 68%);
+    radial-gradient(ellipse 85% 75% at 20% 10%, rgba(255, 255, 255, 0.85), transparent 62%),
+    radial-gradient(ellipse 65% 60% at 5% 55%, rgba(255, 248, 224, 0.5), transparent 68%);
 }
 
 .page-backdrop .side-dark {
   right: 0;
+  mix-blend-mode: multiply;
+  opacity: 0.8;
   background:
-    radial-gradient(ellipse 80% 70% at 80% 12%, rgba(211, 64, 38, 0.30), transparent 62%),
-    radial-gradient(ellipse 60% 55% at 95% 55%, rgba(74, 13, 8, 0.50), transparent 68%);
+    radial-gradient(ellipse 85% 75% at 80% 15%, rgba(211, 64, 38, 0.55), transparent 62%),
+    radial-gradient(ellipse 70% 60% at 95% 60%, rgba(74, 13, 8, 0.85), transparent 68%);
 }
 
 .page-backdrop .seam {
-  left: 35%;
+  left: 32%;
   width: 30%;
-  background: linear-gradient(90deg, transparent, rgba(18, 16, 25, 0.45) 50%, transparent);
+  background: linear-gradient(90deg, transparent, rgba(18, 16, 25, 0.55) 50%, transparent);
+}
+
+.page-backdrop .scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 8, 13, 0.42);
 }
 
 .page-backdrop .rosette-mark {
@@ -347,21 +370,22 @@ footer.site-footer .wrap {
   height: 480px;
   transform: translateX(-50%);
   border-radius: 50%;
-  background: repeating-conic-gradient(from 0deg, rgba(236, 229, 214, 0.12) 0deg 4deg, transparent 4deg 18deg);
+  background: repeating-conic-gradient(from 0deg, rgba(236, 229, 214, 0.14) 0deg 4deg, transparent 4deg 18deg);
   -webkit-mask-image: radial-gradient(circle, black 60%, transparent 64%);
   mask-image: radial-gradient(circle, black 60%, transparent 64%);
   animation: rosette-spin 90s linear infinite;
-  opacity: 0.4;
+  opacity: 0.45;
+  mix-blend-mode: overlay;
   transition: opacity 0.5s ease;
 }
 
 body[data-form-theme="sacra"] {
-  --stone-950: #fdfaf0;
-  --stone-900: #f6efd9;
-  --stone-800: #efe4c4;
-  --stone-700: #d9c48f;
+  --stone-950: #f2e9cf;
+  --stone-900: #ece0bd;
+  --stone-800: #e3d4a4;
+  --stone-700: #cdb87e;
   --parchment: #2b2013;
-  --parchment-dim: #6b5c3a;
+  --parchment-dim: #5c4d2c;
 }
 
 body[data-form-theme="purga"] {
@@ -369,20 +393,34 @@ body[data-form-theme="purga"] {
 }
 
 body[data-form-theme="sacra"] .page-backdrop {
-  background: radial-gradient(ellipse 120% 90% at 50% 0%, #fffdf5, #f3e9cc 78%);
+  background: radial-gradient(ellipse 120% 90% at 50% 15%, #f2ead2, #e2d19f 85%);
+}
+body[data-form-theme="sacra"] .page-backdrop .photo {
+  background-image: url('assets/sacra-bg.jpg');
+  background-position: center 30%;
+  opacity: 0.5;
+  filter: brightness(0.92) saturate(0.95);
 }
 body[data-form-theme="sacra"] .page-backdrop .side-light,
 body[data-form-theme="sacra"] .page-backdrop .side-dark,
 body[data-form-theme="sacra"] .page-backdrop .seam { opacity: 0; }
-body[data-form-theme="sacra"] .page-backdrop .rosette-mark { opacity: 0.12; }
+body[data-form-theme="sacra"] .page-backdrop .scrim { background: rgba(242, 233, 207, 0.35); }
+body[data-form-theme="sacra"] .page-backdrop .rosette-mark { opacity: 0.10; }
 
 body[data-form-theme="purga"] .page-backdrop {
-  background: radial-gradient(ellipse 120% 90% at 50% 0%, #2a0a06, #050201 78%);
+  background: radial-gradient(ellipse 120% 90% at 50% 15%, #2a0a06, #050201 85%);
+}
+body[data-form-theme="purga"] .page-backdrop .photo {
+  background-image: url('assets/purga-bg.png');
+  background-position: center 25%;
+  opacity: 0.6;
+  filter: brightness(0.9);
 }
 body[data-form-theme="purga"] .page-backdrop .side-light,
 body[data-form-theme="purga"] .page-backdrop .side-dark,
 body[data-form-theme="purga"] .page-backdrop .seam { opacity: 0; }
-body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.18; }
+body[data-form-theme="purga"] .page-backdrop .scrim { background: rgba(9, 3, 2, 0.45); }
+body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.16; }
 
 /* ---------- divider ---------- */
 
@@ -589,10 +627,10 @@ body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.18; }
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--stone-950);
+  color: #17140d;
 }
 
-.combo-step.base .combo-icon { background: linear-gradient(160deg, var(--parchment), #cfc6b2); }
+.combo-step.base .combo-icon { background: linear-gradient(160deg, #ece5d6, #cfc6b2); }
 .combo-step.sacra .combo-icon { background: linear-gradient(160deg, var(--sacra-glow), var(--sacra)); }
 .combo-step.purga .combo-icon { background: linear-gradient(160deg, var(--purga-glow), var(--purga)); }
 
