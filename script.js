@@ -15,6 +15,11 @@ document.querySelectorAll('[data-tab-group]').forEach((group) => {
       panelScope.querySelectorAll('[data-tab-panel]').forEach((panel) => {
         panel.classList.toggle('is-active', panel.id === targetId);
       });
+
+      // Bascule le thème de fond de page (ange / démon) si le bouton le déclare.
+      if (btn.dataset.formTheme) {
+        document.body.dataset.formTheme = btn.dataset.formTheme;
+      }
     });
   });
 });

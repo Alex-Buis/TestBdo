@@ -296,6 +296,94 @@ footer.site-footer .wrap {
 .form-card.purga h3 { color: var(--purga-glow); }
 .form-card.purga p { color: var(--purga-ink-dim); }
 
+/* ---------- page backdrop (Combos) : base = split, Sacramentum = plein ange, Purgatum = plein démon ---------- */
+
+.page-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--stone-950);
+  transition: background 0.7s ease;
+}
+
+.page-backdrop .side-light,
+.page-backdrop .side-dark,
+.page-backdrop .seam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: opacity 0.5s ease;
+}
+
+.page-backdrop .side-light,
+.page-backdrop .side-dark { width: 65%; }
+
+.page-backdrop .side-light {
+  left: 0;
+  background:
+    radial-gradient(ellipse 80% 70% at 20% 8%, rgba(255, 255, 255, 0.45), transparent 62%),
+    radial-gradient(ellipse 60% 55% at 5% 55%, rgba(255, 248, 224, 0.25), transparent 68%);
+}
+
+.page-backdrop .side-dark {
+  right: 0;
+  background:
+    radial-gradient(ellipse 80% 70% at 80% 12%, rgba(211, 64, 38, 0.30), transparent 62%),
+    radial-gradient(ellipse 60% 55% at 95% 55%, rgba(74, 13, 8, 0.50), transparent 68%);
+}
+
+.page-backdrop .seam {
+  left: 35%;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, rgba(18, 16, 25, 0.45) 50%, transparent);
+}
+
+.page-backdrop .rosette-mark {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  width: 480px;
+  height: 480px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: repeating-conic-gradient(from 0deg, rgba(236, 229, 214, 0.12) 0deg 4deg, transparent 4deg 18deg);
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 64%);
+  mask-image: radial-gradient(circle, black 60%, transparent 64%);
+  animation: rosette-spin 90s linear infinite;
+  opacity: 0.4;
+  transition: opacity 0.5s ease;
+}
+
+body[data-form-theme="sacra"] {
+  --stone-950: #fdfaf0;
+  --stone-900: #f6efd9;
+  --stone-800: #efe4c4;
+  --stone-700: #d9c48f;
+  --parchment: #2b2013;
+  --parchment-dim: #6b5c3a;
+}
+
+body[data-form-theme="purga"] {
+  --stone-700: #5c1710;
+}
+
+body[data-form-theme="sacra"] .page-backdrop {
+  background: radial-gradient(ellipse 120% 90% at 50% 0%, #fffdf5, #f3e9cc 78%);
+}
+body[data-form-theme="sacra"] .page-backdrop .side-light,
+body[data-form-theme="sacra"] .page-backdrop .side-dark,
+body[data-form-theme="sacra"] .page-backdrop .seam { opacity: 0; }
+body[data-form-theme="sacra"] .page-backdrop .rosette-mark { opacity: 0.12; }
+
+body[data-form-theme="purga"] .page-backdrop {
+  background: radial-gradient(ellipse 120% 90% at 50% 0%, #2a0a06, #050201 78%);
+}
+body[data-form-theme="purga"] .page-backdrop .side-light,
+body[data-form-theme="purga"] .page-backdrop .side-dark,
+body[data-form-theme="purga"] .page-backdrop .seam { opacity: 0; }
+body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.18; }
+
 /* ---------- divider ---------- */
 
 .divider {

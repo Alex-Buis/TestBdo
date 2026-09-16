@@ -6,7 +6,14 @@
 <title>Combos | Seraph</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-form-theme="base">
+
+<div class="page-backdrop" aria-hidden="true">
+  <div class="side-light"></div>
+  <div class="side-dark"></div>
+  <div class="rosette-mark"></div>
+  <div class="seam"></div>
+</div>
 
 <header class="site-nav">
   <div class="wrap">
@@ -29,7 +36,7 @@
   <!-- Onglets PvE / PvP -->
   <div class="tab-row" data-tab-group data-panel-scope="#content-pve-pvp">
     <button class="tab-btn" data-tab-target="panel-pve" aria-selected="true">PvE</button>
-    <button class="tab-btn" data-tab-target="panel-pvp" aria-selected="false">PvP</button>
+    <button class="tab-btn" data-tab-target="panel-pvp" aria-selected="false" data-form-theme="base">PvP</button>
   </div>
 
   <div id="content-pve-pvp">
@@ -39,9 +46,9 @@
 
       <!-- Onglets Base / Sacramentum / Purgatum -->
       <div class="tab-row" data-tab-group data-panel-scope="#content-forms-pve">
-        <button class="tab-btn" data-tab-target="form-base" aria-selected="true">Forme de base</button>
-        <button class="tab-btn sacra" data-tab-target="form-sacra" aria-selected="false">Sacramentum</button>
-        <button class="tab-btn purga" data-tab-target="form-purga" aria-selected="false">Purgatum</button>
+        <button class="tab-btn" data-tab-target="form-base" aria-selected="true" data-form-theme="base">Forme de base</button>
+        <button class="tab-btn sacra" data-tab-target="form-sacra" aria-selected="false" data-form-theme="sacra">Sacramentum</button>
+        <button class="tab-btn purga" data-tab-target="form-purga" aria-selected="false" data-form-theme="purga">Purgatum</button>
       </div>
 
       <div id="content-forms-pve">
