@@ -43,9 +43,4 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!btn) return;
 
   btn.click();
-
-  const panel = document.getElementById(targetForm);
-  if (panel) {
-    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
 });
