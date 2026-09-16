@@ -7,12 +7,16 @@
   --stone-700: #37313f;
   --parchment: #ece5d6;
   --parchment-dim: #b3ab9c;
-  --sacra: #9576d1;
-  --sacra-deep: #5a3f8c;
-  --sacra-glow: #d3c2f2;
-  --purga: #cf5433;
-  --purga-deep: #7c2919;
-  --purga-glow: #f5a37c;
+  --sacra: #cdae4a;
+  --sacra-deep: #8a6d1f;
+  --sacra-glow: #fff8e6;
+  --sacra-ink: #2b2013;
+  --sacra-ink-dim: #6b5c3a;
+  --purga: #c23a22;
+  --purga-deep: #4a0d08;
+  --purga-glow: #ff8a5c;
+  --purga-ink: #f4d9c9;
+  --purga-ink-dim: #c98f79;
   --gold: #bd9752;
   --font-display: 'Cinzel', serif;
   --font-body: 'IBM Plex Sans', sans-serif;
@@ -27,8 +31,8 @@ body {
   margin: 0;
   background: var(--stone-950);
   background-image:
-    radial-gradient(ellipse at 20% -10%, rgba(149, 118, 209, 0.10), transparent 55%),
-    radial-gradient(ellipse at 85% 10%, rgba(207, 84, 51, 0.08), transparent 50%),
+    radial-gradient(ellipse at 20% -10%, rgba(201, 162, 39, 0.08), transparent 55%),
+    radial-gradient(ellipse at 85% 10%, rgba(194, 58, 34, 0.10), transparent 50%),
     repeating-radial-gradient(circle at 0 0, rgba(236, 229, 214, 0.025) 0, rgba(236, 229, 214, 0.025) 1px, transparent 1px, transparent 3px);
   color: var(--parchment);
   font-family: var(--font-body);
@@ -181,15 +185,26 @@ footer.site-footer .wrap {
 
 .form-card:hover { transform: translateY(-3px); }
 
-.form-card.sacra { border-color: var(--sacra-deep); background: linear-gradient(180deg, rgba(149,118,209,0.08), transparent); }
-.form-card.sacra:hover { border-color: var(--sacra); }
-.form-card.purga { border-color: var(--purga-deep); background: linear-gradient(180deg, rgba(207,84,51,0.08), transparent); }
-.form-card.purga:hover { border-color: var(--purga); }
-
 .form-card h3 { margin-bottom: 6px; }
-.form-card.sacra h3 { color: var(--sacra-glow); }
-.form-card.purga h3 { color: var(--purga-glow); }
 .form-card p { margin: 0; font-size: 0.9rem; }
+
+.form-card.sacra {
+  border-color: var(--sacra-deep);
+  background: linear-gradient(165deg, #fff9ea, #ece0bd);
+  box-shadow: 0 0 42px rgba(201, 162, 39, 0.22);
+}
+.form-card.sacra:hover { border-color: var(--sacra); }
+.form-card.sacra h3 { color: var(--sacra-ink); }
+.form-card.sacra p { color: var(--sacra-ink-dim); }
+
+.form-card.purga {
+  border-color: var(--purga-deep);
+  background: linear-gradient(165deg, #2a0906, #0d0403);
+  box-shadow: 0 0 42px rgba(194, 58, 34, 0.28);
+}
+.form-card.purga:hover { border-color: var(--purga); }
+.form-card.purga h3 { color: var(--purga-glow); }
+.form-card.purga p { color: var(--purga-ink-dim); }
 
 /* ---------- divider ---------- */
 
@@ -216,6 +231,60 @@ footer.site-footer .wrap {
   opacity: 0.75;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
+
+/* ---------- theme sections: paradis (Sacramentum) / enfer (Purgatum) ---------- */
+
+.theme-sacra {
+  background: radial-gradient(ellipse at 50% -20%, #fffdf5, #f3e9cc 65%);
+  border: 1px solid var(--sacra-deep);
+  border-radius: var(--radius-rune);
+  padding: 36px;
+  box-shadow: 0 0 70px rgba(201, 162, 39, 0.14);
+}
+.theme-sacra h3, .theme-sacra .combo-note, .theme-sacra p { color: var(--sacra-ink-dim); }
+.theme-sacra h3 { color: var(--sacra-ink); }
+.theme-sacra .combo-arrow { color: var(--sacra-deep); }
+.theme-sacra .combo-name { color: var(--sacra-ink-dim); }
+.theme-sacra .combo-key {
+  background: #fffaf0;
+  border-color: var(--sacra-deep);
+  color: var(--sacra-ink);
+}
+.theme-sacra .callout {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: var(--sacra-deep);
+  border-left-color: var(--sacra-deep);
+  color: var(--sacra-ink-dim);
+}
+.theme-sacra .video-frame { background: #fffaf0; border-color: var(--sacra-deep); }
+.theme-sacra .video-placeholder { color: var(--sacra-ink-dim); }
+.theme-sacra .video-placeholder strong { color: var(--sacra-ink); }
+
+.theme-purga {
+  background: radial-gradient(ellipse at 50% -20%, #2a0a06, #0b0403 65%);
+  border: 1px solid var(--purga-deep);
+  border-radius: var(--radius-rune);
+  padding: 36px;
+  box-shadow: 0 0 80px rgba(194, 58, 34, 0.22);
+}
+.theme-purga h3 { color: var(--purga-glow); }
+.theme-purga .combo-note, .theme-purga p { color: var(--purga-ink-dim); }
+.theme-purga .combo-arrow { color: var(--purga-deep); }
+.theme-purga .combo-name { color: var(--purga-ink-dim); }
+.theme-purga .combo-key {
+  background: #170705;
+  border-color: var(--purga-deep);
+  color: var(--purga-glow);
+}
+.theme-purga .callout {
+  background: rgba(0, 0, 0, 0.35);
+  border-color: var(--purga-deep);
+  border-left-color: var(--purga-glow);
+  color: var(--purga-ink-dim);
+}
+.theme-purga .video-frame { background: #170705; border-color: var(--purga-deep); }
+.theme-purga .video-placeholder { color: var(--purga-ink-dim); }
+.theme-purga .video-placeholder strong { color: var(--purga-glow); }
 
 /* ---------- feature strip ---------- */
 
@@ -277,7 +346,7 @@ footer.site-footer .wrap {
   border-color: var(--parchment);
 }
 
-.tab-btn.sacra[aria-selected="true"] { background: var(--sacra); border-color: var(--sacra); color: #170f26; }
+.tab-btn.sacra[aria-selected="true"] { background: var(--sacra); border-color: var(--sacra); color: var(--sacra-ink); }
 .tab-btn.purga[aria-selected="true"] { background: var(--purga); border-color: var(--purga); color: #200a04; }
 
 .tab-panel { display: none; }
@@ -415,16 +484,8 @@ footer.site-footer .wrap {
 
 .lore-panel {
   border-radius: var(--radius-rune);
-  border: 1px solid var(--stone-700);
-  padding: 28px;
+  overflow: hidden;
 }
-
-.lore-panel.sacra { border-color: var(--sacra-deep); }
-.lore-panel.purga { border-color: var(--purga-deep); }
-
-
-.lore-panel.sacra h3 { color: var(--sacra-glow); }
-.lore-panel.purga h3 { color: var(--purga-glow); }
 
 .lore-note {
   font-size: 0.82rem;
