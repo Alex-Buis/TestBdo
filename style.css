@@ -131,7 +131,12 @@ footer.site-footer .wrap {
   gap: 12px;
 }
 
-/* ---------- hero / rosette ---------- */
+footer.site-footer a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--parchment-dim);
+}
+footer.site-footer a:hover { color: var(--gold); }
 
 /* ---------- hero scene: ange (lumière) / démon (braise) ---------- */
 
