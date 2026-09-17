@@ -4320,3 +4320,27 @@ body[data-form-theme="maegu-eveil"] .page-backdrop .rosette-mark { opacity: 0.08
 .form-card.agent p { color: #414b58; }
 .agent-backdrop { background: radial-gradient(ellipse 120% 90% at 50% 15%, #101419, #080a0c 85%); }
 .agent-backdrop .side-light, .agent-backdrop .side-dark, .agent-backdrop .seam { opacity: 0; }
+
+/* ===== Photos ajoutées pour Musa / Tamer / Berserker / Sorceress / Ranger / Warrior ===== */
+.hero-scene.musa-scene .photo { background-image: url('assets/musa/hero.jpg'); background-size: cover; background-position: center 22%; opacity: 0.9; }
+body[data-form-theme="musa-succ"] .page-backdrop .photo { background-image: url('assets/musa/succession-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="musa-eveil"] .page-backdrop .photo { background-image: url('assets/musa/eveil-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
+
+.hero-scene.tamer-scene .photo { background-image: url('assets/tamer/hero.jpg'); background-size: cover; background-position: center 22%; opacity: 0.9; }
+body[data-form-theme="tamer-succ"] .page-backdrop .photo { background-image: url('assets/tamer/succession-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="tamer-eveil"] .page-backdrop .photo { background-image: url('assets/tamer/eveil-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
+
+.hero-scene.berserker-scene .photo { background-image: url('assets/berserker/hero.jpg'); background-size: cover; background-position: center 22%; opacity: 0.9; }
+body[data-form-theme="berserker-succ"] .page-backdrop .photo { background-image: url('assets/berserker/succession-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.8); }
+body[data-form-theme="berserker-eveil"] .page-backdrop .photo { background-image: url('assets/berserker/eveil-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
+
+.hero-scene.sorceress-scene .photo { background-image: url('assets/sorceress/hero.jpg'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+body[data-form-theme="sorceress-succ"] .page-backdrop .photo { background-image: url('assets/sorceress/succession-bg.png'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.8); }
+body[data-form-theme="sorceress-eveil"] .page-backdrop .photo { background-image: url('assets/sorceress/eveil-bg.png'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.8); }
+
+.hero-scene.ranger-scene .photo { background-image: url('assets/ranger/hero.jpg'); background-size: cover; background-position: center 20%; opacity: 0.9; }
+body[data-form-theme="ranger-eveil"] .page-backdrop .photo { background-image: url('assets/ranger/eveil-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
+
+.hero-scene.warrior-scene .photo { background-image: url('assets/warrior/hero.png'); background-size: cover; background-position: center 22%; opacity: 0.9; }
+body[data-form-theme="warrior-succ"] .page-backdrop .photo { background-image: url('assets/warrior/succession-bg.png'); background-size: cover; background-position: center 18%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="warrior-eveil"] .page-backdrop .photo { background-image: url('assets/warrior/eveil-bg.jpg'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
