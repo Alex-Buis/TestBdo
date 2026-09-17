@@ -346,7 +346,6 @@ footer.site-footer a:hover { color: var(--gold); }
 .hub-cards-section {
   position: relative;
   z-index: 0;
-  overflow: hidden;
   padding-bottom: 40px;
 }
 
