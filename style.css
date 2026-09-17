@@ -151,6 +151,70 @@ header.site-nav {
 }
 .site-nav a.nav-back:hover { opacity: 1; }
 
+/* ---------- extras du header hub : compteur + lien chaîne ---------- */
+
+.nav-extras {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-count {
+  font-size: 0.85rem;
+  color: var(--parchment-dim);
+  white-space: nowrap;
+}
+
+.nav-count strong {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 18px;
+  background: var(--stone-700);
+}
+
+.nav-channel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--parchment-dim);
+  border: 1px solid var(--stone-700);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.nav-channel:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.nav-channel .play-mark {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid var(--gold);
+  flex: 0 0 auto;
+}
+
+@media (max-width: 860px) {
+  .nav-count { display: none; }
+  .nav-divider { display: none; }
+}
+
+@media (max-width: 640px) {
+  .nav-extras { width: 100%; order: 3; justify-content: flex-start; }
+  .nav-channel { font-size: 0.76rem; padding: 6px 14px; }
+}
+
 @media (max-width: 640px) {
   .site-nav .wrap {
     height: auto;
@@ -853,10 +917,23 @@ body[data-form-theme="eveil"] .page-backdrop .rosette-mark { opacity: 0.14; }
 
 .page-head {
   padding: 64px 0 32px;
-  border-bottom: 1px solid var(--stone-700);
 }
 
 .page-head p { margin-top: 8px; }
+
+.page-head-frame {
+  border: 1px solid var(--stone-700);
+  border-radius: var(--radius-rune);
+  background: rgba(18, 16, 25, 0.55);
+  backdrop-filter: blur(4px);
+  padding: 40px 44px 36px;
+  max-width: 620px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+  .page-head-frame { padding: 28px 24px 26px; }
+}
 
 /* ---------- recherche de classe (hub) ---------- */
 
