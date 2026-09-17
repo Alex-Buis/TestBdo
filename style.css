@@ -142,14 +142,32 @@ header.site-nav {
   border-color: var(--gold);
 }
 
-.site-nav nav a.nav-back {
+.site-nav a.nav-back {
   opacity: 0.6;
   font-size: 0.82rem;
   padding-right: 16px;
   margin-right: 4px;
   border-right: 1px solid var(--stone-700);
 }
-.site-nav nav a.nav-back:hover { opacity: 1; }
+.site-nav a.nav-back:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .site-nav .wrap {
+    height: auto;
+    min-height: 56px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    gap: 6px 16px;
+  }
+  .wordmark { font-size: 0.95rem; }
+  .site-nav nav { gap: 18px; }
+  .site-nav a.nav-back {
+    font-size: 0.78rem;
+    padding-right: 12px;
+    margin-right: 0;
+    border-right: none;
+  }
+}
 
 footer.site-footer {
   border-top: 1px solid var(--stone-700);
