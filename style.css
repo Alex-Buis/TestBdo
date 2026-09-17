@@ -2985,3 +2985,44 @@ body[data-form-theme="corsair-eveil"] .page-backdrop .photo { background-image: 
 
 .scholar-backdrop .photo { background-image: url('assets/scholar/scholar-ascension-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.85); }
 .hero-scene.scholar-backdrop .photo { background-image: url('assets/scholar/scholar-hero.jpg'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+/* ===== Sélecteur de langue (FR/EN) ===== */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+.lang-switch button {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 5px 8px;
+  border-radius: 6px;
+  color: rgba(241, 237, 230, 0.55);
+  background: transparent;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.lang-switch button:hover {
+  color: rgba(241, 237, 230, 0.9);
+}
+.lang-switch button.is-active {
+  color: #f1ede6;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.lang-switch .flag {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* Bascule de langue : le FR est affiché par défaut, le JS révèle l'EN */
+[data-i18n="en"] { }
+html[data-lang="en"] [data-i18n="fr"] { display: none !important; }
+html[data-lang="en"] [data-i18n="en"] { display: revert !important; }

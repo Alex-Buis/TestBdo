@@ -16,18 +16,22 @@
 
 <header class="site-nav">
   <div class="wrap">
-    <a href="../index.html" class="nav-back">Toutes les classes</a>
+    <a href="../index.html" class="nav-back"><span data-i18n="fr">Toutes les classes</span><span data-i18n="en" hidden>All classes</span></a>
     <a class="wordmark" href="index.html">Dead<span>eye</span></a>
     <nav>
-      <a href="index.html">Accueil</a>
+      <a href="index.html"><span data-i18n="fr">Accueil</span><span data-i18n="en" hidden>Home</span></a>
       <a href="combos.html" aria-current="page">Combos</a>
     </nav>
+      <div class="lang-switch">
+        <button type="button" data-lang="fr"><span class="flag">🇫🇷</span>FR</button>
+        <button type="button" data-lang="en"><span class="flag">🇬🇧</span>EN</button>
+      </div>
   </div>
 </header>
 
 <div class="page-head wrap">
   <h2>Combos</h2>
-  <p>Icône → touche → sort. Clavier QWERTY. Contenu à venir.</p>
+  <p><span data-i18n="fr">Icône → touche → sort. Clavier QWERTY. Contenu à venir.</span><span data-i18n="en" hidden>Icon → key → skill. QWERTY keyboard. Content coming soon.</span></p>
 </div>
 
 <div class="wrap">
@@ -47,17 +51,17 @@
 
         <div class="video-frame">
           <div class="video-placeholder">
-            <strong>Vidéo à intégrer</strong>
-            Remplace ce bloc par l'iframe YouTube de la vidéo de combo.
+            <strong><span data-i18n="fr">Vidéo à intégrer</span><span data-i18n="en" hidden>Video to embed</span></strong>
+            <span data-i18n="fr">Remplace ce bloc par l'iframe YouTube de la vidéo de combo.</span><span data-i18n="en" hidden>Replace this block with the YouTube iframe of the combo video.</span>
           </div>
         </div>
 
         <div class="combo-block">
           <div class="combo-block-head">
-            <h3>Combo principal</h3>
+            <h3><span data-i18n="fr">Combo principal</span><span data-i18n="en" hidden>Main combo</span></h3>
             <button class="copy-btn" type="button" data-copy-status="Copier la séquence">Copier la séquence</button>
           </div>
-          <p class="combo-note">Combo full DPS le plus optimal (Perfect Storm en finisher).</p>
+          <p class="combo-note"><span data-i18n="fr">Combo full DPS le plus optimal (Perfect Storm en finisher).</span><span data-i18n="en" hidden>Most optimal full DPS combo (Perfect Storm finisher).</span></p>
 
           <div class="combo-row">
             <div class="combo-step deadeye"><span class="combo-icon">?</span><span class="combo-key">Shift+RMB</span><span class="combo-name">—</span></div>
@@ -77,25 +81,34 @@
             <div class="combo-step deadeye"><span class="combo-icon">?</span><span class="combo-key">F</span><span class="combo-name">Perfect Storm</span></div>
           </div>
 
-          <div class="callout">
+          <div class="callout" data-i18n="fr">
             Priorité : <strong>Shift+RMB</strong> (gros dégâts + DP shred). <strong>Shift+LMB → Shift+F</strong> (meilleur DPS instantané). <strong>Perfect Storm</strong> (rabam) donne le DPS soutenu le plus élevé.
           </div>
-          <div class="callout">
+          <div class="callout" data-i18n="en" hidden>
+            Priority: <strong>Shift+RMB</strong> (high damage + DP shred). <strong>Shift+LMB → Shift+F</strong> (best instant DPS). <strong>Perfect Storm</strong> (rabam) gives the highest sustained DPS.
+          </div>
+          <div class="callout" data-i18n="fr">
             <strong>Shift+F</strong> seul est un peu plus lent et moins puissant que le rabam. <strong>RMB</strong> et <strong>Shift+X</strong> servent de filler ; <strong>W+F</strong> sert au repositionnement (comme A/D+LMB, mais moins optimal si le dash du rabam suffit). <strong>W+RMB</strong> n'est utile que pour la mobilité en engageant un pack à distance.
           </div>
-          <div class="callout">
+          <div class="callout" data-i18n="en" hidden>
+            <strong>Shift+F</strong> alone is a bit slower and weaker than the rabam. <strong>RMB</strong> and <strong>Shift+X</strong> are fillers; <strong>W+F</strong> is for repositioning (like A/D+LMB, but less optimal if the rabam dash is enough). <strong>W+RMB</strong> is only useful for mobility when engaging a pack from afar.
+          </div>
+          <div class="callout" data-i18n="fr">
             Sur un perso <strong>full hard capped (vicious shadow AP)</strong>, le combo se simplifie : <strong>Shift+RMB → RMB → Shift+LMB → Shift+F → Quickslot Perfect Storm</strong> (rallonger avec un <strong>Shift+F</strong> supplémentaire si besoin).
+          </div>
+          <div class="callout" data-i18n="en" hidden>
+            On a character that's <strong>fully hard capped (vicious shadow AP)</strong>, the combo simplifies to: <strong>Shift+RMB → RMB → Shift+LMB → Shift+F → Quickslot Perfect Storm</strong> (extend with an extra <strong>Shift+F</strong> if needed).
           </div>
         </div>
 
         <div class="addon-block">
-          <h3>Bonus de compétence (Add-on)</h3>
+          <h3><span data-i18n="fr">Bonus de compétence (Add-on)</span><span data-i18n="en" hidden>Skill add-ons</span></h3>
           <div class="addon-grid">
             <div class="addon-card">
               <span class="combo-icon"><img src="../assets/deadeye/icones/addon-quickdraw.png" alt="Quick Draw I" loading="lazy"></span>
               <div>
                 <h4>Quick Draw I</h4>
-                <p>Armes : Revolvers. Redégaine rapidement le chien de son arme.</p>
+                <p><span data-i18n="fr">Armes : Revolvers. Redégaine rapidement le chien de son arme.</span><span data-i18n="en" hidden>Weapons: Revolvers. Rapidly draws the hammer back.</span></p>
                 <p class="combo-note">Back Attack damage +5% pendant 7 sec · Critical Hit Damage +5% pendant 7 sec</p>
               </div>
             </div>
@@ -103,7 +116,7 @@
               <span class="combo-icon"><img src="../assets/deadeye/icones/addon-olswitcheroo.png" alt="Ol' Switcheroo I" loading="lazy"></span>
               <div>
                 <h4>Ol' Switcheroo I</h4>
-                <p>Armes : Revolvers. Tire en cachant un revolver derrière soi.</p>
+                <p><span data-i18n="fr">Armes : Revolvers. Tire en cachant un revolver derrière soi.</span><span data-i18n="en" hidden>Weapons: Revolvers. Fires while hiding a revolver behind.</span></p>
                 <p class="combo-note">All Damage Reduction +20 pendant 10 sec · Movement Speed +10% pendant 7 sec</p>
               </div>
             </div>
@@ -111,7 +124,7 @@
               <span class="combo-icon"><img src="../assets/deadeye/icones/addon-hellsspread.png" alt="Hell's Spread I" loading="lazy"></span>
               <div>
                 <h4>Hell's Spread I</h4>
-                <p>Armes : Shotgun. Tire plusieurs coups de fusil de chasse.</p>
+                <p><span data-i18n="fr">Armes : Shotgun. Tire plusieurs coups de fusil de chasse.</span><span data-i18n="en" hidden>Weapons: Shotgun. Fires the shotgun multiple times.</span></p>
                 <p class="combo-note">Attack/Casting Speed +10% pendant 12 sec · Critical Hit Damage +5% pendant 12 sec</p>
               </div>
             </div>
@@ -119,7 +132,7 @@
               <span class="combo-icon"><img src="../assets/deadeye/icones/addon-bulletstorm.png" alt="Bulletstorm I" loading="lazy"></span>
               <div>
                 <h4>Bulletstorm I</h4>
-                <p>Armes : Revolvers. Tire sur tout ce qui se trouve à portée avec les revolvers.</p>
+                <p><span data-i18n="fr">Armes : Revolvers. Tire sur tout ce qui se trouve à portée avec les revolvers.</span><span data-i18n="en" hidden>Weapons: Revolvers. Fires at everything in range with the revolvers.</span></p>
                 <p class="combo-note">All Damage Reduction −20 pendant 10 sec à la cible · Récupère instantanément 35 PV par cible touchée</p>
               </div>
             </div>
@@ -127,7 +140,7 @@
               <span class="combo-icon"><img src="../assets/deadeye/icones/addon-starspangledbarrage.png" alt="Star-Spangled Barrage I" loading="lazy"></span>
               <div>
                 <h4>Star-Spangled Barrage I</h4>
-                <p>Armes : Shotgun (munitions régulières). Envoie des balles de revolver dans le tir de fusil.</p>
+                <p><span data-i18n="fr">Armes : Shotgun (munitions régulières). Envoie des balles de revolver dans le tir de fusil.</span><span data-i18n="en" hidden>Weapons: Shotgun (regular ammo). Kicks revolver bullets into the shotgun blast.</span></p>
                 <p class="combo-note">Critical Hit Rate +30% pendant 12 sec · All Damage Reduction −20 pendant 12 sec à la cible</p>
               </div>
             </div>
@@ -135,7 +148,7 @@
               <span class="combo-icon"><img src="../assets/deadeye/icones/addon-mayhem.png" alt="Mayhem I" loading="lazy"></span>
               <div>
                 <h4>Mayhem I</h4>
-                <p>Armes : Revolvers (double arme). Esquive vers l'avant en tirant des deux mains.</p>
+                <p><span data-i18n="fr">Armes : Revolvers (double arme). Esquive vers l'avant en tirant des deux mains.</span><span data-i18n="en" hidden>Weapons: Revolvers (dual-wielding). Dodges forward while firing with both hands.</span></p>
                 <p class="combo-note">Critical Hit Rate +30% pendant 12 sec · Attack/Casting Speed +10% pendant 12 sec</p>
               </div>
             </div>
@@ -143,8 +156,8 @@
         </div>
 
         <div class="rabam-block">
-          <h3>Rabam retenus</h3>
-          <p class="combo-note">Sur les 3 paliers, seule la branche choisie pour ce guide sera montrée.</p>
+          <h3><span data-i18n="fr">Rabam retenus</span><span data-i18n="en" hidden>Rabam picks</span></h3>
+          <p class="combo-note"><span data-i18n="fr">Sur les 3 paliers, seule la branche choisie pour ce guide sera montrée.</span><span data-i18n="en" hidden>Of the 3 tiers, only the branch chosen for this guide is shown.</span></p>
           <div class="rabam-picks">
             <div class="rabam-pick">
               <span class="combo-icon"><img src="../assets/deadeye/icones/rabam-finaldraw.png" alt="Final Draw" loading="lazy"></span>
@@ -176,8 +189,8 @@
     <!-- ============ PANEL PvP ============ -->
     <div id="panel-pvp" class="tab-panel" data-tab-panel>
       <div class="placeholder-panel">
-        <strong>Section PvP en préparation</strong>
-        Les combos et vidéos PvP arrivent dans une prochaine mise à jour.
+        <strong><span data-i18n="fr">Section PvP en préparation</span><span data-i18n="en" hidden>PvP section in progress</span></strong>
+        <span data-i18n="fr">Les combos et vidéos PvP arrivent dans une prochaine mise à jour.</span><span data-i18n="en" hidden>PvP combos and videos are coming in a future update.</span>
       </div>
     </div>
 
@@ -186,7 +199,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <span>Guide de fan, non affilié à Pearl Abyss.</span>
+    <span><span data-i18n="fr">Guide de fan, non affilié à Pearl Abyss.</span><span data-i18n="en" hidden>Fan-made guide, not affiliated with Pearl Abyss.</span></span>
   </div>
 </footer>
 

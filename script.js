@@ -80,28 +80,71 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Bouton "Copier la séquence" : reconstruit la liste touche > touche > ... du combo
-// et la copie dans le presse-papier.
-document.querySelectorAll('.copy-btn').forEach((btn) => {
-  const defaultLabel = btn.textContent;
+// et la copie dans le presse-papier. Libellés adaptés à la langue active.
+const COPY_LABELS = {
+  fr: { default: 'Copier la séquence', done: 'Copié !', fail: 'Échec de la copie' },
+  en: { default: 'Copy sequence', done: 'Copied!', fail: 'Copy failed' },
+};
 
+document.querySelectorAll('.copy-btn').forEach((btn) => {
   btn.addEventListener('click', async () => {
     const block = btn.closest('.combo-block');
     if (!block) return;
 
     const keys = Array.from(block.querySelectorAll('.combo-key')).map((el) => el.textContent.trim());
     const sequence = keys.join(' > ');
+    const lang = document.documentElement.getAttribute('data-lang') || 'fr';
+    const labels = COPY_LABELS[lang] || COPY_LABELS.fr;
 
     try {
       await navigator.clipboard.writeText(sequence);
-      btn.textContent = 'Copié !';
+      btn.textContent = labels.done;
       btn.classList.add('is-copied');
     } catch (err) {
-      btn.textContent = 'Échec de la copie';
+      btn.textContent = labels.fail;
     }
 
     setTimeout(() => {
-      btn.textContent = defaultLabel;
+      btn.textContent = labels.default;
       btn.classList.remove('is-copied');
     }, 1800);
   });
 });
+// ===== Sélecteur de langue (FR/EN) =====
+(function () {
+  const STORAGE_KEY = 'bdo-lang';
+  const savedLang = localStorage.getItem(STORAGE_KEY) || 'fr';
+
+  function applyLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.querySelectorAll('.lang-switch button').forEach((btn) => {
+      btn.classList.toggle('is-active', btn.dataset.lang === lang);
+    });
+    // Traduit aussi les attributs placeholder / aria-label si présents.
+    document.querySelectorAll('[data-i18n-placeholder-fr]').forEach((el) => {
+      el.placeholder = lang === 'en'
+        ? el.getAttribute('data-i18n-placeholder-en')
+        : el.getAttribute('data-i18n-placeholder-fr');
+    });
+    document.querySelectorAll('[data-i18n-aria-fr]').forEach((el) => {
+      el.setAttribute('aria-label', lang === 'en'
+        ? el.getAttribute('data-i18n-aria-en')
+        : el.getAttribute('data-i18n-aria-fr'));
+    });
+    // Remet à jour le libellé par défaut des boutons "copier" non actifs.
+    const labels = COPY_LABELS[lang] || COPY_LABELS.fr;
+    document.querySelectorAll('.copy-btn:not(.is-copied)').forEach((btn) => {
+      btn.textContent = labels.default;
+    });
+  }
+
+  document.querySelectorAll('.lang-switch button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      localStorage.setItem(STORAGE_KEY, lang);
+      applyLang(lang);
+    });
+  });
+
+  applyLang(savedLang);
+})();
