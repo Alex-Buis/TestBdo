@@ -17,10 +17,14 @@
 <div class="page-head wrap">
   <h2>Choisis une classe</h2>
   <p>Guides non officiels de combos, formes et univers pour Black Desert Online.</p>
+
+  <div class="class-search">
+    <input type="search" id="class-search-input" class="class-search-input" placeholder="Rechercher une classe..." aria-label="Rechercher une classe">
+  </div>
 </div>
 
 <div class="wrap">
-  <div class="hero-split" style="max-width: none; margin-top: 32px;">
+  <div class="hero-split" id="class-grid" style="max-width: none; margin-top: 32px;">
     <a class="form-card hub-card sacra" href="seraph/index.html">
       <div class="card-visual"><img src="assets/seraph/hero-seraph.png" alt="Seraph" loading="lazy"></div>
       <div class="card-body">
@@ -239,6 +243,8 @@
       </div>
     </a>
   </div>
+
+  <p id="class-search-empty" class="class-search-empty" hidden>Aucune classe ne correspond à ta recherche.</p>
 
   <div class="callout" style="margin-top: 40px;">
     D'autres classes arriveront progressivement sur ce site.

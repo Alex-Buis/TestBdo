@@ -47,6 +47,38 @@ document.addEventListener('DOMContentLoaded', () => {
   btn.click();
 });
 
+// Recherche de classe sur le hub d'accueil : filtre les cartes par nom en direct.
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('class-search-input');
+  const grid = document.getElementById('class-grid');
+  if (!searchInput || !grid) return;
+
+  const cards = Array.from(grid.querySelectorAll('.hub-card'));
+  const emptyMessage = document.getElementById('class-search-empty');
+
+  // Retire les accents pour que "eveil" trouve aussi "Éveil", etc.
+  const normalize = (str) => str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+
+  searchInput.addEventListener('input', () => {
+    const query = normalize(searchInput.value.trim());
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const name = card.querySelector('h3')?.textContent || '';
+      const matches = normalize(name).includes(query);
+      card.classList.toggle('is-hidden', !matches);
+      if (matches) visibleCount += 1;
+    });
+
+    if (emptyMessage) {
+      emptyMessage.hidden = visibleCount !== 0;
+    }
+  });
+});
+
 // Bouton "Copier la séquence" : reconstruit la liste touche > touche > ... du combo
 // et la copie dans le presse-papier.
 document.querySelectorAll('.copy-btn').forEach((btn) => {
