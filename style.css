@@ -4398,3 +4398,28 @@ body[data-form-theme="kunoichi-eveil"] .page-backdrop .photo { background-image:
 .hero-scene.valkyrie-scene .photo { background-image: url('assets/valkyrie/valkyrie-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
 body[data-form-theme="valkyrie-succ"] .page-backdrop .photo { background-image: url('assets/valkyrie/valkyrie-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.9); }
 body[data-form-theme="valkyrie-eveil"] .page-backdrop .photo { background-image: url('assets/valkyrie/valkyrie-eveil-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.85); }
+
+/* ===== Photos ajoutées pour Mystic / Striker / Dark Knight / Witch / Wizard / Ninja ===== */
+.hero-scene.mystic-scene .photo { background-image: url('assets/mystic/mystic-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="mystic-succ"] .page-backdrop .photo { background-image: url('assets/mystic/mystic-succession-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="mystic-eveil"] .page-backdrop .photo { background-image: url('assets/mystic/mystic-eveil-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.85); }
+
+.hero-scene.striker-scene .photo { background-image: url('assets/striker/striker-hero.jpg'); background-size: cover; background-position: center 22%; opacity: 0.9; }
+body[data-form-theme="striker-succ"] .page-backdrop .photo { background-image: url('assets/striker/striker-succession-bg.jpg'); background-size: cover; background-position: center 18%; opacity: 0.4; filter: brightness(0.8); }
+body[data-form-theme="striker-eveil"] .page-backdrop .photo { background-image: url('assets/striker/striker-eveil-bg.jpg'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.8); }
+
+.hero-scene.dark-knight-scene .photo { background-image: url('assets/dark-knight/dark-knight-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="dark-knight-succ"] .page-backdrop .photo { background-image: url('assets/dark-knight/dark-knight-succession-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.8); }
+body[data-form-theme="dark-knight-eveil"] .page-backdrop .photo { background-image: url('assets/dark-knight/dark-knight-eveil-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.8); }
+
+.hero-scene.witch-scene .photo { background-image: url('assets/witch/witch-hero.jpg'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+body[data-form-theme="witch-succ"] .page-backdrop .photo { background-image: url('assets/witch/witch-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="witch-eveil"] .page-backdrop .photo { background-image: url('assets/witch/witch-eveil-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.8); }
+
+.hero-scene.wizard-scene .photo { background-image: url('assets/wizard/wizard-hero.png'); background-size: cover; background-position: center 20%; opacity: 0.9; }
+body[data-form-theme="wizard-succ"] .page-backdrop .photo { background-image: url('assets/wizard/wizard-succession-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="wizard-eveil"] .page-backdrop .photo { background-image: url('assets/wizard/wizard-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+
+.hero-scene.ninja-scene .photo { background-image: url('assets/ninja/ninja-hero.jpg'); background-size: cover; background-position: center 20%; opacity: 0.9; }
+body[data-form-theme="ninja-succ"] .page-backdrop .photo { background-image: url('assets/ninja/ninja-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="ninja-eveil"] .page-backdrop .photo { background-image: url('assets/ninja/ninja-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
