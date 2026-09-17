@@ -2847,6 +2847,7 @@ body[data-form-theme="sorceress-eveil"] .page-backdrop .photo { background-image
 
 .hero-scene.ranger-scene .photo { background-image: url('assets/ranger/ranger-hero.jpg'); background-size: cover; background-position: center 20%; opacity: 0.9; }
 body[data-form-theme="ranger-eveil"] .page-backdrop .photo { background-image: url('assets/ranger/ranger-eveil-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="ranger-succ"] .page-backdrop .photo { background-image: url('assets/ranger/ranger-succession-bg.jpg'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
 
 .hero-scene.warrior-scene .photo { background-image: url('assets/warrior/warrior-hero.png'); background-size: cover; background-position: center 22%; opacity: 0.9; }
 body[data-form-theme="warrior-succ"] .page-backdrop .photo { background-image: url('assets/warrior/warrior-succession-bg.png'); background-size: cover; background-position: center 18%; opacity: 0.4; filter: brightness(0.85); }
