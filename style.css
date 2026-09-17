@@ -840,7 +840,7 @@ body[data-form-theme="eveil"] .page-backdrop .rosette-mark { opacity: 0.14; }
   padding: 32px 0;
 }
 
-.hub-card.is-hidden { display: none; }
+.hub-card.is-hidden { display: none !important; }
 
 /* ---------- tabs ---------- */
 
