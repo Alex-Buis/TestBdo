@@ -353,8 +353,8 @@ footer.site-footer a:hover { color: var(--gold); }
 
 .form-card.succ {
   border-color: var(--succ-deep);
-  background: linear-gradient(165deg, #eef5fc, #cfe0ef);
-  box-shadow: 0 0 42px rgba(110, 155, 209, 0.22);
+  background: linear-gradient(165deg, #cddce9, #a9bfd2);
+  box-shadow: 0 0 42px rgba(44, 69, 96, 0.22);
 }
 .form-card.succ:hover { border-color: var(--succ); }
 .form-card.succ h3 { color: var(--succ-ink); }
@@ -493,31 +493,31 @@ body[data-form-theme="purga"] .page-backdrop .rosette-mark { opacity: 0.16; }
 
 /* Dosa : Succession (bleu glacé) / Éveil (or sombre) */
 body[data-form-theme="succession"] {
-  --stone-950: #eef3f8;
-  --stone-900: #e2eaf3;
-  --stone-800: #cfdcec;
-  --stone-700: #9fb6cf;
-  --parchment: #17222d;
-  --parchment-dim: #47596b;
+  --stone-950: #c3d0dc;
+  --stone-900: #b3c3d2;
+  --stone-800: #9dafc2;
+  --stone-700: #5c7186;
+  --parchment: #141d25;
+  --parchment-dim: #3c4d5c;
 }
 body[data-form-theme="eveil"] {
   --stone-700: #6b4a1a;
 }
 
 body[data-form-theme="succession"] .page-backdrop {
-  background: radial-gradient(ellipse 120% 90% at 50% 15%, #eef3f8, #c6d7e8 85%);
+  background: radial-gradient(ellipse 120% 90% at 50% 15%, #c3d0dc, #92a7ba 85%);
 }
 body[data-form-theme="succession"] .page-backdrop .photo {
   background-image: url('assets/dosa/succession-bg.jpg');
   background-position: center 35%;
-  opacity: 0.4;
-  filter: brightness(0.95) saturate(0.9);
+  opacity: 0.28;
+  filter: brightness(0.7) saturate(0.8);
 }
 body[data-form-theme="succession"] .page-backdrop .side-light,
 body[data-form-theme="succession"] .page-backdrop .side-dark,
 body[data-form-theme="succession"] .page-backdrop .seam { opacity: 0; }
-body[data-form-theme="succession"] .page-backdrop .scrim { background: rgba(23, 34, 45, 0.18); }
-body[data-form-theme="succession"] .page-backdrop .rosette-mark { opacity: 0.08; }
+body[data-form-theme="succession"] .page-backdrop .scrim { background: rgba(20, 29, 37, 0.28); }
+body[data-form-theme="succession"] .page-backdrop .rosette-mark { opacity: 0.07; }
 
 body[data-form-theme="eveil"] .page-backdrop {
   background: radial-gradient(ellipse 120% 90% at 50% 15%, #2a1c08, #0d0902 85%);
@@ -616,19 +616,19 @@ body[data-form-theme="eveil"] .page-backdrop .rosette-mark { opacity: 0.14; }
 
 /* Dosa panels */
 .theme-succ {
-  background: radial-gradient(ellipse at 50% -20%, #f4f8fc, #d7e5f2 65%);
+  background: radial-gradient(ellipse at 50% -20%, #c9d7e3, #a3b9cc 65%);
   border: 1px solid var(--succ-deep);
   border-radius: var(--radius-rune);
   padding: 36px;
-  box-shadow: 0 0 50px rgba(110, 155, 209, 0.14);
+  box-shadow: 0 0 50px rgba(44, 69, 96, 0.14);
 }
 .theme-succ h3 { color: var(--succ-ink); }
 .theme-succ .combo-note, .theme-succ p { color: var(--succ-ink-dim); }
 .theme-succ .combo-arrow { color: var(--succ-deep); }
 .theme-succ .combo-name { color: var(--succ-ink-dim); }
-.theme-succ .combo-key { background: #fff; border-color: var(--succ-deep); color: var(--succ-ink); }
-.theme-succ .callout { background: rgba(255,255,255,0.5); border-color: var(--succ-deep); border-left-color: var(--succ-deep); color: var(--succ-ink-dim); }
-.theme-succ .video-frame { background: #fff; border-color: var(--succ-deep); }
+.theme-succ .combo-key { background: #dbe6ef; border-color: var(--succ-deep); color: var(--succ-ink); }
+.theme-succ .callout { background: rgba(255,255,255,0.35); border-color: var(--succ-deep); border-left-color: var(--succ-deep); color: var(--succ-ink-dim); }
+.theme-succ .video-frame { background: #dbe6ef; border-color: var(--succ-deep); }
 .theme-succ .video-placeholder { color: var(--succ-ink-dim); }
 .theme-succ .video-placeholder strong { color: var(--succ-ink); }
 .theme-succ .addon-card h4 { color: var(--succ-ink); }
