@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const hashToForm = {
     '#sacramentum': 'form-sacra',
     '#purgatum': 'form-purga',
+    '#succession': 'form-succ',
+    '#eveil': 'form-eveil',
   };
   const targetForm = hashToForm[window.location.hash];
   if (!targetForm) return;
