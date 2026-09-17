@@ -121,9 +121,19 @@ header.site-nav {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--parchment);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .wordmark span { color: var(--gold); }
+
+.wordmark-logo {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 0 4px rgba(189, 151, 82, 0.35));
+}
 
 .site-nav nav { display: flex; gap: 28px; }
 
