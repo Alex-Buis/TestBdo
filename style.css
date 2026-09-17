@@ -33,6 +33,20 @@
   --eveil-glow: #ffe3a3;
   --eveil-ink: #241703;
   --eveil-ink-dim: #6b5636;
+
+  /* Shai — calme, doux, nature */
+  --shai: #8bab7c;
+  --shai-deep: #46603f;
+  --shai-glow: #eaf3e2;
+  --shai-ink: #263422;
+  --shai-ink-dim: #52664c;
+
+  /* Deadeye — western, gunslinger */
+  --deadeye: #b5702f;
+  --deadeye-deep: #5c3315;
+  --deadeye-glow: #f0c88a;
+  --deadeye-ink: #2a1a0a;
+  --deadeye-ink-dim: #6b4c2c;
 }
 
 * { box-sizing: border-box; }
@@ -650,6 +664,86 @@ body[data-form-theme="eveil"] .page-backdrop .rosette-mark { opacity: 0.14; }
 .theme-eveil .video-placeholder { color: var(--eveil-ink-dim); }
 .theme-eveil .video-placeholder strong { color: var(--eveil-glow); }
 .theme-eveil .addon-card h4 { color: var(--eveil-glow); }
+
+/* Shai (statique — une seule section) */
+.theme-shai {
+  background: radial-gradient(ellipse at 50% -20%, #dbe8d3, #b9cdae 65%);
+  border: 1px solid var(--shai-deep);
+  border-radius: var(--radius-rune);
+  padding: 36px;
+  box-shadow: 0 0 50px rgba(70, 96, 63, 0.14);
+}
+.theme-shai h3 { color: var(--shai-ink); }
+.theme-shai .combo-note, .theme-shai p { color: var(--shai-ink-dim); }
+.theme-shai .combo-arrow { color: var(--shai-deep); }
+.theme-shai .combo-name { color: var(--shai-ink-dim); }
+.theme-shai .combo-key { background: #eef5e8; border-color: var(--shai-deep); color: var(--shai-ink); }
+.theme-shai .callout { background: rgba(255,255,255,0.4); border-color: var(--shai-deep); border-left-color: var(--shai-deep); color: var(--shai-ink-dim); }
+.theme-shai .video-frame { background: #eef5e8; border-color: var(--shai-deep); }
+.theme-shai .video-placeholder { color: var(--shai-ink-dim); }
+.theme-shai .video-placeholder strong { color: var(--shai-ink); }
+.theme-shai .addon-card h4 { color: var(--shai-ink); }
+.combo-step.shai .combo-icon { background: linear-gradient(160deg, var(--shai-glow), var(--shai)); }
+
+/* Deadeye (statique — une seule section) */
+.theme-deadeye {
+  background: radial-gradient(ellipse at 50% -20%, #2b1a0c, #100a04 65%);
+  border: 1px solid var(--deadeye-deep);
+  border-radius: var(--radius-rune);
+  padding: 36px;
+  box-shadow: 0 0 55px rgba(181, 112, 47, 0.2);
+}
+.theme-deadeye h3 { color: var(--deadeye-glow); }
+.theme-deadeye .combo-note, .theme-deadeye p { color: var(--deadeye-ink-dim); }
+.theme-deadeye .combo-arrow { color: var(--deadeye-deep); }
+.theme-deadeye .combo-name { color: var(--deadeye-ink-dim); }
+.theme-deadeye .combo-key { background: #1c1108; border-color: var(--deadeye-deep); color: var(--deadeye-glow); }
+.theme-deadeye .callout { background: rgba(0,0,0,0.3); border-color: var(--deadeye-deep); border-left-color: var(--deadeye-glow); color: var(--deadeye-ink-dim); }
+.theme-deadeye .video-frame { background: #1c1108; border-color: var(--deadeye-deep); }
+.theme-deadeye .video-placeholder { color: var(--deadeye-ink-dim); }
+.theme-deadeye .video-placeholder strong { color: var(--deadeye-glow); }
+.theme-deadeye .addon-card h4 { color: var(--deadeye-glow); }
+.combo-step.deadeye .combo-icon { background: linear-gradient(160deg, var(--deadeye-glow), var(--deadeye)); }
+
+/* Fonds de page statiques Shai / Deadeye (pas de bascule — une seule section) */
+.shai-backdrop {
+  background: radial-gradient(ellipse 120% 90% at 50% 15%, #33452c, #1a2416 85%);
+}
+.shai-backdrop .side-light,
+.shai-backdrop .side-dark,
+.shai-backdrop .seam { opacity: 0; }
+.shai-backdrop .rosette-mark { opacity: 0.1; }
+
+.deadeye-backdrop {
+  background: radial-gradient(ellipse 120% 90% at 50% 15%, #3a2210, #150c05 85%);
+}
+.deadeye-backdrop .side-light,
+.deadeye-backdrop .side-dark,
+.deadeye-backdrop .seam { opacity: 0; }
+.deadeye-backdrop .rosette-mark { opacity: 0.12; }
+
+/* Cartes d'accueil (hub + page classe) Shai / Deadeye */
+.form-card.shai {
+  border-color: var(--shai-deep);
+  background: linear-gradient(165deg, #dfead8, #b9cdae);
+  box-shadow: 0 0 42px rgba(70, 96, 63, 0.22);
+}
+.form-card.shai:hover { border-color: var(--shai); }
+.form-card.shai h3 { color: var(--shai-ink); }
+.form-card.shai p { color: var(--shai-ink-dim); }
+
+.form-card.deadeye {
+  border-color: var(--deadeye-deep);
+  background: linear-gradient(165deg, #2b1a0c, #120b04);
+  box-shadow: 0 0 42px rgba(181, 112, 47, 0.3);
+}
+.form-card.deadeye:hover { border-color: var(--deadeye); }
+.form-card.deadeye h3 { color: var(--deadeye-glow); }
+.form-card.deadeye p { color: var(--deadeye-ink-dim); }
+
+/* Une seule carte centrée (classes à section unique) */
+.hero-split.single { max-width: 340px; margin-left: auto; margin-right: auto; }
+
 
 
 /* ---------- feature strip ---------- */
