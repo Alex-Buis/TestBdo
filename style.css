@@ -470,6 +470,14 @@ footer.site-footer a:hover { color: var(--gold); }
   flex-wrap: wrap;
 }
 
+/* Grille des classes du hub : grid plutôt que flex, pour que les cards gardent
+   toujours la même taille même quand la dernière ligne n'est pas complète
+   (au lieu de s'étirer pour combler l'espace restant). */
+#class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
 .form-card {
   flex: 1 1 220px;
   border: 1px solid var(--stone-700);
