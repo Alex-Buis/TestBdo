@@ -3380,3 +3380,42 @@ html[data-lang="en"] [data-i18n="en"] { display: revert !important; }
   font-family: var(--font-display);
   font-size: 1.05rem;
 }
+/* ===== Cartes du hub : dégradé combinant les couleurs des deux formes ===== */
+/* Seraph : Sacramentum -> Purgatum, avec les teintes vives (pas les fonds mutés des form-card individuelles). */
+.form-card.hub-card.sacra { background: linear-gradient(165deg, var(--sacra), var(--purga)); }
+.form-card.hub-card.sacra h3, .form-card.hub-card.sacra p { color: var(--parchment); }
+.form-card.hub-card.sacra p { color: var(--parchment-dim); }
+
+/* Dosa : Succession -> Éveil, teintes vives du thème. */
+.form-card.hub-card.succ { background: linear-gradient(165deg, var(--succ), var(--eveil)); }
+.form-card.hub-card.succ h3 { color: #fff8ec; }
+.form-card.hub-card.succ p { color: rgba(255, 248, 236, 0.82); }
+
+.form-card.hub-card.warrior-succ { background: linear-gradient(165deg, #3d3731, #2d353d); }
+.form-card.hub-card.ranger-succ { background: linear-gradient(165deg, #3d3630, #243a3d); }
+.form-card.hub-card.sorceress-succ { background: linear-gradient(165deg, #2b243d, #35243d); }
+.form-card.hub-card.berserker-succ { background: linear-gradient(165deg, #3d2e2f, #3d2420); }
+.form-card.hub-card.tamer-succ { background: linear-gradient(165deg, #23353d, #1d343d); }
+.form-card.hub-card.musa-succ { background: linear-gradient(165deg, #3d3935, #3d231e); }
+.form-card.hub-card.maehwa-succ { background: linear-gradient(165deg, #3d2e28, #222e3d); }
+.form-card.hub-card.valkyrie-succ { background: linear-gradient(165deg, #3d251e, #3d2d1c); }
+.form-card.hub-card.kunoichi-succ { background: linear-gradient(165deg, #cedfea, #3d342a); }
+.form-card.hub-card.ninja-succ { background: linear-gradient(165deg, #eadace, #3d2a26); }
+.form-card.hub-card.wizard-succ { background: linear-gradient(165deg, #1c2a3d, #3d1e18); }
+.form-card.hub-card.witch-succ { background: linear-gradient(165deg, #3d2834, #3d322b); }
+.form-card.hub-card.striker-succ { background: linear-gradient(165deg, #3d322b, #3d2922); }
+.form-card.hub-card.mystic-succ { background: linear-gradient(165deg, #3d3226, #24303d); }
+.form-card.hub-card.lahn-succ { background: linear-gradient(165deg, #3d1818, #3d2123); }
+.form-card.hub-card.dark-knight-succ { background: linear-gradient(165deg, #28323d, #35243d); }
+.form-card.hub-card.guardian-succ { background: linear-gradient(165deg, #3d2e39, #3d2f33); }
+.form-card.hub-card.hashashin-succ { background: linear-gradient(165deg, #24243d, #3d312b); }
+.form-card.hub-card.nova-succ { background: linear-gradient(165deg, #3d231f, #3d352d); }
+.form-card.hub-card.sage-succ { background: linear-gradient(165deg, #3d2524, #3d3525); }
+.form-card.hub-card.corsair-succ { background: linear-gradient(165deg, #232e3d, #28313d); }
+.form-card.hub-card.drakania-succ { background: linear-gradient(165deg, #2c303d, #3d2e2a); }
+.form-card.hub-card.woosa-succ { background: linear-gradient(165deg, #232a3d, #3d2123); }
+.form-card.hub-card.maegu-succ { background: linear-gradient(165deg, #3d2024, #3d1d27); }
+
+/* Kunoichi et Ninja : la partie visible du dégradé (sous la photo) reste claire,
+   les couleurs d'encre foncées d'origine (form-card individuelles) restent donc
+   adaptées ici et ne sont pas modifiées. */
