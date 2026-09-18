@@ -101,7 +101,7 @@ header.site-nav {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(18, 16, 25, 0.86);
+  background: rgba(12, 10, 16, 0.96);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--stone-700);
 }
