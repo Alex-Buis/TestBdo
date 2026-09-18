@@ -3128,3 +3128,147 @@ body[data-form-theme="corsair-eveil"] .page-backdrop .photo { background-image: 
 [data-i18n="en"] { }
 html[data-lang="en"] [data-i18n="fr"] { display: none !important; }
 html[data-lang="en"] [data-i18n="en"] { display: revert !important; }
+
+/* ===== Sélecteur de disposition clavier (QWERTY/AZERTY) ===== */
+.kb-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.kb-switch button {
+  all: unset;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: var(--parchment-dim);
+  background: transparent;
+  border: 1px solid var(--stone-700);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.kb-switch button:hover {
+  color: var(--parchment);
+  border-color: var(--parchment-dim);
+}
+.kb-switch button.is-active {
+  color: #16130f;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+/* Ligne regroupant la nav rapide (Combo/Add-ons/Rabam) et les outils de page
+   (clavier + copier tout), pour éviter d'alourdir le header. */
+.tools-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 20px;
+}
+.tools-row .quick-nav { margin: 0; }
+.page-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ===== Statuts des classes (hub) ===== */
+.status-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.status-filter button {
+  all: unset;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--stone-700);
+  color: var(--parchment-dim);
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.status-filter button:hover { color: var(--parchment); border-color: var(--gold); }
+.status-filter button.is-active {
+  color: #16130f;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.status-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.status-badge.status-complete { color: #7bd88f; background: rgba(123, 216, 143, 0.14); }
+.status-badge.status-partial { color: #e8c766; background: rgba(232, 199, 102, 0.14); }
+.status-badge.status-upcoming { color: #d97f6b; background: rgba(217, 127, 107, 0.14); }
+
+.hub-card.is-status-hidden { display: none !important; }
+
+/* ===== Lien "Suggérer une correction" (footer) ===== */
+.suggest-fix-link {
+  color: var(--parchment-dim);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+.suggest-fix-link:hover {
+  color: var(--gold);
+  text-decoration-color: var(--gold);
+}
+
+/* ===== Feuille de style impression ===== */
+@media print {
+  .site-nav, .page-backdrop, .hero-scene, .quick-nav, .tools-row .quick-nav,
+  .page-tools, .kb-switch, .lang-switch, .status-filter, .class-search,
+  .video-frame, .yt-facade, .copy-btn, .footer-tools, footer.site-footer,
+  .tab-row, .callout ~ .video-frame {
+    display: none !important;
+  }
+  /* Les thèmes par classe (.theme-*) posent chacun leurs propres couleurs de fond
+     et de texte sombres : on neutralise tout pour un rendu papier lisible. */
+  * {
+    background: transparent !important;
+    color: #111 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+  body { background: #fff !important; }
+  .wrap { max-width: 100% !important; padding: 0 !important; }
+  .combo-block, .addon-block, .rabam-block, .callout, .addon-card, .rabam-pick {
+    border: 1px solid #ccc !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 18px;
+  }
+  .combo-key { border: 1px solid #999 !important; }
+  .combo-row { flex-wrap: wrap; }
+  a { text-decoration: none !important; }
+  .tab-panel:not(.is-active) { display: none !important; }
+}

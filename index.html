@@ -52,224 +52,262 @@
   <div class="class-search">
     <input type="search" id="class-search-input" class="class-search-input" placeholder="Rechercher une classe..." aria-label="Rechercher une classe" data-i18n-placeholder-fr="Rechercher une classe..." data-i18n-placeholder-en="Search a class..." data-i18n-aria-fr="Rechercher une classe" data-i18n-aria-en="Search a class">
   </div>
+
+  <div class="status-filter">
+    <button type="button" data-status-filter="all" class="is-active"><span data-i18n="fr">Toutes</span><span data-i18n="en" hidden>All</span></button>
+    <button type="button" data-status-filter="complete"><span data-i18n="fr">Complet</span><span data-i18n="en" hidden>Complete</span></button>
+    <button type="button" data-status-filter="partial"><span data-i18n="fr">Partiel</span><span data-i18n="en" hidden>Partial</span></button>
+    <button type="button" data-status-filter="upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></button>
+  </div>
   </div>
 </div>
 
   <div class="wrap">
   <div class="hero-split" id="class-grid" style="max-width: none; margin-top: 32px;">
-    <a class="form-card hub-card sacra" href="seraph/index.html">
+    <a class="form-card hub-card sacra" href="seraph/index.html" data-status="complete">
       <div class="card-visual"><img src="assets/seraph/hero-seraph.webp" alt="Seraph" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-complete"><span data-i18n="fr">Complet</span><span data-i18n="en" hidden>Complete</span></span>
         <h3>Seraph</h3>
         <p><span data-i18n="fr">Sacramentum &amp; Purgatum — combos PvE/PvP, formes et univers.</span><span data-i18n="en" hidden>Sacramentum &amp; Purgatum — PvE/PvP combos, forms and lore.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card succ" href="dosa/index.html">
+    <a class="form-card hub-card succ" href="dosa/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/dosa/dosa-succession-portrait.webp" alt="Dosa" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Dosa</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — combos PvE/PvP et formes.</span><span data-i18n="en" hidden>Succession &amp; Awakening — PvE/PvP combos and forms.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card shai" href="shai/index.html">
+    <a class="form-card hub-card shai" href="shai/index.html" data-status="partial">
       <div class="card-visual"><img src="assets/shai/shai-hero.webp" alt="Shai" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-partial"><span data-i18n="fr">Partiel</span><span data-i18n="en" hidden>Partial</span></span>
         <h3>Shai</h3>
         <p><span data-i18n="fr">Éveil — combos PvE/PvP. Page en construction.</span><span data-i18n="en" hidden>Awakening — PvE/PvP combos. Page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card deadeye" href="deadeye/index.html">
+    <a class="form-card hub-card deadeye" href="deadeye/index.html" data-status="partial">
       <div class="card-visual"><img src="assets/deadeye/deadeye-hero.webp" alt="Deadeye" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-partial"><span data-i18n="fr">Partiel</span><span data-i18n="en" hidden>Partial</span></span>
         <h3>Deadeye</h3>
         <p><span data-i18n="fr">Ascension — combo PvE, bonus de compétence et rabam.</span><span data-i18n="en" hidden>Ascension — PvE combo, skill add-ons and rabam.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card warrior-succ" href="warrior/index.html">
+    <a class="form-card hub-card warrior-succ" href="warrior/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/warrior/warrior-hero.webp" alt="Warrior" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Warrior</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — combo Succession, bonus de compétence et rabam.</span><span data-i18n="en" hidden>Succession &amp; Awakening — Succession combo, skill add-ons and rabam.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card ranger-succ" href="ranger/index.html">
+    <a class="form-card hub-card ranger-succ" href="ranger/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/ranger/ranger-hero.webp" alt="Ranger" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Ranger</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — rotation Éveil, bonus de compétence et rabam.</span><span data-i18n="en" hidden>Succession &amp; Awakening — Awakening rotation, skill add-ons and rabam.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card sorceress-succ" href="sorceress/index.html">
+    <a class="form-card hub-card sorceress-succ" href="sorceress/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/sorceress/sorceress-hero.webp" alt="Sorceress" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Sorceress</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card berserker-succ" href="berserker/index.html">
+    <a class="form-card hub-card berserker-succ" href="berserker/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/berserker/berserker-hero.webp" alt="Berserker" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Berserker</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card tamer-succ" href="tamer/index.html">
+    <a class="form-card hub-card tamer-succ" href="tamer/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/tamer/tamer-hero.webp" alt="Tamer" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Tamer</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card musa-succ" href="musa/index.html">
+    <a class="form-card hub-card musa-succ" href="musa/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/musa/musa-hero.webp" alt="Musa" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Musa</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card maehwa-succ" href="maehwa/index.html">
+    <a class="form-card hub-card maehwa-succ" href="maehwa/index.html" data-status="partial">
       <div class="card-visual"><img src="assets/maehwa/maehwa-hero.webp" alt="Maehwa" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-partial"><span data-i18n="fr">Partiel</span><span data-i18n="en" hidden>Partial</span></span>
         <h3>Maehwa</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card valkyrie-succ" href="valkyrie/index.html">
+    <a class="form-card hub-card valkyrie-succ" href="valkyrie/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/valkyrie/valkyrie-hero.webp" alt="Valkyrie" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Valkyrie</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card kunoichi-succ" href="kunoichi/index.html">
+    <a class="form-card hub-card kunoichi-succ" href="kunoichi/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/kunoichi/kunoichi-hero.webp" alt="Kunoichi" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Kunoichi</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card ninja-succ" href="ninja/index.html">
+    <a class="form-card hub-card ninja-succ" href="ninja/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/ninja/ninja-hero.webp" alt="Ninja" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Ninja</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card wizard-succ" href="wizard/index.html">
+    <a class="form-card hub-card wizard-succ" href="wizard/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/wizard/wizard-hero.webp" alt="Wizard" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Wizard</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card witch-succ" href="witch/index.html">
+    <a class="form-card hub-card witch-succ" href="witch/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/witch/witch-hero.webp" alt="Witch" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Witch</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card striker-succ" href="striker/index.html">
+    <a class="form-card hub-card striker-succ" href="striker/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/striker/striker-hero.webp" alt="Striker" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Striker</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card mystic-succ" href="mystic/index.html">
+    <a class="form-card hub-card mystic-succ" href="mystic/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/mystic/mystic-hero.webp" alt="Mystic" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Mystic</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card lahn-succ" href="lahn/index.html">
+    <a class="form-card hub-card lahn-succ" href="lahn/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/lahn/lahn-hero.webp" alt="Lahn" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Lahn</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card dark-knight-succ" href="dark-knight/index.html">
+    <a class="form-card hub-card dark-knight-succ" href="dark-knight/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/dark-knight/dark-knight-hero.webp" alt="Dark Knight" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Dark Knight</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card guardian-succ" href="guardian/index.html">
+    <a class="form-card hub-card guardian-succ" href="guardian/index.html" data-status="partial">
       <div class="card-visual"><img src="assets/guardian/guardian-hero.webp" alt="Guardian" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-partial"><span data-i18n="fr">Partiel</span><span data-i18n="en" hidden>Partial</span></span>
         <h3>Guardian</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card hashashin-succ" href="hashashin/index.html">
+    <a class="form-card hub-card hashashin-succ" href="hashashin/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/hashashin/hashashin-hero.webp" alt="Hashashin" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Hashashin</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card nova-succ" href="nova/index.html">
+    <a class="form-card hub-card nova-succ" href="nova/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/nova/nova-hero.webp" alt="Nova" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Nova</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card sage-succ" href="sage/index.html">
+    <a class="form-card hub-card sage-succ" href="sage/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/sage/sage-hero.webp" alt="Sage" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Sage</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card corsair-succ" href="corsair/index.html">
+    <a class="form-card hub-card corsair-succ" href="corsair/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/corsair/corsair-hero.webp" alt="Corsair" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Corsair</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card drakania-succ" href="drakania/index.html">
+    <a class="form-card hub-card drakania-succ" href="drakania/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/drakania/drakania-hero.webp" alt="Drakania" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Drakania</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card woosa-succ" href="woosa/index.html">
+    <a class="form-card hub-card woosa-succ" href="woosa/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/woosa/woosa-hero.webp" alt="Woosa" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Woosa</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card maegu-succ" href="maegu/index.html">
+    <a class="form-card hub-card maegu-succ" href="maegu/index.html" data-status="upcoming">
       <div class="card-visual"><img src="assets/maegu/maegu-hero.webp" alt="Maegu" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-upcoming"><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></span>
         <h3>Maegu</h3>
         <p><span data-i18n="fr">Succession &amp; Éveil — page en construction.</span><span data-i18n="en" hidden>Succession &amp; Awakening — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card scholar" href="scholar/index.html">
+    <a class="form-card hub-card scholar" href="scholar/index.html" data-status="partial">
       <div class="card-visual"><img src="assets/scholar/scholar-hero.webp" alt="Scholar" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-partial"><span data-i18n="fr">Partiel</span><span data-i18n="en" hidden>Partial</span></span>
         <h3>Scholar</h3>
         <p><span data-i18n="fr">Ascension — combo PvE, bonus de compétence et rabam.</span><span data-i18n="en" hidden>Ascension — PvE combo, skill add-ons and rabam.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card wukong" href="wukong/index.html">
+    <a class="form-card hub-card wukong" href="wukong/index.html" data-status="partial">
       <div class="card-visual"><img src="assets/wukong/wukong-hero.webp" alt="Wukong" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-partial"><span data-i18n="fr">Partiel</span><span data-i18n="en" hidden>Partial</span></span>
         <h3>Wukong</h3>
         <p><span data-i18n="fr">Ascension — page en construction.</span><span data-i18n="en" hidden>Ascension — page under construction.</span></p>
       </div>
     </a>
-    <a class="form-card hub-card agent" href="agent/index.html">
+    <a class="form-card hub-card agent" href="agent/index.html" data-status="partial">
       <div class="card-visual"><img src="assets/agent/agent-hero.webp" alt="Agent" loading="lazy"></div>
       <div class="card-body">
+        <span class="status-badge status-partial"><span data-i18n="fr">Partiel</span><span data-i18n="en" hidden>Partial</span></span>
         <h3>Agent</h3>
         <p><span data-i18n="fr">Succession — page en construction.</span><span data-i18n="en" hidden>Succession — page under construction.</span></p>
       </div>
@@ -286,7 +324,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <span><span data-i18n="fr">Guides de fan, non affiliés à Pearl Abyss.</span><span data-i18n="en" hidden>Fan-made guides, not affiliated with Pearl Abyss.</span></span> <span aria-hidden="true">·</span> <a href="licence.html"><span data-i18n="fr">Mentions légales &amp; licence</span><span data-i18n="en" hidden>Legal notice &amp; license</span></a>
+    <span><span data-i18n="fr">Guides de fan, non affiliés à Pearl Abyss.</span><span data-i18n="en" hidden>Fan-made guides, not affiliated with Pearl Abyss.</span></span> <span aria-hidden="true">·</span> <a href="licence.html"><span data-i18n="fr">Mentions légales &amp; licence</span><span data-i18n="en" hidden>Legal notice &amp; license</span></a> <span aria-hidden="true">·</span> <a href="https://github.com/Alex-Buisine/TestBdo/issues/new?title=%5BAccueil%5D%20%E2%80%94%20" target="_blank" rel="noopener" class="suggest-fix-link"><span data-i18n="fr">Suggérer une correction</span><span data-i18n="en" hidden>Suggest a fix</span></a>
   </div>
 </footer>
 

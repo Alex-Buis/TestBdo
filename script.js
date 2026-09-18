@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   btn.click();
 });
 
-// Recherche de classe sur le hub d'accueil : filtre les cartes par nom en direct.
+// Recherche de classe sur le hub d'accueil : filtre les cartes par nom et par statut.
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('class-search-input');
   const grid = document.getElementById('class-grid');
@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const cards = Array.from(grid.querySelectorAll('.hub-card'));
   const emptyMessage = document.getElementById('class-search-empty');
+  const statusButtons = Array.from(document.querySelectorAll('.status-filter button'));
+  let activeStatus = 'all';
 
   // Retire les accents pour que "eveil" trouve aussi "Éveil", etc.
   const normalize = (str) => str
@@ -62,21 +64,35 @@ document.addEventListener('DOMContentLoaded', () => {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '');
 
-  searchInput.addEventListener('input', () => {
+  function refresh() {
     const query = normalize(searchInput.value.trim());
     let visibleCount = 0;
 
     cards.forEach((card) => {
       const name = card.querySelector('h3')?.textContent || '';
-      const matches = normalize(name).includes(query);
-      card.classList.toggle('is-hidden', !matches);
-      if (matches) visibleCount += 1;
+      const matchesSearch = normalize(name).includes(query);
+      const matchesStatus = activeStatus === 'all' || card.dataset.status === activeStatus;
+      const visible = matchesSearch && matchesStatus;
+      card.classList.toggle('is-hidden', !visible);
+      if (visible) visibleCount += 1;
     });
 
     if (emptyMessage) {
       emptyMessage.hidden = visibleCount !== 0;
     }
+  }
+
+  searchInput.addEventListener('input', refresh);
+
+  statusButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeStatus = btn.dataset.statusFilter;
+      statusButtons.forEach((b) => b.classList.toggle('is-active', b === btn));
+      refresh();
+    });
   });
+
+  refresh();
 });
 
 // Bouton "Copier la séquence" : reconstruit la liste touche > touche > ... du combo
@@ -84,6 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
 const COPY_LABELS = {
   fr: { default: 'Copier la séquence', done: 'Copié !', fail: 'Échec de la copie' },
   en: { default: 'Copy sequence', done: 'Copied!', fail: 'Copy failed' },
+};
+
+// Libellés du bouton "Copier tout le combo" (copie tous les blocs visibles de la page).
+const COPY_ALL_LABELS = {
+  fr: { default: 'Copier tout le combo', done: 'Copié !', fail: 'Échec de la copie' },
+  en: { default: 'Copy full combo', done: 'Copied!', fail: 'Copy failed' },
 };
 
 document.querySelectorAll('.copy-btn').forEach((btn) => {
@@ -110,6 +132,33 @@ document.querySelectorAll('.copy-btn').forEach((btn) => {
     }, 1800);
   });
 });
+
+// ===== Bouton "Copier tout le combo" (copie tous les blocs combo VISIBLES de la page) =====
+document.querySelectorAll('[data-copy-all]').forEach((btn) => {
+  btn.addEventListener('click', async () => {
+    const blocks = Array.from(document.querySelectorAll('.combo-block')).filter((b) => b.offsetParent !== null);
+    const sequence = blocks
+      .map((block) => Array.from(block.querySelectorAll('.combo-key')).map((el) => el.textContent.trim()).join(' > '))
+      .filter(Boolean)
+      .join('  |  ');
+    const lang = document.documentElement.getAttribute('data-lang') || 'fr';
+    const labels = COPY_ALL_LABELS[lang] || COPY_ALL_LABELS.fr;
+
+    try {
+      await navigator.clipboard.writeText(sequence);
+      btn.textContent = labels.done;
+      btn.classList.add('is-copied');
+    } catch (err) {
+      btn.textContent = labels.fail;
+    }
+
+    setTimeout(() => {
+      btn.textContent = labels.default;
+      btn.classList.remove('is-copied');
+    }, 1800);
+  });
+});
+
 // ===== Sélecteur de langue (FR/EN) =====
 (function () {
   const STORAGE_KEY = 'bdo-lang';
@@ -133,8 +182,12 @@ document.querySelectorAll('.copy-btn').forEach((btn) => {
     });
     // Remet à jour le libellé par défaut des boutons "copier" non actifs.
     const labels = COPY_LABELS[lang] || COPY_LABELS.fr;
-    document.querySelectorAll('.copy-btn:not(.is-copied)').forEach((btn) => {
+    document.querySelectorAll('.copy-btn:not([data-copy-all]):not(.is-copied)').forEach((btn) => {
       btn.textContent = labels.default;
+    });
+    const allLabels = COPY_ALL_LABELS[lang] || COPY_ALL_LABELS.fr;
+    document.querySelectorAll('[data-copy-all]:not(.is-copied)').forEach((btn) => {
+      btn.textContent = allLabels.default;
     });
   }
 
@@ -170,6 +223,44 @@ document.querySelectorAll('.copy-btn').forEach((btn) => {
       }
     });
   });
+})();
+
+// ===== Sélecteur de disposition clavier (QWERTY/AZERTY) =====
+// Les touches affichées (.combo-key) sont mémorisées à leur valeur QWERTY d'origine
+// puis remappées à la volée (Q<->A, W<->Z) en AZERTY, avec persistance du choix.
+(function () {
+  const STORAGE_KEY = 'bdo-keyboard';
+  const TO_AZERTY = { Q: 'A', A: 'Q', W: 'Z', Z: 'W' };
+  const keyEls = document.querySelectorAll('.combo-key');
+  const switches = document.querySelectorAll('.kb-switch');
+  if (!keyEls.length || !switches.length) return;
+
+  keyEls.forEach((el) => {
+    if (!el.dataset.qwerty) el.dataset.qwerty = el.textContent;
+  });
+
+  function toAzerty(text) {
+    return text.replace(/\b[QAWZ]\b/g, (m) => TO_AZERTY[m] || m);
+  }
+
+  function applyKeyboard(layout) {
+    keyEls.forEach((el) => {
+      el.textContent = layout === 'azerty' ? toAzerty(el.dataset.qwerty) : el.dataset.qwerty;
+    });
+    document.querySelectorAll('.kb-switch button').forEach((btn) => {
+      btn.classList.toggle('is-active', btn.dataset.kb === layout);
+    });
+  }
+
+  document.querySelectorAll('.kb-switch button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const layout = btn.dataset.kb;
+      localStorage.setItem(STORAGE_KEY, layout);
+      applyKeyboard(layout);
+    });
+  });
+
+  applyKeyboard(localStorage.getItem(STORAGE_KEY) || 'qwerty');
 })();
 
 // ===== Lazy-load des vidéos YouTube (facade) =====
