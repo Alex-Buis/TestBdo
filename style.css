@@ -3381,45 +3381,45 @@ html[data-lang="en"] [data-i18n="en"] { display: revert !important; }
   font-size: 1.05rem;
 }
 /* ===== Cartes du hub : dégradé combinant les couleurs des deux formes ===== */
-/* Seraph : rouge foncé (Purgatum) en haut -> blanc/crème (Sacramentum) en bas. */
-.form-card.hub-card.sacra .card-body { background: linear-gradient(165deg, var(--purga-deep), var(--sacra-glow)); }
-.form-card.hub-card.sacra h3, .form-card.hub-card.sacra p { color: var(--sacra-ink); }
-.form-card.hub-card.sacra p { color: var(--sacra-ink-dim); }
+/* Seraph : le rouge foncé (Purgatum) domine désormais, crème (Sacramentum) en minorité. */
+.form-card.hub-card.sacra .card-body { background: linear-gradient(165deg, var(--purga-deep) 0%, var(--purga-deep) 65%, var(--sacra-glow) 100%); }
+.form-card.hub-card.sacra h3 { color: var(--parchment); }
+.form-card.hub-card.sacra p { color: var(--parchment-dim); }
 
-/* Deadeye : une seule forme, mais un peu plus sombre que sur sa page dédiée. */
-.form-card.hub-card.deadeye .card-body { background: linear-gradient(165deg, #eaddce, var(--deadeye-deep)); }
+/* Deadeye : une seule forme, mais un peu plus sombre que sur sa page dédiée, le foncé domine. */
+.form-card.hub-card.deadeye .card-body { background: linear-gradient(165deg, #eaddce 0%, var(--deadeye-deep) 35%, var(--deadeye-deep) 100%); }
 .form-card.hub-card.deadeye h3 { color: #f0e6da; }
 .form-card.hub-card.deadeye p { color: #d9c2b4; }
 
-/* Dosa : Succession -> Éveil, teintes vives du thème. */
-.form-card.hub-card.succ .card-body { background: linear-gradient(165deg, var(--succ), var(--eveil)); }
+/* Dosa : le bleu foncé (Succession) domine désormais, Éveil en minorité. */
+.form-card.hub-card.succ .card-body { background: linear-gradient(165deg, var(--succ) 0%, var(--succ) 65%, var(--eveil) 100%); }
 .form-card.hub-card.succ h3 { color: #fff8ec; }
 .form-card.hub-card.succ p { color: rgba(255, 248, 236, 0.82); }
 
-.form-card.hub-card.warrior-succ .card-body { background: linear-gradient(165deg, #3d3731, #2d353d); }
-.form-card.hub-card.ranger-succ .card-body { background: linear-gradient(165deg, #3d3630, #243a3d); }
-.form-card.hub-card.sorceress-succ .card-body { background: linear-gradient(165deg, #2b243d, #35243d); }
-.form-card.hub-card.berserker-succ .card-body { background: linear-gradient(165deg, #3d2e2f, #3d2420); }
-.form-card.hub-card.tamer-succ .card-body { background: linear-gradient(165deg, #23353d, #1d343d); }
-.form-card.hub-card.musa-succ .card-body { background: linear-gradient(165deg, #3d3935, #3d231e); }
-.form-card.hub-card.maehwa-succ .card-body { background: linear-gradient(165deg, #3d2e28, #222e3d); }
-.form-card.hub-card.valkyrie-succ .card-body { background: linear-gradient(165deg, #3d251e, #3d2d1c); }
+.form-card.hub-card.warrior-succ .card-body { background: linear-gradient(165deg, #3d3731 0%, #2d353d 35%, #2d353d 100%); }
+.form-card.hub-card.ranger-succ .card-body { background: linear-gradient(165deg, #3d3630 0%, #243a3d 35%, #243a3d 100%); }
+.form-card.hub-card.sorceress-succ .card-body { background: linear-gradient(165deg, #2b243d 0%, #2b243d 65%, #35243d 100%); }
+.form-card.hub-card.berserker-succ .card-body { background: linear-gradient(165deg, #3d2e2f 0%, #3d2420 35%, #3d2420 100%); }
+.form-card.hub-card.tamer-succ .card-body { background: linear-gradient(165deg, #23353d 0%, #1d343d 35%, #1d343d 100%); }
+.form-card.hub-card.musa-succ .card-body { background: linear-gradient(165deg, #3d3935 0%, #3d231e 35%, #3d231e 100%); }
+.form-card.hub-card.maehwa-succ .card-body { background: linear-gradient(165deg, #3d2e28 0%, #222e3d 35%, #222e3d 100%); }
+.form-card.hub-card.valkyrie-succ .card-body { background: linear-gradient(165deg, #3d251e 0%, #3d251e 65%, #3d2d1c 100%); }
 .form-card.hub-card.kunoichi-succ .card-body { background: linear-gradient(165deg, #cedfea 0%, #3d342a 35%, #3d342a 100%); }
 .form-card.hub-card.ninja-succ .card-body { background: linear-gradient(165deg, #eadace 0%, #3d2a26 35%, #3d2a26 100%); }
-.form-card.hub-card.wizard-succ .card-body { background: linear-gradient(165deg, #1c2a3d, #3d1e18); }
-.form-card.hub-card.witch-succ .card-body { background: linear-gradient(165deg, #3d2834, #3d322b); }
-.form-card.hub-card.striker-succ .card-body { background: linear-gradient(165deg, #3d322b, #3d2922); }
-.form-card.hub-card.mystic-succ .card-body { background: linear-gradient(165deg, #3d3226, #24303d); }
-.form-card.hub-card.lahn-succ .card-body { background: linear-gradient(165deg, #3d1818, #3d2123); }
-.form-card.hub-card.dark-knight-succ .card-body { background: linear-gradient(165deg, #28323d, #35243d); }
-.form-card.hub-card.guardian-succ .card-body { background: linear-gradient(165deg, #3d2e39, #3d2f33); }
-.form-card.hub-card.hashashin-succ .card-body { background: linear-gradient(165deg, #24243d, #3d312b); }
-.form-card.hub-card.nova-succ .card-body { background: linear-gradient(165deg, #3d231f, #3d352d); }
-.form-card.hub-card.sage-succ .card-body { background: linear-gradient(165deg, #3d2524, #3d3525); }
-.form-card.hub-card.corsair-succ .card-body { background: linear-gradient(165deg, #232e3d, #28313d); }
-.form-card.hub-card.drakania-succ .card-body { background: linear-gradient(165deg, #2c303d, #3d2e2a); }
-.form-card.hub-card.woosa-succ .card-body { background: linear-gradient(165deg, #232a3d, #3d2123); }
-.form-card.hub-card.maegu-succ .card-body { background: linear-gradient(165deg, #3d2024, #3d1d27); }
+.form-card.hub-card.wizard-succ .card-body { background: linear-gradient(165deg, #1c2a3d 0%, #3d1e18 35%, #3d1e18 100%); }
+.form-card.hub-card.witch-succ .card-body { background: linear-gradient(165deg, #3d2834 0%, #3d2834 65%, #3d322b 100%); }
+.form-card.hub-card.striker-succ .card-body { background: linear-gradient(165deg, #3d322b 0%, #3d2922 35%, #3d2922 100%); }
+.form-card.hub-card.mystic-succ .card-body { background: linear-gradient(165deg, #3d3226 0%, #24303d 35%, #24303d 100%); }
+.form-card.hub-card.lahn-succ .card-body { background: linear-gradient(165deg, #3d1818 0%, #3d1818 65%, #3d2123 100%); }
+.form-card.hub-card.dark-knight-succ .card-body { background: linear-gradient(165deg, #28323d 0%, #35243d 35%, #35243d 100%); }
+.form-card.hub-card.guardian-succ .card-body { background: linear-gradient(165deg, #3d2e39 0%, #3d2e39 65%, #3d2f33 100%); }
+.form-card.hub-card.hashashin-succ .card-body { background: linear-gradient(165deg, #24243d 0%, #24243d 65%, #3d312b 100%); }
+.form-card.hub-card.nova-succ .card-body { background: linear-gradient(165deg, #3d231f 0%, #3d231f 65%, #3d352d 100%); }
+.form-card.hub-card.sage-succ .card-body { background: linear-gradient(165deg, #3d2524 0%, #3d2524 65%, #3d3525 100%); }
+.form-card.hub-card.corsair-succ .card-body { background: linear-gradient(165deg, #232e3d 0%, #232e3d 65%, #28313d 100%); }
+.form-card.hub-card.drakania-succ .card-body { background: linear-gradient(165deg, #2c303d 0%, #2c303d 65%, #3d2e2a 100%); }
+.form-card.hub-card.woosa-succ .card-body { background: linear-gradient(165deg, #232a3d 0%, #3d2123 35%, #3d2123 100%); }
+.form-card.hub-card.maegu-succ .card-body { background: linear-gradient(165deg, #3d2024 0%, #3d1d27 35%, #3d1d27 100%); }
 
 /* Kunoichi et Ninja : la teinte Éveil (foncée) domine désormais le dégradé
    (Succession n'apparaît qu'en minorité), donc texte clair plutôt que l'encre
