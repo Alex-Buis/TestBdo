@@ -3009,8 +3009,8 @@ body[data-form-theme="warrior-eveil"] .page-backdrop .photo { background-image: 
   z-index: 2;
 }
 .hero-split:has(.hub-card:hover) .hub-card:not(:hover) {
-  filter: blur(1.5px);
-  opacity: 0.55;
+  filter: blur(0.5px);
+  opacity: 0.75;
   transform: scale(0.98);
 }
 
@@ -3031,6 +3031,23 @@ body[data-form-theme="warrior-eveil"] .page-backdrop .photo { background-image: 
 }
 .card-body h3 { margin-bottom: 6px; }
 .card-body p { margin: 0; font-size: 0.9rem; }
+
+/* Ligne de tags (archétype de la classe) : cachée par défaut, révélée quand la
+   card grandit au survol. */
+.form-card.hub-card .card-tags {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 0.78rem;
+  font-style: italic;
+  transition: max-height 0.25s ease, opacity 0.25s ease, margin-top 0.25s ease;
+}
+.form-card.hub-card:hover .card-tags {
+  max-height: 40px;
+  opacity: 0.85;
+  margin-top: 8px;
+}
 
 /* ===== Photos ajoutées pour Maehwa / Kunoichi / Valkyrie ===== */
 .hero-scene.maehwa-scene .photo { background-image: url('assets/maehwa/maehwa-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
