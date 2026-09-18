@@ -148,3 +148,13 @@ document.querySelectorAll('.copy-btn').forEach((btn) => {
 
   applyLang(savedLang);
 })();
+
+// ===== Protection basique des images (dissuasive, pas une vraie sécurité) =====
+// Empêche le glisser-déposer et le menu clic-droit "Enregistrer l'image" sur les
+// icônes/artworks du site. Ne touche pas à la sélection du texte des guides.
+(function () {
+  document.querySelectorAll('img').forEach((img) => {
+    img.setAttribute('draggable', 'false');
+    img.addEventListener('contextmenu', (e) => e.preventDefault());
+  });
+})();
