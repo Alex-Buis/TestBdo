@@ -3387,7 +3387,7 @@ html[data-lang="en"] [data-i18n="en"] { display: revert !important; }
 .form-card.hub-card.sacra p { color: var(--parchment-dim); }
 
 /* Deadeye : une seule forme, mais un peu plus sombre que sur sa page dédiée, le foncé domine. */
-.form-card.hub-card.deadeye .card-body { background: linear-gradient(165deg, #eaddce 0%, var(--deadeye-deep) 35%, var(--deadeye-deep) 100%); }
+.form-card.hub-card.deadeye .card-body { background: linear-gradient(165deg, var(--deadeye-deep) 0%, var(--deadeye-deep) 65%, #eaddce 100%); }
 .form-card.hub-card.deadeye h3 { color: #f0e6da; }
 .form-card.hub-card.deadeye p { color: #d9c2b4; }
 
