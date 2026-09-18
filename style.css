@@ -295,7 +295,7 @@ footer.site-footer a:hover { color: var(--gold); }
 }
 
 .hero-scene.seraph-scene .photo {
-  background-image: url('assets/seraph/hero-seraph.png');
+  background-image: url('assets/seraph/hero-seraph.webp');
   background-position: center 28%;
   opacity: 0.92;
 }
@@ -347,7 +347,7 @@ footer.site-footer a:hover { color: var(--gold); }
 .hero-scene .photo-left { left: 0; -webkit-mask-image: linear-gradient(90deg, black 70%, transparent 100%); mask-image: linear-gradient(90deg, black 70%, transparent 100%); }
 .hero-scene .photo-right { right: 0; -webkit-mask-image: linear-gradient(270deg, black 70%, transparent 100%); mask-image: linear-gradient(270deg, black 70%, transparent 100%); }
 
-.hero-scene.dosa-scene .photo { background-image: url('assets/dosa/dosa-succession-portrait.png'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+.hero-scene.dosa-scene .photo { background-image: url('assets/dosa/dosa-succession-portrait.webp'); background-size: cover; background-position: center 18%; opacity: 0.9; }
 
 .hero-scene .seam {
   position: absolute;
@@ -432,7 +432,7 @@ footer.site-footer a:hover { color: var(--gold); }
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('assets/site/hub-cards-bg.jpg');
+  background-image: url('assets/site/hub-cards-bg.webp');
   background-size: cover;
   background-position: center 22%;
   opacity: 0.45;
@@ -523,7 +523,7 @@ footer.site-footer a:hover { color: var(--gold); }
 }
 
 .page-backdrop.seraph-backdrop .photo {
-  background-image: url('assets/seraph/hero-seraph.png');
+  background-image: url('assets/seraph/hero-seraph.webp');
   background-position: center 28%;
   opacity: 0.92;
 }
@@ -604,7 +604,7 @@ body[data-form-theme="sacra"] .page-backdrop {
   background: radial-gradient(ellipse 120% 90% at 50% 15%, #d6c69a, #ad9463 85%);
 }
 body[data-form-theme="sacra"] .page-backdrop .photo {
-  background-image: url('assets/seraph/sacra-bg.jpg');
+  background-image: url('assets/seraph/sacra-bg.webp');
   background-position: center 30%;
   opacity: 0.32;
   filter: brightness(0.7) saturate(0.85);
@@ -619,7 +619,7 @@ body[data-form-theme="purga"] .page-backdrop {
   background: radial-gradient(ellipse 120% 90% at 50% 15%, #2a0a06, #050201 85%);
 }
 body[data-form-theme="purga"] .page-backdrop .photo {
-  background-image: url('assets/seraph/purga-bg.png');
+  background-image: url('assets/seraph/purga-bg.webp');
   background-position: center 25%;
   opacity: 0.6;
   filter: brightness(0.9);
@@ -647,7 +647,7 @@ body[data-form-theme="succession"] .page-backdrop {
   background: radial-gradient(ellipse 120% 90% at 50% 15%, #c3d0dc, #92a7ba 85%);
 }
 body[data-form-theme="succession"] .page-backdrop .photo {
-  background-image: url('assets/dosa/dosa-succession-bg.jpg');
+  background-image: url('assets/dosa/dosa-succession-bg.webp');
   background-position: center 35%;
   opacity: 0.28;
   filter: brightness(0.7) saturate(0.8);
@@ -662,7 +662,7 @@ body[data-form-theme="eveil"] .page-backdrop {
   background: radial-gradient(ellipse 120% 90% at 50% 15%, #2a1c08, #0d0902 85%);
 }
 body[data-form-theme="eveil"] .page-backdrop .photo {
-  background-image: url('assets/dosa/dosa-eveil-bg.png');
+  background-image: url('assets/dosa/dosa-eveil-bg.webp');
   background-position: center 20%;
   opacity: 0.55;
   filter: brightness(0.85);
@@ -989,6 +989,30 @@ body[data-form-theme="eveil"] .page-backdrop .rosette-mark { opacity: 0.14; }
 
 .tab-row + .tab-row { margin-top: 4px; margin-bottom: 32px; }
 
+.quick-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 20px;
+}
+
+.quick-nav button {
+  background: transparent;
+  border: 1px dashed var(--stone-700);
+  color: var(--parchment-dim);
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.quick-nav button:hover {
+  border-color: var(--parchment-dim);
+  color: var(--parchment);
+}
+
 .tab-btn {
   background: transparent;
   border: 1px solid var(--stone-700);
@@ -1031,6 +1055,48 @@ body[data-form-theme="eveil"] .page-backdrop .rosette-mark { opacity: 0.14; }
 }
 
 .video-frame iframe { width: 100%; height: 100%; border: 0; }
+
+.yt-facade {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: var(--stone-900);
+}
+
+.yt-facade img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.yt-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 68px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+  background: rgba(20, 14, 10, 0.75);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.yt-facade:hover .yt-play { background: rgba(190, 40, 30, 0.9); }
+
+.yt-play::after {
+  content: '';
+  border-style: solid;
+  border-width: 11px 0 11px 18px;
+  border-color: transparent transparent transparent var(--parchment);
+  margin-left: 4px;
+}
 
 .video-placeholder {
   text-align: center;
@@ -2863,29 +2929,29 @@ body[data-form-theme="maegu-eveil"] .page-backdrop .rosette-mark { opacity: 0.08
 .agent-backdrop .side-light, .agent-backdrop .side-dark, .agent-backdrop .seam { opacity: 0; }
 
 /* ===== Photos ajoutées pour Musa / Tamer / Berserker / Sorceress / Ranger / Warrior ===== */
-.hero-scene.musa-scene .photo { background-image: url('assets/musa/musa-hero.jpg'); background-size: cover; background-position: center 22%; opacity: 0.9; }
-body[data-form-theme="musa-succ"] .page-backdrop .photo { background-image: url('assets/musa/musa-succession-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="musa-eveil"] .page-backdrop .photo { background-image: url('assets/musa/musa-eveil-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
+.hero-scene.musa-scene .photo { background-image: url('assets/musa/musa-hero.webp'); background-size: cover; background-position: center 22%; opacity: 0.9; }
+body[data-form-theme="musa-succ"] .page-backdrop .photo { background-image: url('assets/musa/musa-succession-bg.webp'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="musa-eveil"] .page-backdrop .photo { background-image: url('assets/musa/musa-eveil-bg.webp'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
 
-.hero-scene.tamer-scene .photo { background-image: url('assets/tamer/tamer-hero.jpg'); background-size: cover; background-position: center 22%; opacity: 0.9; }
-body[data-form-theme="tamer-succ"] .page-backdrop .photo { background-image: url('assets/tamer/tamer-succession-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="tamer-eveil"] .page-backdrop .photo { background-image: url('assets/tamer/tamer-eveil-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
+.hero-scene.tamer-scene .photo { background-image: url('assets/tamer/tamer-hero.webp'); background-size: cover; background-position: center 22%; opacity: 0.9; }
+body[data-form-theme="tamer-succ"] .page-backdrop .photo { background-image: url('assets/tamer/tamer-succession-bg.webp'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="tamer-eveil"] .page-backdrop .photo { background-image: url('assets/tamer/tamer-eveil-bg.webp'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
 
-.hero-scene.berserker-scene .photo { background-image: url('assets/berserker/berserker-hero.jpg'); background-size: cover; background-position: center 22%; opacity: 0.9; }
-body[data-form-theme="berserker-succ"] .page-backdrop .photo { background-image: url('assets/berserker/berserker-succession-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.8); }
-body[data-form-theme="berserker-eveil"] .page-backdrop .photo { background-image: url('assets/berserker/berserker-eveil-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
+.hero-scene.berserker-scene .photo { background-image: url('assets/berserker/berserker-hero.webp'); background-size: cover; background-position: center 22%; opacity: 0.9; }
+body[data-form-theme="berserker-succ"] .page-backdrop .photo { background-image: url('assets/berserker/berserker-succession-bg.webp'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.8); }
+body[data-form-theme="berserker-eveil"] .page-backdrop .photo { background-image: url('assets/berserker/berserker-eveil-bg.webp'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
 
-.hero-scene.sorceress-scene .photo { background-image: url('assets/sorceress/sorceress-hero.jpg'); background-size: cover; background-position: center 18%; opacity: 0.9; }
-body[data-form-theme="sorceress-succ"] .page-backdrop .photo { background-image: url('assets/sorceress/sorceress-succession-bg.png'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.8); }
-body[data-form-theme="sorceress-eveil"] .page-backdrop .photo { background-image: url('assets/sorceress/sorceress-eveil-bg.png'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.sorceress-scene .photo { background-image: url('assets/sorceress/sorceress-hero.webp'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+body[data-form-theme="sorceress-succ"] .page-backdrop .photo { background-image: url('assets/sorceress/sorceress-succession-bg.webp'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.8); }
+body[data-form-theme="sorceress-eveil"] .page-backdrop .photo { background-image: url('assets/sorceress/sorceress-eveil-bg.webp'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.ranger-scene .photo { background-image: url('assets/ranger/ranger-hero.jpg'); background-size: cover; background-position: center 20%; opacity: 0.9; }
-body[data-form-theme="ranger-eveil"] .page-backdrop .photo { background-image: url('assets/ranger/ranger-eveil-bg.png'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="ranger-succ"] .page-backdrop .photo { background-image: url('assets/ranger/ranger-succession-bg.jpg'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
+.hero-scene.ranger-scene .photo { background-image: url('assets/ranger/ranger-hero.webp'); background-size: cover; background-position: center 20%; opacity: 0.9; }
+body[data-form-theme="ranger-eveil"] .page-backdrop .photo { background-image: url('assets/ranger/ranger-eveil-bg.webp'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="ranger-succ"] .page-backdrop .photo { background-image: url('assets/ranger/ranger-succession-bg.webp'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
 
-.hero-scene.warrior-scene .photo { background-image: url('assets/warrior/warrior-hero.png'); background-size: cover; background-position: center 22%; opacity: 0.9; }
-body[data-form-theme="warrior-succ"] .page-backdrop .photo { background-image: url('assets/warrior/warrior-succession-bg.png'); background-size: cover; background-position: center 18%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="warrior-eveil"] .page-backdrop .photo { background-image: url('assets/warrior/warrior-eveil-bg.jpg'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
+.hero-scene.warrior-scene .photo { background-image: url('assets/warrior/warrior-hero.webp'); background-size: cover; background-position: center 22%; opacity: 0.9; }
+body[data-form-theme="warrior-succ"] .page-backdrop .photo { background-image: url('assets/warrior/warrior-succession-bg.webp'); background-size: cover; background-position: center 18%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="warrior-eveil"] .page-backdrop .photo { background-image: url('assets/warrior/warrior-eveil-bg.webp'); background-size: cover; background-position: center 20%; opacity: 0.5; filter: brightness(0.8); }
 
 /* ===== Hub : cartes avec vignette ===== */
 .form-card.hub-card {
@@ -2929,98 +2995,98 @@ body[data-form-theme="warrior-eveil"] .page-backdrop .photo { background-image: 
 .card-body p { margin: 0; font-size: 0.9rem; }
 
 /* ===== Photos ajoutées pour Maehwa / Kunoichi / Valkyrie ===== */
-.hero-scene.maehwa-scene .photo { background-image: url('assets/maehwa/maehwa-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
-body[data-form-theme="maehwa-succ"] .page-backdrop .photo { background-image: url('assets/maehwa/maehwa-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="maehwa-eveil"] .page-backdrop .photo { background-image: url('assets/maehwa/maehwa-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.5; filter: brightness(0.8); }
+.hero-scene.maehwa-scene .photo { background-image: url('assets/maehwa/maehwa-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="maehwa-succ"] .page-backdrop .photo { background-image: url('assets/maehwa/maehwa-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="maehwa-eveil"] .page-backdrop .photo { background-image: url('assets/maehwa/maehwa-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.5; filter: brightness(0.8); }
 
-.hero-scene.kunoichi-scene .photo { background-image: url('assets/kunoichi/kunoichi-hero.jpg'); background-size: cover; background-position: center 20%; opacity: 0.9; }
-body[data-form-theme="kunoichi-succ"] .page-backdrop .photo { background-image: url('assets/kunoichi/kunoichi-succession-bg.jpg'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="kunoichi-eveil"] .page-backdrop .photo { background-image: url('assets/kunoichi/kunoichi-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.5; filter: brightness(0.8); }
+.hero-scene.kunoichi-scene .photo { background-image: url('assets/kunoichi/kunoichi-hero.webp'); background-size: cover; background-position: center 20%; opacity: 0.9; }
+body[data-form-theme="kunoichi-succ"] .page-backdrop .photo { background-image: url('assets/kunoichi/kunoichi-succession-bg.webp'); background-size: cover; background-position: center 20%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="kunoichi-eveil"] .page-backdrop .photo { background-image: url('assets/kunoichi/kunoichi-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.5; filter: brightness(0.8); }
 
-.hero-scene.valkyrie-scene .photo { background-image: url('assets/valkyrie/valkyrie-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
-body[data-form-theme="valkyrie-succ"] .page-backdrop .photo { background-image: url('assets/valkyrie/valkyrie-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.9); }
-body[data-form-theme="valkyrie-eveil"] .page-backdrop .photo { background-image: url('assets/valkyrie/valkyrie-eveil-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.85); }
+.hero-scene.valkyrie-scene .photo { background-image: url('assets/valkyrie/valkyrie-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="valkyrie-succ"] .page-backdrop .photo { background-image: url('assets/valkyrie/valkyrie-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.9); }
+body[data-form-theme="valkyrie-eveil"] .page-backdrop .photo { background-image: url('assets/valkyrie/valkyrie-eveil-bg.webp'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.85); }
 
 /* ===== Photos ajoutées pour Mystic / Striker / Dark Knight / Witch / Wizard / Ninja ===== */
-.hero-scene.mystic-scene .photo { background-image: url('assets/mystic/mystic-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
-body[data-form-theme="mystic-succ"] .page-backdrop .photo { background-image: url('assets/mystic/mystic-succession-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="mystic-eveil"] .page-backdrop .photo { background-image: url('assets/mystic/mystic-eveil-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.85); }
+.hero-scene.mystic-scene .photo { background-image: url('assets/mystic/mystic-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="mystic-succ"] .page-backdrop .photo { background-image: url('assets/mystic/mystic-succession-bg.webp'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="mystic-eveil"] .page-backdrop .photo { background-image: url('assets/mystic/mystic-eveil-bg.webp'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.85); }
 
-.hero-scene.striker-scene .photo { background-image: url('assets/striker/striker-hero.jpg'); background-size: cover; background-position: center 22%; opacity: 0.9; }
-body[data-form-theme="striker-succ"] .page-backdrop .photo { background-image: url('assets/striker/striker-succession-bg.jpg'); background-size: cover; background-position: center 18%; opacity: 0.4; filter: brightness(0.8); }
-body[data-form-theme="striker-eveil"] .page-backdrop .photo { background-image: url('assets/striker/striker-eveil-bg.jpg'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.striker-scene .photo { background-image: url('assets/striker/striker-hero.webp'); background-size: cover; background-position: center 22%; opacity: 0.9; }
+body[data-form-theme="striker-succ"] .page-backdrop .photo { background-image: url('assets/striker/striker-succession-bg.webp'); background-size: cover; background-position: center 18%; opacity: 0.4; filter: brightness(0.8); }
+body[data-form-theme="striker-eveil"] .page-backdrop .photo { background-image: url('assets/striker/striker-eveil-bg.webp'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.dark-knight-scene .photo { background-image: url('assets/dark-knight/dark-knight-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
-body[data-form-theme="dark-knight-succ"] .page-backdrop .photo { background-image: url('assets/dark-knight/dark-knight-succession-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.8); }
-body[data-form-theme="dark-knight-eveil"] .page-backdrop .photo { background-image: url('assets/dark-knight/dark-knight-eveil-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.dark-knight-scene .photo { background-image: url('assets/dark-knight/dark-knight-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="dark-knight-succ"] .page-backdrop .photo { background-image: url('assets/dark-knight/dark-knight-succession-bg.webp'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.8); }
+body[data-form-theme="dark-knight-eveil"] .page-backdrop .photo { background-image: url('assets/dark-knight/dark-knight-eveil-bg.webp'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.witch-scene .photo { background-image: url('assets/witch/witch-hero.jpg'); background-size: cover; background-position: center 18%; opacity: 0.9; }
-body[data-form-theme="witch-succ"] .page-backdrop .photo { background-image: url('assets/witch/witch-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="witch-eveil"] .page-backdrop .photo { background-image: url('assets/witch/witch-eveil-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.witch-scene .photo { background-image: url('assets/witch/witch-hero.webp'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+body[data-form-theme="witch-succ"] .page-backdrop .photo { background-image: url('assets/witch/witch-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="witch-eveil"] .page-backdrop .photo { background-image: url('assets/witch/witch-eveil-bg.webp'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.wizard-scene .photo { background-image: url('assets/wizard/wizard-hero.png'); background-size: cover; background-position: center 20%; opacity: 0.9; }
-body[data-form-theme="wizard-succ"] .page-backdrop .photo { background-image: url('assets/wizard/wizard-succession-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="wizard-eveil"] .page-backdrop .photo { background-image: url('assets/wizard/wizard-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.wizard-scene .photo { background-image: url('assets/wizard/wizard-hero.webp'); background-size: cover; background-position: center 20%; opacity: 0.9; }
+body[data-form-theme="wizard-succ"] .page-backdrop .photo { background-image: url('assets/wizard/wizard-succession-bg.webp'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="wizard-eveil"] .page-backdrop .photo { background-image: url('assets/wizard/wizard-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.ninja-scene .photo { background-image: url('assets/ninja/ninja-hero.jpg'); background-size: cover; background-position: center 20%; opacity: 0.9; }
-body[data-form-theme="ninja-succ"] .page-backdrop .photo { background-image: url('assets/ninja/ninja-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="ninja-eveil"] .page-backdrop .photo { background-image: url('assets/ninja/ninja-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.ninja-scene .photo { background-image: url('assets/ninja/ninja-hero.webp'); background-size: cover; background-position: center 20%; opacity: 0.9; }
+body[data-form-theme="ninja-succ"] .page-backdrop .photo { background-image: url('assets/ninja/ninja-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="ninja-eveil"] .page-backdrop .photo { background-image: url('assets/ninja/ninja-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
 
 /* ===== Photos ajoutées pour Hashashin / Nova / Sage / Guardian / Shai / Lahn ===== */
-.hero-scene.hashashin-scene .photo { background-image: url('assets/hashashin/hashashin-hero.jpg'); background-size: cover; background-position: center 20%; opacity: 0.9; }
-body[data-form-theme="hashashin-succ"] .page-backdrop .photo { background-image: url('assets/hashashin/hashashin-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="hashashin-eveil"] .page-backdrop .photo { background-image: url('assets/hashashin/hashashin-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.hashashin-scene .photo { background-image: url('assets/hashashin/hashashin-hero.webp'); background-size: cover; background-position: center 20%; opacity: 0.9; }
+body[data-form-theme="hashashin-succ"] .page-backdrop .photo { background-image: url('assets/hashashin/hashashin-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="hashashin-eveil"] .page-backdrop .photo { background-image: url('assets/hashashin/hashashin-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.nova-scene .photo { background-image: url('assets/nova/nova-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
-body[data-form-theme="nova-succ"] .page-backdrop .photo { background-image: url('assets/nova/nova-succession-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="nova-eveil"] .page-backdrop .photo { background-image: url('assets/nova/nova-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.nova-scene .photo { background-image: url('assets/nova/nova-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="nova-succ"] .page-backdrop .photo { background-image: url('assets/nova/nova-succession-bg.webp'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="nova-eveil"] .page-backdrop .photo { background-image: url('assets/nova/nova-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.sage-scene .photo { background-image: url('assets/sage/sage-hero.jpg'); background-size: cover; background-position: center 18%; opacity: 0.9; }
-body[data-form-theme="sage-succ"] .page-backdrop .photo { background-image: url('assets/sage/sage-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="sage-eveil"] .page-backdrop .photo { background-image: url('assets/sage/sage-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.sage-scene .photo { background-image: url('assets/sage/sage-hero.webp'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+body[data-form-theme="sage-succ"] .page-backdrop .photo { background-image: url('assets/sage/sage-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="sage-eveil"] .page-backdrop .photo { background-image: url('assets/sage/sage-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.guardian-scene .photo { background-image: url('assets/guardian/guardian-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
-body[data-form-theme="guardian-succ"] .page-backdrop .photo { background-image: url('assets/guardian/guardian-succession-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="guardian-eveil"] .page-backdrop .photo { background-image: url('assets/guardian/guardian-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.guardian-scene .photo { background-image: url('assets/guardian/guardian-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="guardian-succ"] .page-backdrop .photo { background-image: url('assets/guardian/guardian-succession-bg.webp'); background-size: cover; background-position: center 12%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="guardian-eveil"] .page-backdrop .photo { background-image: url('assets/guardian/guardian-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.lahn-scene .photo { background-image: url('assets/lahn/lahn-hero.jpg'); background-size: cover; background-position: center 18%; opacity: 0.9; }
-body[data-form-theme="lahn-succ"] .page-backdrop .photo { background-image: url('assets/lahn/lahn-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="lahn-eveil"] .page-backdrop .photo { background-image: url('assets/lahn/lahn-eveil-bg.jpg'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.lahn-scene .photo { background-image: url('assets/lahn/lahn-hero.webp'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+body[data-form-theme="lahn-succ"] .page-backdrop .photo { background-image: url('assets/lahn/lahn-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="lahn-eveil"] .page-backdrop .photo { background-image: url('assets/lahn/lahn-eveil-bg.webp'); background-size: cover; background-position: center 12%; opacity: 0.45; filter: brightness(0.8); }
 
 /* Shai (statique — une seule section, pas de succession) */
-.shai-backdrop .photo { background-image: url('assets/shai/shai-eveil-bg.jpg'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.85); }
-.hero-scene.shai-backdrop .photo { background-image: url('assets/shai/shai-hero.jpg'); background-size: cover; background-position: center 20%; opacity: 0.9; }
+.shai-backdrop .photo { background-image: url('assets/shai/shai-eveil-bg.webp'); background-size: cover; background-position: center 18%; opacity: 0.45; filter: brightness(0.85); }
+.hero-scene.shai-backdrop .photo { background-image: url('assets/shai/shai-hero.webp'); background-size: cover; background-position: center 20%; opacity: 0.9; }
 
 
 /* ===== Photos ajoutées pour Maegu / Woosa / Drakania / Corsair ===== */
-.hero-scene.maegu-scene .photo { background-image: url('assets/maegu/maegu-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
-body[data-form-theme="maegu-succ"] .page-backdrop .photo { background-image: url('assets/maegu/maegu-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="maegu-eveil"] .page-backdrop .photo { background-image: url('assets/maegu/maegu-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.maegu-scene .photo { background-image: url('assets/maegu/maegu-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="maegu-succ"] .page-backdrop .photo { background-image: url('assets/maegu/maegu-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="maegu-eveil"] .page-backdrop .photo { background-image: url('assets/maegu/maegu-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.woosa-scene .photo { background-image: url('assets/woosa/woosa-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
-body[data-form-theme="woosa-succ"] .page-backdrop .photo { background-image: url('assets/woosa/woosa-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="woosa-eveil"] .page-backdrop .photo { background-image: url('assets/woosa/woosa-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.woosa-scene .photo { background-image: url('assets/woosa/woosa-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="woosa-succ"] .page-backdrop .photo { background-image: url('assets/woosa/woosa-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="woosa-eveil"] .page-backdrop .photo { background-image: url('assets/woosa/woosa-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.drakania-scene .photo { background-image: url('assets/drakania/drakania-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
-body[data-form-theme="drakania-succ"] .page-backdrop .photo { background-image: url('assets/drakania/drakania-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="drakania-eveil"] .page-backdrop .photo { background-image: url('assets/drakania/drakania-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.drakania-scene .photo { background-image: url('assets/drakania/drakania-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="drakania-succ"] .page-backdrop .photo { background-image: url('assets/drakania/drakania-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="drakania-eveil"] .page-backdrop .photo { background-image: url('assets/drakania/drakania-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
 
-.hero-scene.corsair-scene .photo { background-image: url('assets/corsair/corsair-hero.jpg'); background-size: cover; background-position: center 15%; opacity: 0.9; }
-body[data-form-theme="corsair-succ"] .page-backdrop .photo { background-image: url('assets/corsair/corsair-succession-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
-body[data-form-theme="corsair-eveil"] .page-backdrop .photo { background-image: url('assets/corsair/corsair-eveil-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
+.hero-scene.corsair-scene .photo { background-image: url('assets/corsair/corsair-hero.webp'); background-size: cover; background-position: center 15%; opacity: 0.9; }
+body[data-form-theme="corsair-succ"] .page-backdrop .photo { background-image: url('assets/corsair/corsair-succession-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.4; filter: brightness(0.85); }
+body[data-form-theme="corsair-eveil"] .page-backdrop .photo { background-image: url('assets/corsair/corsair-eveil-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.8); }
 
 /* Agent / Wukong / Deadeye / Scholar (statiques — une seule section) */
-.agent-backdrop .photo { background-image: url('assets/agent/agent-ascension-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.85); }
-.hero-scene.agent-backdrop .photo { background-image: url('assets/agent/agent-hero.jpg'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+.agent-backdrop .photo { background-image: url('assets/agent/agent-ascension-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.85); }
+.hero-scene.agent-backdrop .photo { background-image: url('assets/agent/agent-hero.webp'); background-size: cover; background-position: center 18%; opacity: 0.9; }
 
-.wukong-backdrop .photo { background-image: url('assets/wukong/wukong-ascension-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.85); }
-.hero-scene.wukong-backdrop .photo { background-image: url('assets/wukong/wukong-hero.png'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+.wukong-backdrop .photo { background-image: url('assets/wukong/wukong-ascension-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.85); }
+.hero-scene.wukong-backdrop .photo { background-image: url('assets/wukong/wukong-hero.webp'); background-size: cover; background-position: center 18%; opacity: 0.9; }
 
-.deadeye-backdrop .photo { background-image: url('assets/deadeye/deadeye-ascension-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.85); }
-.hero-scene.deadeye-backdrop .photo { background-image: url('assets/deadeye/deadeye-hero.jpg'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+.deadeye-backdrop .photo { background-image: url('assets/deadeye/deadeye-ascension-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.85); }
+.hero-scene.deadeye-backdrop .photo { background-image: url('assets/deadeye/deadeye-hero.webp'); background-size: cover; background-position: center 18%; opacity: 0.9; }
 
-.scholar-backdrop .photo { background-image: url('assets/scholar/scholar-ascension-bg.jpg'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.85); }
-.hero-scene.scholar-backdrop .photo { background-image: url('assets/scholar/scholar-hero.jpg'); background-size: cover; background-position: center 18%; opacity: 0.9; }
+.scholar-backdrop .photo { background-image: url('assets/scholar/scholar-ascension-bg.webp'); background-size: cover; background-position: center 15%; opacity: 0.45; filter: brightness(0.85); }
+.hero-scene.scholar-backdrop .photo { background-image: url('assets/scholar/scholar-hero.webp'); background-size: cover; background-position: center 18%; opacity: 0.9; }
 /* ===== Sélecteur de langue (FR/EN) ===== */
 .lang-switch {
   display: flex;

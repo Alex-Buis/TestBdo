@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Combos | Seraph</title>
+<meta name="description" content="Combos PvE/PvP, add-ons de compétences et choix de rabam pour Seraph sur Black Desert Online.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Combos | Seraph">
+<meta property="og:description" content="Combos PvE/PvP, add-ons de compétences et choix de rabam pour Seraph sur Black Desert Online.">
+<meta property="og:image" content="https://test-bdo.vercel.app/assets/seraph/hero-seraph.png">
+<meta property="og:url" content="https://test-bdo.vercel.app/seraph/combos.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Combos | Seraph">
+<meta name="twitter:description" content="Combos PvE/PvP, add-ons de compétences et choix de rabam pour Seraph sur Black Desert Online.">
+<meta name="twitter:image" content="https://test-bdo.vercel.app/assets/seraph/hero-seraph.png">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body data-form-theme="base">
@@ -46,6 +56,12 @@
     <button class="tab-btn" data-tab-target="panel-pvp" aria-selected="false" data-form-theme="base">PvP</button>
   </div>
 
+  <div class="quick-nav">
+    <button type="button" data-scroll-to="combo"><span data-i18n="fr">Combo</span><span data-i18n="en" hidden>Combo</span></button>
+    <button type="button" data-scroll-to="addons">Add-ons</button>
+    <button type="button" data-scroll-to="rabam">Rabam</button>
+  </div>
+
   <div id="content-pve-pvp">
 
     <!-- ============ PANEL PvE ============ -->
@@ -59,7 +75,10 @@
       </div>
 
       <div class="video-frame">
-        <iframe src="https://www.youtube-nocookie.com/embed/J_yoiCYNy68" title="Seraph Post Nerfs PvE guide | Sacramentum + Purgatum | Highest DPS Combo — Mangle" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        <button type="button" class="yt-facade" data-yt-id="J_yoiCYNy68" data-yt-title="Seraph Post Nerfs PvE guide | Sacramentum + Purgatum | Highest DPS Combo — Mangle" aria-label="Lire la vidéo : Seraph Post Nerfs PvE guide | Sacramentum + Purgatum | Highest DPS Combo — Mangle">
+          <img src="https://img.youtube.com/vi/J_yoiCYNy68/hqdefault.jpg" alt="" loading="lazy">
+          <span class="yt-play" aria-hidden="true"></span>
+        </button>
       </div>
 
       <div id="content-forms-pve">
@@ -395,7 +414,10 @@
     <!-- ============ PANEL PvP ============ -->
     <div id="panel-pvp" class="tab-panel" data-tab-panel>
       <div class="video-frame">
-        <iframe src="https://www.youtube-nocookie.com/embed/jv8SELGKg1o" title="Seraph PvP montage — Mangle" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        <button type="button" class="yt-facade" data-yt-id="jv8SELGKg1o" data-yt-title="Seraph PvP montage — Mangle" aria-label="Lire la vidéo : Seraph PvP montage — Mangle">
+          <img src="https://img.youtube.com/vi/jv8SELGKg1o/hqdefault.jpg" alt="" loading="lazy">
+          <span class="yt-play" aria-hidden="true"></span>
+        </button>
       </div>
       <div class="callout" data-i18n="fr">
         Montage PvP par Mangle. Le détail des combos et sorts pour le PvP (Sacramentum et Purgatum) arrive dans une prochaine mise à jour du site.

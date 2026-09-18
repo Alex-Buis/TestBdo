@@ -149,6 +149,47 @@ document.querySelectorAll('.copy-btn').forEach((btn) => {
   applyLang(savedLang);
 })();
 
+// ===== Navigation rapide (boutons Combo / Add-ons / Rabam) =====
+// Scrolle vers le premier bloc VISIBLE du type demandé (tient compte des onglets
+// PvE/PvP et Succession/Éveil actifs, puisque les panneaux inactifs sont en display:none).
+(function () {
+  const selectorMap = {
+    combo: '.combo-block',
+    addons: '.addon-block',
+    rabam: '.rabam-block',
+  };
+
+  document.querySelectorAll('[data-scroll-to]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const selector = selectorMap[btn.dataset.scrollTo];
+      if (!selector) return;
+      const target = Array.from(document.querySelectorAll(selector))
+        .find((el) => el.offsetParent !== null);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+
+// ===== Lazy-load des vidéos YouTube (facade) =====
+// Affiche une miniature cliquable à la place de l'iframe YouTube : la vidéo (et
+// tous les scripts qu'elle charge) n'est insérée dans la page qu'au clic, ce qui
+// accélère nettement le chargement initial des pages avec vidéo.
+document.querySelectorAll('.yt-facade').forEach((facade) => {
+  const load = () => {
+    const id = facade.dataset.ytId;
+    const title = facade.dataset.ytTitle || 'Vidéo YouTube';
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`;
+    iframe.title = title;
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    facade.replaceWith(iframe);
+  };
+  facade.addEventListener('click', load);
+});
+
 // ===== Protection basique des images (dissuasive, pas une vraie sécurité) =====
 // Empêche le glisser-déposer et le menu clic-droit "Enregistrer l'image" sur les
 // icônes/artworks du site. Ne touche pas à la sélection du texte des guides.
