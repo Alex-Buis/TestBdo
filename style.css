@@ -104,6 +104,13 @@ header.site-nav {
   background: rgba(12, 10, 16, 0.96);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--stone-700);
+  /* Le header a toujours un fond sombre, quel que soit le thème de forme actif
+     (Sacramentum/Purgatum inversent --parchment en brun foncé pour leur contenu
+     clair). On fige donc ici des couleurs de texte claires fixes, pour ne pas
+     hériter d'un texte sombre illisible sur ce fond sombre. */
+  --parchment: #ece5d6;
+  --parchment-dim: #b3ab9c;
+  --stone-700: #37313f;
 }
 
 .site-nav .wrap {
@@ -153,6 +160,7 @@ header.site-nav {
 }
 
 .site-nav a.nav-back {
+  color: var(--parchment);
   opacity: 0.6;
   font-size: 0.82rem;
   padding-right: 16px;
