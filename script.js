@@ -166,6 +166,7 @@ document.querySelectorAll('[data-copy-all]').forEach((btn) => {
 
   function applyLang(lang) {
     document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.lang = lang;
     document.querySelectorAll('.lang-switch button').forEach((btn) => {
       btn.classList.toggle('is-active', btn.dataset.lang === lang);
     });
@@ -288,5 +289,33 @@ document.querySelectorAll('.yt-facade').forEach((facade) => {
   document.querySelectorAll('img').forEach((img) => {
     img.setAttribute('draggable', 'false');
     img.addEventListener('contextmenu', (e) => e.preventDefault());
+  });
+})();
+
+// ===== Fallback si une icône de compétence ne charge pas =====
+// Remplace l'image cassée par le même "?" utilisé pour les icônes pas encore
+// disponibles, au lieu de laisser l'icône de navigateur cassée.
+document.querySelectorAll('.combo-icon img').forEach((img) => {
+  img.addEventListener('error', () => {
+    const holder = img.closest('.combo-icon');
+    if (holder) {
+      holder.textContent = '?';
+      holder.classList.add('icon-missing');
+    }
+  }, { once: true });
+});
+
+// ===== Bouton "Retour en haut" =====
+// Apparaît après un peu de scroll sur les pages longues (Combos).
+(function () {
+  const btn = document.querySelector('.back-to-top');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('is-visible', window.scrollY > 600);
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();

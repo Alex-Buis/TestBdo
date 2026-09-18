@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+/* Police chargée via <link> dans le <head> de chaque page (voir preconnect),
+   plutôt qu'en @import ici : un @import bloque le rendu le temps que le
+   navigateur télécharge et parse ce fichier CSS avant même de découvrir la
+   police à charger. */
 
 :root {
   --stone-950: #121019;
@@ -3254,7 +3257,7 @@ html[data-lang="en"] [data-i18n="en"] { display: revert !important; }
   .site-nav, .page-backdrop, .hero-scene, .quick-nav, .tools-row .quick-nav,
   .page-tools, .kb-switch, .lang-switch, .status-filter, .class-search,
   .video-frame, .yt-facade, .copy-btn, .footer-tools, footer.site-footer,
-  .tab-row, .callout ~ .video-frame {
+  .tab-row, .callout ~ .video-frame, .skip-link, .back-to-top, .class-pager {
     display: none !important;
   }
   /* Les thèmes par classe (.theme-*) posent chacun leurs propres couleurs de fond
@@ -3279,4 +3282,101 @@ html[data-lang="en"] [data-i18n="en"] { display: revert !important; }
   .combo-row { flex-wrap: wrap; }
   a { text-decoration: none !important; }
   .tab-panel:not(.is-active) { display: none !important; }
+}
+
+/* ===== Lien d'évitement "Aller au contenu" (accessibilité clavier) ===== */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  z-index: 100;
+  background: var(--gold);
+  color: #16130f;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ===== Bouton "Retour en haut" ===== */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--stone-700);
+  background: rgba(18, 16, 25, 0.9);
+  color: var(--parchment);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.15s ease;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.back-to-top:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ===== Suggestions de classes sur la page 404 ===== */
+.notfound-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 28px;
+}
+.notfound-suggestions a {
+  border: 1px solid var(--stone-700);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  color: var(--parchment-dim);
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+.notfound-suggestions a:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ===== Navigation classe précédente / suivante ===== */
+.class-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 40px 0 8px;
+  flex-wrap: wrap;
+}
+.class-pager a {
+  flex: 1 1 220px;
+  border: 1px solid var(--stone-700);
+  border-radius: 10px;
+  padding: 12px 18px;
+  text-decoration: none;
+  color: var(--parchment-dim);
+  transition: border-color 0.15s, color 0.15s;
+}
+.class-pager a:hover { border-color: var(--gold); color: var(--parchment); }
+.class-pager a.next { text-align: right; }
+.class-pager .pager-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  margin-bottom: 3px;
+}
+.class-pager .pager-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
 }

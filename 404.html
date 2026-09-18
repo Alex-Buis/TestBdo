@@ -10,9 +10,15 @@
 <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link"><span data-i18n="fr">Aller au contenu</span><span data-i18n="en" hidden>Skip to content</span></a>
+
+
 
 <header class="site-nav">
   <div class="wrap">
@@ -24,13 +30,20 @@
   </div>
 </header>
 
-<div class="wrap" style="text-align: center; padding: 120px 20px;">
+<div class="wrap" style="text-align: center; padding: 120px 20px;" id="main-content">
   <h2 style="font-size: 3rem; margin-bottom: 16px;">404</h2>
   <p data-i18n="fr" style="font-size: 1.15rem; margin-bottom: 32px;">Cette page n'existe pas (ou plus). Elle a peut-être été renommée ou déplacée.</p>
   <p data-i18n="en" hidden style="font-size: 1.15rem; margin-bottom: 32px;">This page doesn't exist (or not anymore). It may have been renamed or moved.</p>
   <a class="copy-btn" href="/index.html" style="display: inline-block; text-decoration: none;">
     <span data-i18n="fr">Retour à l'accueil</span><span data-i18n="en" hidden>Back to home</span>
   </a>
+
+  <p style="margin-top: 40px; font-size: 0.85rem; opacity: 0.7;"><span data-i18n="fr">Ou essaie une de ces pages :</span><span data-i18n="en" hidden>Or try one of these pages:</span></p>
+  <div class="notfound-suggestions">
+    <a href="/seraph/index.html">Seraph</a>
+    <a href="/deadeye/index.html">Deadeye</a>
+    <a href="/wukong/index.html">Wukong</a>
+  </div>
 </div>
 
 <footer class="site-footer">
