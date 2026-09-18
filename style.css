@@ -256,17 +256,19 @@ header.site-nav {
 
 footer.site-footer {
   border-top: 1px solid var(--stone-700);
-  margin-top: 96px;
-  padding: 32px 0 56px;
+  margin-top: 56px;
+  padding: 28px 0 36px;
   color: var(--parchment-dim);
   font-size: 0.85rem;
+  text-align: center;
 }
 
 footer.site-footer .wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 6px 12px;
 }
 
 footer.site-footer a {
@@ -936,7 +938,7 @@ body[data-form-theme="eveil"] .page-backdrop .rosette-mark { opacity: 0.14; }
 /* ---------- page header (combos / univers) ---------- */
 
 .page-head {
-  padding: 64px 0 32px;
+  padding: 64px 24px 32px;
 }
 
 .page-head p { margin-top: 8px; }
@@ -2985,7 +2987,24 @@ body[data-form-theme="warrior-eveil"] .page-backdrop .photo { background-image: 
   display: block;
   transition: transform 0.3s ease;
 }
-.form-card.hub-card:hover .card-visual img { transform: scale(1.06); }
+.form-card.hub-card:hover .card-visual img { transform: scale(1.1); }
+
+/* Survol plus marqué : la card ciblée ressort davantage (montée + lueur dorée),
+   et les autres cards de la grille s'estompent légèrement en flou pour renforcer le contraste. */
+.form-card.hub-card {
+  transition: border-color 0.2s, transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease, opacity 0.25s ease;
+}
+.form-card.hub-card:hover {
+  transform: translateY(-8px) scale(1.025);
+  border-color: var(--gold);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(189, 151, 82, 0.35);
+  z-index: 2;
+}
+.hero-split:has(.hub-card:hover) .hub-card:not(:hover) {
+  filter: blur(1.5px);
+  opacity: 0.55;
+  transform: scale(0.98);
+}
 
 .card-visual.placeholder {
   display: flex;
@@ -3311,6 +3330,10 @@ html[data-lang="en"] [data-i18n="en"] { display: revert !important; }
   z-index: 30;
   width: 44px;
   height: 44px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   border: 1px solid var(--stone-700);
   background: rgba(18, 16, 25, 0.9);
