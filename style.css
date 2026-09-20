@@ -3474,3 +3474,100 @@ html[data-lang="en"] [data-i18n="en"] { display: revert !important; }
    foncée des form-card individuelles. */
 .form-card.hub-card.kunoichi-succ h3, .form-card.hub-card.ninja-succ h3 { color: var(--parchment); }
 .form-card.hub-card.kunoichi-succ p, .form-card.hub-card.ninja-succ p { color: var(--parchment-dim); }
+
+/* ===== Créateur de combo (builder.html) ===== */
+.builder-wrap { padding-top: 24px; padding-bottom: 56px; }
+
+.builder-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.builder-skill-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--stone-800);
+  border: 1px solid var(--stone-700);
+  border-radius: 999px;
+  padding: 4px 14px 4px 4px;
+  color: var(--parchment);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.builder-skill-btn:hover { border-color: var(--gold); transform: translateY(-1px); }
+.builder-skill-btn .combo-icon { width: 30px; height: 30px; margin: 0; }
+
+.builder-step { position: relative; padding-top: 22px; }
+
+.builder-step-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.builder-mini-btn {
+  all: unset;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  color: var(--parchment-dim);
+  background: var(--stone-800);
+  border: 1px solid var(--stone-700);
+}
+.builder-mini-btn:hover { color: var(--gold); border-color: var(--gold); }
+.builder-mini-remove:hover { color: #d16b5a; border-color: #d16b5a; }
+
+.builder-key-input {
+  display: block;
+  width: 68px;
+  margin: 4px auto 6px;
+  text-align: center;
+  font-size: 0.72rem;
+  background: var(--stone-800);
+  border: 1px solid var(--stone-700);
+  border-radius: 4px;
+  color: var(--parchment);
+  padding: 2px 4px;
+}
+.builder-key-input:focus { outline: none; border-color: var(--gold); }
+
+.builder-btn {
+  flex: 0 0 auto;
+  background: transparent;
+  border: 1px solid var(--stone-700);
+  color: var(--parchment-dim);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.builder-btn:hover { border-color: var(--gold); color: var(--gold); }
+.builder-btn.is-copied { border-color: var(--gold); color: var(--gold); }
+
+.builder-toggle-card { cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease; }
+.builder-toggle-card:hover { border-color: var(--gold); }
+.builder-toggle-card.is-selected {
+  border-color: var(--gold);
+  background: rgba(189, 151, 82, 0.12);
+}
+
+.builder-actions {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--stone-700);
+  text-align: center;
+}
+.builder-share-note { max-width: 460px; margin: 10px auto 0; }
