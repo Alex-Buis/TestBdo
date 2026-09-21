@@ -1228,6 +1228,15 @@ body[data-form-theme="eveil"] .page-backdrop .rosette-mark { opacity: 0.14; }
   padding: 0 2px 20px;
 }
 
+/* Flat key-only rows (built via keyrow(), no .combo-step icon columns):
+   .combo-key's `margin: 0 auto 6px` is meant to center it inside a fixed
+   92px .combo-step column. As a direct flex child of .combo-row it instead
+   triggers flexbox auto-margin space distribution, spreading a handful of
+   key-chips across the whole row width with large empty gaps. Neutralize
+   the horizontal auto-margin only when .combo-key sits directly in the row
+   (icon-format rows keep it nested inside .combo-step, untouched here). */
+.combo-row > .combo-key { margin-left: 0; margin-right: 0; }
+
 .callout {
   border: 1px solid var(--stone-700);
   border-left: 3px solid var(--gold);
@@ -1426,7 +1435,7 @@ body[data-form-theme="warrior-succ"] .page-backdrop .rosette-mark { opacity: 0.0
 }
 .theme-warrior-eveil h3 { color: #b4c3d1; }
 .theme-warrior-eveil .combo-note, .theme-warrior-eveil p { color: #5c6772; }
-.theme-warrior-eveil .combo-arrow { color: #1f252b; }
+.theme-warrior-eveil .combo-arrow { color: #5c6772; }
 .theme-warrior-eveil .combo-name { color: #5c6772; }
 .theme-warrior-eveil .combo-key { background: #0c0f11; border-color: #1f252b; color: #b4c3d1; }
 .theme-warrior-eveil .callout { background: rgba(0,0,0,0.15); border-color: #1f252b; border-left-color: #1f252b; color: #5c6772; }
@@ -1488,7 +1497,7 @@ body[data-form-theme="ranger-succ"] .page-backdrop .rosette-mark { opacity: 0.08
 }
 .theme-ranger-eveil h3 { color: #a3ccd1; }
 .theme-ranger-eveil .combo-note, .theme-ranger-eveil p { color: #4f6e72; }
-.theme-ranger-eveil .combo-arrow { color: #18292b; }
+.theme-ranger-eveil .combo-arrow { color: #4f6e72; }
 .theme-ranger-eveil .combo-name { color: #4f6e72; }
 .theme-ranger-eveil .combo-key { background: #0c1111; border-color: #18292b; color: #a3ccd1; }
 .theme-ranger-eveil .callout { background: rgba(0,0,0,0.15); border-color: #18292b; border-left-color: #18292b; color: #4f6e72; }
@@ -1550,7 +1559,7 @@ body[data-form-theme="sorceress-succ"] .page-backdrop .rosette-mark { opacity: 0
 }
 .theme-sorceress-eveil h3 { color: #c2a4d1; }
 .theme-sorceress-eveil .combo-note, .theme-sorceress-eveil p { color: #674f72; }
-.theme-sorceress-eveil .combo-arrow { color: #25182b; }
+.theme-sorceress-eveil .combo-arrow { color: #674f72; }
 .theme-sorceress-eveil .combo-name { color: #674f72; }
 .theme-sorceress-eveil .combo-key { background: #110d0e; border-color: #25182b; color: #c2a4d1; }
 .theme-sorceress-eveil .callout { background: rgba(0,0,0,0.15); border-color: #25182b; border-left-color: #25182b; color: #674f72; }
@@ -1612,7 +1621,7 @@ body[data-form-theme="berserker-succ"] .page-backdrop .rosette-mark { opacity: 0
 }
 .theme-berserker-eveil h3 { color: #d1a29d; }
 .theme-berserker-eveil .combo-note, .theme-berserker-eveil p { color: #724e4a; }
-.theme-berserker-eveil .combo-arrow { color: #2b1815; }
+.theme-berserker-eveil .combo-arrow { color: #724e4a; }
 .theme-berserker-eveil .combo-name { color: #724e4a; }
 .theme-berserker-eveil .combo-key { background: #110b0a; border-color: #2b1815; color: #d1a29d; }
 .theme-berserker-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b1815; border-left-color: #2b1815; color: #724e4a; }
@@ -1674,7 +1683,7 @@ body[data-form-theme="tamer-succ"] .page-backdrop .rosette-mark { opacity: 0.08;
 }
 .theme-tamer-eveil h3 { color: #96c0d1; }
 .theme-tamer-eveil .combo-note, .theme-tamer-eveil p { color: #537c8c; }
-.theme-tamer-eveil .combo-arrow { color: #12242b; }
+.theme-tamer-eveil .combo-arrow { color: #537c8c; }
 .theme-tamer-eveil .combo-name { color: #537c8c; }
 .theme-tamer-eveil .combo-key { background: #0b0f11; border-color: #12242b; color: #96c0d1; }
 .theme-tamer-eveil .callout { background: rgba(0,0,0,0.15); border-color: #12242b; border-left-color: #12242b; color: #537c8c; }
@@ -1736,7 +1745,7 @@ body[data-form-theme="musa-succ"] .page-backdrop .rosette-mark { opacity: 0.08; 
 }
 .theme-musa-eveil h3 { color: #d1a298; }
 .theme-musa-eveil .combo-note, .theme-musa-eveil p { color: #8c5f56; }
-.theme-musa-eveil .combo-arrow { color: #2b1713; }
+.theme-musa-eveil .combo-arrow { color: #8c5f56; }
 .theme-musa-eveil .combo-name { color: #8c5f56; }
 .theme-musa-eveil .combo-key { background: #110d0c; border-color: #2b1713; color: #d1a298; }
 .theme-musa-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b1713; border-left-color: #2b1713; color: #8c5f56; }
@@ -1798,7 +1807,7 @@ body[data-form-theme="maehwa-succ"] .page-backdrop .rosette-mark { opacity: 0.08
 }
 .theme-maehwa-eveil h3 { color: #9fb6d1; }
 .theme-maehwa-eveil .combo-note, .theme-maehwa-eveil p { color: #5c728c; }
-.theme-maehwa-eveil .combo-arrow { color: #16202b; }
+.theme-maehwa-eveil .combo-arrow { color: #5c728c; }
 .theme-maehwa-eveil .combo-name { color: #5c728c; }
 .theme-maehwa-eveil .combo-key { background: #0f1011; border-color: #16202b; color: #9fb6d1; }
 .theme-maehwa-eveil .callout { background: rgba(0,0,0,0.15); border-color: #16202b; border-left-color: #16202b; color: #5c728c; }
@@ -1860,7 +1869,7 @@ body[data-form-theme="valkyrie-succ"] .page-backdrop .rosette-mark { opacity: 0.
 }
 .theme-valkyrie-eveil h3 { color: #d1b395; }
 .theme-valkyrie-eveil .combo-note, .theme-valkyrie-eveil p { color: #8c7053; }
-.theme-valkyrie-eveil .combo-arrow { color: #2b1f12; }
+.theme-valkyrie-eveil .combo-arrow { color: #8c7053; }
 .theme-valkyrie-eveil .combo-name { color: #8c7053; }
 .theme-valkyrie-eveil .combo-key { background: #110d0b; border-color: #2b1f12; color: #d1b395; }
 .theme-valkyrie-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b1f12; border-left-color: #2b1f12; color: #8c7053; }
@@ -1922,7 +1931,7 @@ body[data-form-theme="kunoichi-succ"] .page-backdrop .rosette-mark { opacity: 0.
 }
 .theme-kunoichi-eveil h3 { color: #eddac6; }
 .theme-kunoichi-eveil .combo-note, .theme-kunoichi-eveil p { color: #8c7c6b; }
-.theme-kunoichi-eveil .combo-arrow { color: #2b241d; }
+.theme-kunoichi-eveil .combo-arrow { color: #8c7c6b; }
 .theme-kunoichi-eveil .combo-name { color: #8c7c6b; }
 .theme-kunoichi-eveil .combo-key { background: #0f110f; border-color: #2b241d; color: #eddac6; }
 .theme-kunoichi-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b241d; border-left-color: #2b241d; color: #8c7c6b; }
@@ -1984,7 +1993,7 @@ body[data-form-theme="ninja-succ"] .page-backdrop .rosette-mark { opacity: 0.08;
 }
 .theme-ninja-eveil h3 { color: #d1afa6; }
 .theme-ninja-eveil .combo-note, .theme-ninja-eveil p { color: #725851; }
-.theme-ninja-eveil .combo-arrow { color: #2b1d19; }
+.theme-ninja-eveil .combo-arrow { color: #725851; }
 .theme-ninja-eveil .combo-name { color: #725851; }
 .theme-ninja-eveil .combo-key { background: #110c0c; border-color: #2b1d19; color: #d1afa6; }
 .theme-ninja-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b1d19; border-left-color: #2b1d19; color: #725851; }
@@ -2046,7 +2055,7 @@ body[data-form-theme="wizard-succ"] .page-backdrop .rosette-mark { opacity: 0.08
 }
 .theme-wizard-eveil h3 { color: #e5a69a; }
 .theme-wizard-eveil .combo-note, .theme-wizard-eveil p { color: #8c554a; }
-.theme-wizard-eveil .combo-arrow { color: #2b130e; }
+.theme-wizard-eveil .combo-arrow { color: #8c554a; }
 .theme-wizard-eveil .combo-name { color: #8c554a; }
 .theme-wizard-eveil .combo-key { background: #110d0d; border-color: #2b130e; color: #e5a69a; }
 .theme-wizard-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b130e; border-left-color: #2b130e; color: #8c554a; }
@@ -2108,7 +2117,7 @@ body[data-form-theme="witch-succ"] .page-backdrop .rosette-mark { opacity: 0.08;
 }
 .theme-witch-eveil h3 { color: #d1bdb0; }
 .theme-witch-eveil .combo-note, .theme-witch-eveil p { color: #8c796d; }
-.theme-witch-eveil .combo-arrow { color: #2b231d; }
+.theme-witch-eveil .combo-arrow { color: #8c796d; }
 .theme-witch-eveil .combo-name { color: #8c796d; }
 .theme-witch-eveil .combo-key { background: #110f11; border-color: #2b231d; color: #d1bdb0; }
 .theme-witch-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b231d; border-left-color: #2b231d; color: #8c796d; }
@@ -2170,7 +2179,7 @@ body[data-form-theme="striker-succ"] .page-backdrop .rosette-mark { opacity: 0.0
 }
 .theme-striker-eveil h3 { color: #d1ad9f; }
 .theme-striker-eveil .combo-note, .theme-striker-eveil p { color: #72564b; }
-.theme-striker-eveil .combo-arrow { color: #2b1c16; }
+.theme-striker-eveil .combo-arrow { color: #72564b; }
 .theme-striker-eveil .combo-name { color: #72564b; }
 .theme-striker-eveil .combo-key { background: #110d0c; border-color: #2b1c16; color: #d1ad9f; }
 .theme-striker-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b1c16; border-left-color: #2b1c16; color: #72564b; }
@@ -2232,7 +2241,7 @@ body[data-form-theme="mystic-succ"] .page-backdrop .rosette-mark { opacity: 0.08
 }
 .theme-mystic-eveil h3 { color: #a4b9d1; }
 .theme-mystic-eveil .combo-note, .theme-mystic-eveil p { color: #4f6072; }
-.theme-mystic-eveil .combo-arrow { color: #18212b; }
+.theme-mystic-eveil .combo-arrow { color: #4f6072; }
 .theme-mystic-eveil .combo-name { color: #4f6072; }
 .theme-mystic-eveil .combo-key { background: #0d0f11; border-color: #18212b; color: #a4b9d1; }
 .theme-mystic-eveil .callout { background: rgba(0,0,0,0.15); border-color: #18212b; border-left-color: #18212b; color: #4f6072; }
@@ -2294,7 +2303,7 @@ body[data-form-theme="lahn-succ"] .page-backdrop .rosette-mark { opacity: 0.08; 
 }
 .theme-lahn-eveil h3 { color: #d19da2; }
 .theme-lahn-eveil .combo-note, .theme-lahn-eveil p { color: #8b5a5f; }
-.theme-lahn-eveil .combo-arrow { color: #2b1617; }
+.theme-lahn-eveil .combo-arrow { color: #8b5a5f; }
 .theme-lahn-eveil .combo-name { color: #8b5a5f; }
 .theme-lahn-eveil .combo-key { background: #110f0f; border-color: #2b1617; color: #d19da2; }
 .theme-lahn-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b1617; border-left-color: #2b1617; color: #8b5a5f; }
@@ -2356,7 +2365,7 @@ body[data-form-theme="dark-knight-succ"] .page-backdrop .rosette-mark { opacity:
 }
 .theme-dark-knight-eveil h3 { color: #c3a3d1; }
 .theme-dark-knight-eveil .combo-note, .theme-dark-knight-eveil p { color: #674e72; }
-.theme-dark-knight-eveil .combo-arrow { color: #25182b; }
+.theme-dark-knight-eveil .combo-arrow { color: #674e72; }
 .theme-dark-knight-eveil .combo-name { color: #674e72; }
 .theme-dark-knight-eveil .combo-key { background: #0f0c11; border-color: #25182b; color: #c3a3d1; }
 .theme-dark-knight-eveil .callout { background: rgba(0,0,0,0.15); border-color: #25182b; border-left-color: #25182b; color: #674e72; }
@@ -2418,7 +2427,7 @@ body[data-form-theme="guardian-succ"] .page-backdrop .rosette-mark { opacity: 0.
 }
 .theme-guardian-eveil h3 { color: #d1b8bf; }
 .theme-guardian-eveil .combo-note, .theme-guardian-eveil p { color: #725f64; }
-.theme-guardian-eveil .combo-arrow { color: #2b2023; }
+.theme-guardian-eveil .combo-arrow { color: #725f64; }
 .theme-guardian-eveil .combo-name { color: #725f64; }
 .theme-guardian-eveil .combo-key { background: #110e10; border-color: #2b2023; color: #d1b8bf; }
 .theme-guardian-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b2023; border-left-color: #2b2023; color: #725f64; }
@@ -2480,7 +2489,7 @@ body[data-form-theme="hashashin-succ"] .page-backdrop .rosette-mark { opacity: 0
 }
 .theme-hashashin-eveil h3 { color: #d1bbaf; }
 .theme-hashashin-eveil .combo-note, .theme-hashashin-eveil p { color: #726158; }
-.theme-hashashin-eveil .combo-arrow { color: #2b221d; }
+.theme-hashashin-eveil .combo-arrow { color: #726158; }
 .theme-hashashin-eveil .combo-name { color: #726158; }
 .theme-hashashin-eveil .combo-key { background: #110e0c; border-color: #2b221d; color: #d1bbaf; }
 .theme-hashashin-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b221d; border-left-color: #2b221d; color: #726158; }
@@ -2542,7 +2551,7 @@ body[data-form-theme="nova-succ"] .page-backdrop .rosette-mark { opacity: 0.08; 
 }
 .theme-nova-eveil h3 { color: #d1c2b5; }
 .theme-nova-eveil .combo-note, .theme-nova-eveil p { color: #85776b; }
-.theme-nova-eveil .combo-arrow { color: #2b251f; }
+.theme-nova-eveil .combo-arrow { color: #85776b; }
 .theme-nova-eveil .combo-name { color: #85776b; }
 .theme-nova-eveil .combo-key { background: #110f0f; border-color: #2b251f; color: #d1c2b5; }
 .theme-nova-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b251f; border-left-color: #2b251f; color: #85776b; }
@@ -2604,7 +2613,7 @@ body[data-form-theme="sage-succ"] .page-backdrop .rosette-mark { opacity: 0.08; 
 }
 .theme-sage-eveil h3 { color: #d1c2a5; }
 .theme-sage-eveil .combo-note, .theme-sage-eveil p { color: #8c7e62; }
-.theme-sage-eveil .combo-arrow { color: #2b2519; }
+.theme-sage-eveil .combo-arrow { color: #8c7e62; }
 .theme-sage-eveil .combo-name { color: #8c7e62; }
 .theme-sage-eveil .combo-key { background: #11110c; border-color: #2b2519; color: #d1c2a5; }
 .theme-sage-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b2519; border-left-color: #2b2519; color: #8c7e62; }
@@ -2666,7 +2675,7 @@ body[data-form-theme="corsair-succ"] .page-backdrop .rosette-mark { opacity: 0.0
 }
 .theme-corsair-eveil h3 { color: #abbad1; }
 .theme-corsair-eveil .combo-note, .theme-corsair-eveil p { color: #68768c; }
-.theme-corsair-eveil .combo-arrow { color: #1b222b; }
+.theme-corsair-eveil .combo-arrow { color: #68768c; }
 .theme-corsair-eveil .combo-name { color: #68768c; }
 .theme-corsair-eveil .combo-key { background: #110e10; border-color: #1b222b; color: #abbad1; }
 .theme-corsair-eveil .callout { background: rgba(0,0,0,0.15); border-color: #1b222b; border-left-color: #1b222b; color: #68768c; }
@@ -2728,7 +2737,7 @@ body[data-form-theme="drakania-succ"] .page-backdrop .rosette-mark { opacity: 0.
 }
 .theme-drakania-eveil h3 { color: #d1b5ae; }
 .theme-drakania-eveil .combo-note, .theme-drakania-eveil p { color: #76605a; }
-.theme-drakania-eveil .combo-arrow { color: #2b1f1d; }
+.theme-drakania-eveil .combo-arrow { color: #76605a; }
 .theme-drakania-eveil .combo-name { color: #76605a; }
 .theme-drakania-eveil .combo-key { background: #0d0e11; border-color: #2b1f1d; color: #d1b5ae; }
 .theme-drakania-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b1f1d; border-left-color: #2b1f1d; color: #76605a; }
@@ -2790,7 +2799,7 @@ body[data-form-theme="woosa-succ"] .page-backdrop .rosette-mark { opacity: 0.08;
 }
 .theme-woosa-eveil h3 { color: #d19da1; }
 .theme-woosa-eveil .combo-note, .theme-woosa-eveil p { color: #8c5b5e; }
-.theme-woosa-eveil .combo-arrow { color: #2b1617; }
+.theme-woosa-eveil .combo-arrow { color: #8c5b5e; }
 .theme-woosa-eveil .combo-name { color: #8c5b5e; }
 .theme-woosa-eveil .combo-key { background: #0d0c11; border-color: #2b1617; color: #d19da1; }
 .theme-woosa-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b1617; border-left-color: #2b1617; color: #8c5b5e; }
@@ -2852,7 +2861,7 @@ body[data-form-theme="maegu-succ"] .page-backdrop .rosette-mark { opacity: 0.08;
 }
 .theme-maegu-eveil h3 { color: #d196a8; }
 .theme-maegu-eveil .combo-note, .theme-maegu-eveil p { color: #724452; }
-.theme-maegu-eveil .combo-arrow { color: #2b121a; }
+.theme-maegu-eveil .combo-arrow { color: #724452; }
 .theme-maegu-eveil .combo-name { color: #724452; }
 .theme-maegu-eveil .combo-key { background: #110e0f; border-color: #2b121a; color: #d196a8; }
 .theme-maegu-eveil .callout { background: rgba(0,0,0,0.15); border-color: #2b121a; border-left-color: #2b121a; color: #724452; }
