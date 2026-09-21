@@ -91,54 +91,56 @@
               <span data-i18n="fr">Remplace ce bloc par l'iframe YouTube de la vidéo de combo Succession.</span><span data-i18n="en" hidden>Replace this block with the YouTube iframe of the Succession combo video.</span>
             </div>
           </div>
-
-          <div class="combo-block">
-            <div class="combo-block-head">
-              <h3><span data-i18n="fr">Combo principal</span><span data-i18n="en" hidden>Main combo</span></h3>
-              <button class="copy-btn" type="button" data-copy-status="Copier la séquence">Copier la séquence</button>
-            </div>
-            <p class="combo-note"><span data-i18n="fr">[Placeholder — combo Succession à venir.]</span><span data-i18n="en" hidden>[Placeholder — Succession combo coming soon.]</span></p>
-
-            <div class="combo-row">
-              <div class="combo-step ranger-succ"><span class="combo-icon">?</span><span class="combo-key">—</span><span class="combo-name">Sort 1</span></div>
-              <span class="combo-arrow">→</span>
-              <div class="combo-step ranger-succ"><span class="combo-icon">?</span><span class="combo-key">—</span><span class="combo-name">Sort 2</span></div>
-              <span class="combo-arrow">→</span>
-              <div class="combo-step ranger-succ"><span class="combo-icon">?</span><span class="combo-key">—</span><span class="combo-name">Sort 3</span></div>
-            </div>
-
-            <div class="callout">
-              <span data-i18n="fr">Placeholder — astuces et priorités Succession à venir.</span><span data-i18n="en" hidden>Placeholder — Succession tips and priorities coming soon.</span>
-            </div>
+          <div class="lock-block">
+            <h3><span data-i18n="fr">Les 4 sorts principaux</span><span data-i18n="en" hidden>The four main skills</span></h3>
+            <p><span data-i18n="fr">Regeneration (buff de vitesse d'attaque), Razor Wind (le plus gros dégât brut), Tearing Arrow (meilleur burst) et PuBG (Prime : Ultimate Blasting Gust, nettoyage AoE en pack à pack ou DPS constant ailleurs) organisent toute la rotation.</span><span data-i18n="en" hidden>Regeneration (attack speed buff), Razor Wind (highest raw damage), Tearing Arrow (best burst) and PuBG (Prime: Ultimate Blasting Gust, AoE cleanup pack-to-pack or steady DPS elsewhere) anchor the whole rotation.</span></p><p><span data-i18n="fr">Enchaînement de base : Regeneration (vitesse) → Tearing Arrow (burst) → Razor Wind (dégâts constants) → PuBG (nettoie les HP bas restants). Le buff de Regeneration dure 10s pour un cooldown de 7s, donc le cycle peut s'étirer à 8-10s selon le rythme du pack.</span><span data-i18n="en" hidden>Base flow: Regeneration (speed) → Tearing Arrow (burst) → Razor Wind (steady damage) → PuBG (mop up remaining low HP). Regeneration's buff lasts 10s on a 7s cooldown, so the cycle can stretch to 8-10s depending on the pack's pace.</span></p><p class="combo-note"><span data-i18n="fr">Will of the Wind (Shift+Q+A/D+LMB) est un excellent buffer de debuff, mais son timing est exigeant à intégrer proprement — ne t'y repose pas trop : chaque tour utilisé pour patienter est un tour où d'autres sorts restent inutilisés en CD.</span><span data-i18n="en" hidden>Will of the Wind (Shift+Q+A/D+LMB) is a great debuff buffer, but the timing is demanding to fit cleanly — don't lean on it too much: every round spent stalling is a round where other skills sit unused on cooldown.</span></p>
           </div>
-
-          <div class="addon-block">
-            <h3><span data-i18n="fr">Bonus de compétence (Add-on)</span><span data-i18n="en" hidden>Skill add-ons</span></h3>
-            <div class="addon-grid">
-              <div class="addon-card">
-                <span class="combo-icon">?</span>
-                <div>
-                  <h4><span data-i18n="fr">Nom du sort I</span><span data-i18n="en" hidden>Skill name I</span></h4>
-                  <p><span data-i18n="fr">[Placeholder — description du sort.]</span><span data-i18n="en" hidden>[Placeholder — skill description.]</span></p>
-                  <p class="combo-note"><span data-i18n="fr">[Effet 1] · [Effet 2]</span><span data-i18n="en" hidden>[Effect 1] · [Effect 2]</span></p>
-                </div>
-              </div>
-            </div>
+          <div class="lock-block">
+            <h3><span data-i18n="fr">Sorts secondaires et leur rôle</span><span data-i18n="en" hidden>Secondary skills and their role</span></h3>
+            
+            <div class="lock-columns">
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Bypassing Wind</span><span data-i18n="en" hidden>Bypassing Wind</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Flow fluide entre les sorts, réapplique le buff de Charging Wind ; utile même hors flow normal (ex. entre Squall Shot et PuBG) pour du dégât gratuit.</span><span data-i18n="en" hidden>Smooth flow-filler between skills, reapplies Charging Wind's buff; useful even outside a normal flow (e.g. between Squall Shot and PuBG) for free damage.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Descending Current</span><span data-i18n="en" hidden>Descending Current</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Situationnel : utile sur les zones à grande surface de spawn (spots Dehkia, Yzrahid Highlands, event spawns) — dégât gratuit si l'opportunité se présente, mais ne rentre pas dans une rotation normale.</span><span data-i18n="en" hidden>Situational: useful on wide-spawn areas (Dehkia spots, Yzrahid Highlands, event spawns) — free damage when the opportunity appears, but doesn't fit into a normal rotation.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Binding Arrow</span><span data-i18n="en" hidden>Binding Arrow</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Sert surtout de flow d'un flow (typiquement après Regeneration) plutôt que de flow direct depuis Tearing Arrow/Razor Wind, qui ont de meilleurs candidats (Penetrating Wind, Bypass, Shotgun).</span><span data-i18n="en" hidden>Mostly used as a flow-of-a-flow (typically after Regeneration) rather than a direct flow from Tearing Arrow/Razor Wind, which have better candidates (Penetrating Wind, Bypass, Shotgun).</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Squall Shot vs Tearing Arrow</span><span data-i18n="en" hidden>Squall Shot vs Tearing Arrow</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Squall Shot perd de la valeur sur une rotation très serrée avec peu de mobs ; sinon il gagne en régularité et en dégâts sur Tearing.</span><span data-i18n="en" hidden>Squall Shot loses value on tight rotations with few mobs; otherwise it wins on consistency and damage over Tearing.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">3e rebams situationnels</span><span data-i18n="en" hidden>Situational 3rd rebams</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Will of Descending Current pour pull à distance avec debuff appliqué ; Wind Explosive Shot pour ralentir le regroupement (20s), utile mais très situationnel.</span><span data-i18n="en" hidden>Will of Descending Current to pull at range with debuff applied; Wind Explosive Shot for a pack-clumping slow (20s), useful but very situational.</span></li></ul>
+      </div></div>
           </div>
-
-          <div class="rabam-block">
-            <h3><span data-i18n="fr">Rabam retenus</span><span data-i18n="en" hidden>Rabam picks</span></h3>
-            <p class="combo-note"><span data-i18n="fr">Sur les 3 paliers, seule la branche choisie pour ce guide sera montrée.</span><span data-i18n="en" hidden>Of the 3 tiers, only the branch chosen for this guide is shown.</span></p>
-            <div class="rabam-picks">
-              <div class="rabam-pick">
-                <span class="combo-icon">?</span>
-                <div>
-                  <span class="rabam-pick-lv">Lv. 56</span>
-                  <h4><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></h4>
-                </div>
-              </div>
-            </div>
+          <div class="lock-block">
+            <h3><span data-i18n="fr">Sorts verrouillés en PvE</span><span data-i18n="en" hidden>Locked abilities in PvE</span></h3>
+            <p><span data-i18n="fr">Pinpoint, Evasion, Rage Transfer, tous les kicks, et les dagues de protection — jugés trop en dessous des autres options pour être utilisés.</span><span data-i18n="en" hidden>Pinpoint, Evasion, Rage Transfer, all kicks, and daggers of protection — considered not worth using over the rest of the kit.</span></p>
           </div>
+          <div class="lock-block">
+            <h3><span data-i18n="fr">Philosophie des add-ons (Succession)</span><span data-i18n="en" hidden>Addon philosophy (Succession)</span></h3>
+            <p class="combo-note"><span data-i18n="fr">Formule PvE : les modificateurs Critique et Aérien valent +100%, Bas et Dos valent +50%. Deux buffs du même type s'additionnent (50%+5%=55%), deux types différents se multiplient (×2 crit × ×1.5 dos = ×3).</span><span data-i18n="en" hidden>PvE formula: Crit and Air modifiers are +100%, Down and Back are +50%. Two buffs of the same type add up (50%+5%=55%), two different types multiply (×2 crit × ×1.5 back = ×3).</span></p>
+            <div class="lock-columns">
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Sur soi-même</span><span data-i18n="en" hidden>On yourself</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Taux de coup critique +30% pendant 7s — indispensable, à placer sur un sort semi-spam comme Penetrating Wind ou Charging Wind.</span><span data-i18n="en" hidden>Critical Rate +30% for 7 sec — essential, put it on a semi-spam skill like Penetrating Wind or Charging Wind.</span></li><li><span data-i18n="fr">Vitesse d'attaque +10% pendant 7s — indispensable aussi (plus de vitesse = plus de dégâts) ; souvent trouvé sur Blasting Gust, le sort de mouvement qui enchaîne sur le pack.</span><span data-i18n="en" hidden>Attack Speed +10% for 7 sec — also essential (more speed = more damage); often found on Blasting Gust, the movement skill that chains into the pack.</span></li><li><span data-i18n="fr">Réduction de tous dégâts +20 pendant 10s — bonne QoL pour compenser un sous-équipement, généralement ajoutée aux sorts Forward Guard (Razor Wind, PuBG, Tremble).</span><span data-i18n="en" hidden>All Damage Reduction +20 for 10 sec — good QoL to cover being undergeared, normally added to Forward Guard skills (Razor Wind, PuBG, Tremble).</span></li><li><span data-i18n="fr">Vitesse de déplacement +10% pendant 7s — placée sur Blasting Gust, vue comme du confort plus qu'un vrai gain de DPS.</span><span data-i18n="en" hidden>Movement Speed +10% for 7 sec — placed on Blasting Gust, seen as QoL rather than a real DPS gain.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Sur la cible</span><span data-i18n="en" hidden>On the target</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Réduction de tous dégâts -20 pendant 7s (cible) — essentiel sur chaque mob, généralement via Will of the Wind ou Nature's Tremble (spammables).</span><span data-i18n="en" hidden>All Damage Reduction -20 for 7 sec to target — essential on every mob, generally via Will of the Wind or Nature's Tremble (spammable).</span></li><li><span data-i18n="fr">Évasion/Précision -20 (cible) — quasi inutile, tu touches déjà 100% du temps.</span><span data-i18n="en" hidden>Evasion/Accuracy -20 (target) — nearly useless, you already hit 100% of the time.</span></li><li><span data-i18n="fr">Saignement 100 tous les 3s pendant 9s — mauvais choix : un pack meurt en ~4s, donc le bleed ne tique presque jamais deux fois.</span><span data-i18n="en" hidden>100 bleeding damage per 3 sec for 9 sec — bad pick: a pack dies in ~4s, so the bleed almost never ticks twice.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Dégâts spéciaux</span><span data-i18n="en" hidden>Special attack damage</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Dégâts dans le dos +5% pendant 5s — quasi toujours disponible en PvE, à garder up en plaçant l'add-on juste avant d'aller dans le dos des mobs.</span><span data-i18n="en" hidden>Back Attack damage +5% for 5 sec — almost always available in PvE, keep it up by placing the addon right before going behind mobs.</span></li><li><span data-i18n="fr">Dégâts critiques +5% pendant 5s — priorité encore plus haute que le dos, à mettre sur un sort semi-spam pour un uptime quasi permanent.</span><span data-i18n="en" hidden>Critical Hit damage +5% for 5 sec — even higher priority than back attack, put it on a semi-spam skill for near-permanent uptime.</span></li></ul>
+      </div></div>
+          </div><div class="callout"><span data-i18n="fr">Le guide original détaille plusieurs variantes de combo (mouvement derrière pack, version serrée/relâchée), mais les icônes de compétences utilisées dans ces lignes n'ont pas survécu à l'export texte du document — impossible de les retranscrire fiablement ici. Le flow de base ci-dessus (Regeneration → Tearing Arrow → Razor Wind → PuBG) reste la référence fiable ; ajuste selon ton doigté et tes cooldowns.</span><span data-i18n="en" hidden>The original guide details several combo variants (movement behind a pack, tighter/looser version), but the skill icons used in those lines didn't survive the document's text export — I couldn't reliably transcribe them here. The base flow above (Regeneration → Tearing Arrow → Razor Wind → PuBG) remains the reliable reference; adjust to your own timing and cooldowns.</span></div><div class="callout"><span data-i18n="fr">Théorie et philosophie d'add-ons retranscrites depuis le guide communautaire "Succession Ranger's PvE guide (2026 Edition)" par Hazy the Mist — à vérifier en jeu.</span><span data-i18n="en" hidden>Theory and addon philosophy transcribed from the community guide "Succession Ranger's PvE guide (2026 Edition)" by Hazy the Mist — verify in-game.</span></div>
         </div>
 
         <div id="form-eveil" class="tab-panel theme-ranger-eveil" data-tab-panel>
@@ -149,54 +151,122 @@
               <span data-i18n="fr">Remplace ce bloc par l'iframe YouTube de la vidéo de combo Éveil.</span><span data-i18n="en" hidden>Replace this block with the YouTube iframe of the Awakening combo video.</span>
             </div>
           </div>
-
+          <div class="lock-block">
+            <h3><span data-i18n="fr">Éveil : cooldowns forts vs fillers</span><span data-i18n="en" hidden>Awakening: strong cooldowns vs fillers</span></h3>
+            <p><span data-i18n="fr">Le kit Éveil du Ranger se divise clairement entre grosses compétences à cooldown et sorts filler. L'ordre exact du combo importe donc moins que d'éviter les casts lents et de placer les effets clés (-DP, buff critique, vitesse d'attaque) en début de rotation.</span><span data-i18n="en" hidden>Ranger Awakening's kit clearly splits into strong DPS cooldowns and filler spells. The exact combo order matters less than avoiding slow casts and putting the key effects (-DP, crit buff, attack speed) near the start.</span></p><p><span data-i18n="fr">La plupart des sorts à haut DPS ont un cooldown similaire : quand ils sont dispo, il suffit généralement de les enchaîner dans l'ordre de la priority list.</span><span data-i18n="en" hidden>Most high-DPS skills share a similar cooldown, so when they're up you can usually just go through the whole priority list in order.</span></p><p class="combo-note"><span data-i18n="fr">100% de Blasting Gust est annulable par un dash (Q), ce qui permet d'enchaîner plus vite qu'avec l'absorption Z classique.</span><span data-i18n="en" hidden>100% Blasting Gust is cancellable with a dash (Q), which lets you chain faster than the classic Z absorb.</span></p>
+          </div>
+          <div class="lock-block">
+            <h3><span data-i18n="fr">Verrouillage, quickslot & buffs</span><span data-i18n="en" hidden>Locks, quickslot & buffs</span></h3>
+            
+            <div class="lock-columns">
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Verrouillés (Pré-éveil)</span><span data-i18n="en" hidden>Locked (Preawakening)</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">6 emplacements verrouillés en Pré-éveil, dont un optionnel donnant un bon iframe PvE latéral.</span><span data-i18n="en" hidden>6 slots locked in Preawakening, including an optional one giving a useful side PvE iframe.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Quickslot</span><span data-i18n="en" hidden>Quickslot</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Buff de 3 min utilisable uniquement depuis le quickslot ; un sort de swap Pré-éveil → Éveil y est aussi disponible.</span><span data-i18n="en" hidden>3-min buff usable only from quickslot; a Preawakening → Awakening swap skill is also quickslot-only.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Buffs clés</span><span data-i18n="en" hidden>Key buffs</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">+12 AP à distance, +10% vitesse d'attaque, +20% taux de critique, plus un buff cumulé +30% vitesse d'attaque / +20% critique / +20% vitesse de déplacement (CD 3 min, à ne pas cumuler avec le BSR).</span><span data-i18n="en" hidden>+12 ranged AP, +10% attack speed, +20% crit rate, plus a stacked +30% attack speed / +20% crit / +20% move speed buff (3-min CD, don't stack with BSR).</span></li></ul>
+      </div></div>
+          </div>
+          <div class="lock-block">
+            <h3><span data-i18n="fr">Debuffs, mouvement et repositionnement</span><span data-i18n="en" hidden>Debuffs, movement and repositioning</span></h3>
+            
+            <div class="lock-columns">
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Debuffs (hors CC/DoT)</span><span data-i18n="en" hidden>Debuffs (excl. CC/DoT)</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">-25 DP appliqué via RMB, Shift+LMB, ou en Pré-éveil A/D+F / Shift+Q.</span><span data-i18n="en" hidden>-25 DP applied via RMB, Shift+LMB, or in Preawakening A/D+F / Shift+Q.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Mouvement</span><span data-i18n="en" hidden>Movement</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Shift+RMB (W/S) est l'iframe PvE principal et le déplacement le plus utilisé.</span><span data-i18n="en" hidden>Shift+RMB (W/S) is the main PvE iframe and the most-used movement tool.</span></li><li><span data-i18n="fr">Le sprint Shift ne coûte pas de stamina — pratique en cas de gestion de stamina tendue.</span><span data-i18n="en" hidden>Shift-sprint costs zero stamina — handy when stamina management is tight.</span></li><li><span data-i18n="fr">Shift+E permet un bon engage à distance.</span><span data-i18n="en" hidden>Shift+E is good for engaging from range.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">Repositionnement</span><span data-i18n="en" hidden>Repositioning</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Shift+RMB en arrière ignore les collisions (attention à rester bloqué dans l'animation si des monstres attaquent).</span><span data-i18n="en" hidden>Backward Shift+RMB ignores collision (careful about getting stuck in the animation if monsters are attacking).</span></li><li><span data-i18n="fr">W/S+F est un filler DPS correct, aussi utilisable pour se replacer.</span><span data-i18n="en" hidden>W/S+F is a decent DPS filler, also usable to reposition.</span></li></ul>
+      </div></div>
+          </div>
           <div class="combo-block">
             <div class="combo-block-head">
-              <h3><span data-i18n="fr">Combo principal</span><span data-i18n="en" hidden>Main combo</span></h3>
+              <h3><span data-i18n="fr">Exemple de combo Éveil</span><span data-i18n="en" hidden>Awakening example combo</span></h3>
               <button class="copy-btn" type="button" data-copy-status="Copier la séquence">Copier la séquence</button>
             </div>
-            <p class="combo-note"><span data-i18n="fr">[Placeholder — combo Éveil à venir.]</span><span data-i18n="en" hidden>[Placeholder — Awakening combo coming soon.]</span></p>
-
-            <div class="combo-row">
-              <div class="combo-step ranger-eveil"><span class="combo-icon">?</span><span class="combo-key">—</span><span class="combo-name">Sort 1</span></div>
-              <span class="combo-arrow">→</span>
-              <div class="combo-step ranger-eveil"><span class="combo-icon">?</span><span class="combo-key">—</span><span class="combo-name">Sort 2</span></div>
-              <span class="combo-arrow">→</span>
-              <div class="combo-step ranger-eveil"><span class="combo-icon">?</span><span class="combo-key">—</span><span class="combo-name">Sort 3</span></div>
-            </div>
-
-            <div class="callout">
-              <span data-i18n="fr">Placeholder — astuces et priorités Éveil à venir.</span><span data-i18n="en" hidden>Placeholder — Awakening tips and priorities coming soon.</span>
-            </div>
+            <div class="combo-row theme-ranger-eveil"><span class="combo-key">Shift+E</span><span class="combo-arrow">&gt;</span><span class="combo-key">LMB</span><span class="combo-arrow">&gt;</span><span class="combo-key">RMB</span><span class="combo-arrow">&gt;</span><span class="combo-key">Q</span><span class="combo-arrow">&gt;</span><span class="combo-key">Space</span><span class="combo-arrow">&gt;</span><span class="combo-key">Shift+X</span><span class="combo-arrow">&gt;</span><span class="combo-key">F</span><span class="combo-arrow">&gt;</span><span class="combo-key">Slot</span><span class="combo-arrow">&gt;</span><span class="combo-key">Shift+Q</span><span class="combo-arrow">&gt;</span><span class="combo-key">Shift+F</span><span class="combo-arrow">&gt;</span><span class="combo-key">Shift+LMB</span><span class="combo-arrow">&gt;</span><span class="combo-key">Shift+RMB</span><span class="combo-arrow">&gt;</span><span class="combo-key">RMB</span><span class="combo-arrow">&gt;</span><span class="combo-key">S+LMB</span><span class="combo-arrow">&gt;</span><span class="combo-key">LMB</span><span class="combo-arrow">&gt;</span><span class="combo-key">RMB</span><span class="combo-arrow">&gt;</span><span class="combo-key">F</span><span class="combo-arrow">&gt;</span><span class="combo-key">W/S+F</span></div>
+            <p class="combo-note"><span data-i18n="fr">Passe le premier sort si tu n'engages pas un nouveau pack. Vise les 3 hits d'un sort à charges quand possible (le dps de 2 hits est plus haut, mais tu manqueras de cooldowns de toute façon). Avec une grosse vitesse d'attaque, remplis avec LMB/RMB en boucle.</span><span data-i18n="en" hidden>Skip the first skill if you're not engaging a new pack. Try to get all 3 hits of a charge skill when possible (2-hit dps is technically higher, but you'll run out of cooldowns anyway). With high attack speed, fill with LMB/RMB on repeat.</span></p>
           </div>
-
+          <div class="lock-block">
+            <h3><span data-i18n="fr">Priority list</span><span data-i18n="en" hidden>Priority list</span></h3>
+            <p class="combo-note"><span data-i18n="fr">Un sort avec effet de swap ramène instantanément en Éveil depuis le Pré-éveil. Pense à accélérer tes cooldowns core avec les bons add-ons et à éviter les casts lents (voir Notable Cancels dans le guide source).</span><span data-i18n="en" hidden>A swap-effect skill instantly brings you back to Awakening from Preawakening. Remember to accelerate your core cooldowns with the right addons and to avoid slow casts (see Notable Cancels in the source guide).</span></p>
+            <div class="lock-columns">
+      <div class="lock-group">
+        <h4><span data-i18n="fr">1. Core Burst</span><span data-i18n="en" hidden>1. Core Burst</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Les sorts à plus gros dégâts uniques — à utiliser dès qu'ils sont disponibles.</span><span data-i18n="en" hidden>The single biggest-damage skills — use as soon as available.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">2. DPS moyen</span><span data-i18n="en" hidden>2. Mediocre DPS</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Sorts secondaires à intégrer entre les gros cooldowns.</span><span data-i18n="en" hidden>Secondary skills to weave between the big cooldowns.</span></li></ul>
+      </div>
+      <div class="lock-group">
+        <h4><span data-i18n="fr">3. Filler</span><span data-i18n="en" hidden>3. Filler</span></h4>
+        <ul class="lock-list"><li><span data-i18n="fr">Sorts filler à utiliser même en cooldown pour garder le rythme, en évitant les casts lents.</span><span data-i18n="en" hidden>Filler skills to use even on cooldown to keep the pace, avoiding slow casts.</span></li></ul>
+      </div></div>
+          </div>
           <div class="addon-block">
-            <h3><span data-i18n="fr">Bonus de compétence (Add-on)</span><span data-i18n="en" hidden>Skill add-ons</span></h3>
+            <h3><span data-i18n="fr">Bonus de compétence (effets)</span><span data-i18n="en" hidden>Skill add-on effects</span></h3>
             <div class="addon-grid">
               <div class="addon-card">
-                <span class="combo-icon">?</span>
+                <span class="combo-icon"><img src="../assets/ranger/icones/addon-awak-wailingwind1.png" alt="" loading="lazy"></span>
                 <div>
-                  <h4><span data-i18n="fr">Nom du sort I</span><span data-i18n="en" hidden>Skill name I</span></h4>
-                  <p><span data-i18n="fr">[Placeholder — description du sort.]</span><span data-i18n="en" hidden>[Placeholder — skill description.]</span></p>
-                  <p class="combo-note"><span data-i18n="fr">[Effet 1] · [Effet 2]</span><span data-i18n="en" hidden>[Effect 1] · [Effect 2]</span></p>
+                  <h4>Wailing Wind I</h4>
+                  <p><span data-i18n="fr">Invoque la puissance du Kamasylve pour attaquer…</span><span data-i18n="en" hidden>Call upon the power of the Kamasylve to attack…</span></p>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="rabam-block">
-            <h3><span data-i18n="fr">Rabam retenus</span><span data-i18n="en" hidden>Rabam picks</span></h3>
-            <p class="combo-note"><span data-i18n="fr">Sur les 3 paliers, seule la branche choisie pour ce guide sera montrée.</span><span data-i18n="en" hidden>Of the 3 tiers, only the branch chosen for this guide is shown.</span></p>
-            <div class="rabam-picks">
-              <div class="rabam-pick">
-                <span class="combo-icon">?</span>
+              <div class="addon-card">
+                <span class="combo-icon"><img src="../assets/ranger/icones/addon-awak-flowtempest.png" alt="" loading="lazy"></span>
                 <div>
-                  <span class="rabam-pick-lv">Lv. 56</span>
-                  <h4><span data-i18n="fr">À venir</span><span data-i18n="en" hidden>Coming soon</span></h4>
+                  <h4>Flow: Tempest</h4>
+                  <p><span data-i18n="fr">Sort précédent [Wailing Wind I]. Après Wailing Wind, insuffle ta force dans…</span><span data-i18n="en" hidden>Preceding Skill [Wailing Wind I]. After Wailing Wind, imbue your might into…</span></p>
                 </div>
               </div>
-            </div>
-          </div>
+              <div class="addon-card">
+                <span class="combo-icon"><img src="../assets/ranger/icones/addon-awak-breezyblade1.png" alt="" loading="lazy"></span>
+                <div>
+                  <h4>Breezy Blade I</h4>
+                  <p><span data-i18n="fr">Effectue une attaque instantanée sur l'ennemi devant en approchant tel le vent.</span><span data-i18n="en" hidden>Perform an instantaneous attack to the enemy ahead by swiftly approaching it like wind.</span></p>
+                </div>
+              </div>
+              <div class="addon-card">
+                <span class="combo-icon"><img src="../assets/ranger/icones/addon-awak-naturestremble1.png" alt="" loading="lazy"></span>
+                <div>
+                  <h4>Nature's Tremble I</h4>
+                  <p><span data-i18n="fr">Divise l'ennemi avec la puissance de l'esprit.</span><span data-i18n="en" hidden>Divide the enemy with the power of the spirit.</span></p>
+                </div>
+              </div>
+              <div class="addon-card">
+                <span class="combo-icon"><img src="../assets/ranger/icones/addon-awak-regeneration.png" alt="" loading="lazy"></span>
+                <div>
+                  <h4>Regeneration</h4>
+                  <p><span data-i18n="fr">Repousse l'ennemi avec la puissance de l'esprit.</span><span data-i18n="en" hidden>Blow the enemy away with the power of the spirit.</span></p>
+                </div>
+              </div>
+              <div class="addon-card">
+                <span class="combo-icon"><img src="../assets/ranger/icones/addon-awak-windblade.png" alt="" loading="lazy"></span>
+                <div>
+                  <h4>Wind Blade</h4>
+                  <p><span data-i18n="fr">Tranche latéralement en repoussant les ennemis, puis les submerge sous le Vent…</span><span data-i18n="en" hidden>Slash laterally while pushing enemies away, then overwhelm them with the Wind of the…</span></p>
+                </div>
+              </div>
+              <div class="addon-card">
+                <span class="combo-icon"><img src="../assets/ranger/icones/addon-awak-spiritshaven.png" alt="" loading="lazy"></span>
+                <div>
+                  <h4>Spirit's Haven</h4>
+                  <p><span data-i18n="fr">Rassemble la puissance du vent pour trancher les ennemis proches.</span><span data-i18n="en" hidden>Gather the power of the wind to slash enemies nearby.</span></p>
+                </div>
+              </div></div>
+          </div><div class="callout"><span data-i18n="fr">Les combos Éveil sont plus flexibles qu'auparavant : certains sorts filler peuvent maintenant se lancer à tout moment via un input LMB plutôt qu'uniquement en suivi direct d'un autre sort précis — une bonne marge pour improviser sans perdre de DPS quand un sort clé est en cooldown.</span><span data-i18n="en" hidden>Awakening combos are more flexible than before: some filler skills can now be triggered at any point via an LMB input rather than only as a direct follow-up to one specific skill — good room to improvise without losing DPS when a key skill is on cooldown.</span></div><div class="callout"><span data-i18n="fr">Retranscrit depuis un guide communautaire (captures fournies) — à vérifier en jeu.</span><span data-i18n="en" hidden>Transcribed from a community guide (screenshots provided) — verify in-game.</span></div>
         </div>
 
       </div>
